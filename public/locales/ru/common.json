@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "href": "/about",
+      "text": "Про центр"
+    },
+    {
+      "href": "/about",
+      "text": "Брак за сутки"
+    },
+    {
+      "href": "/services",
+      "text": "Услуги"
+    },
+    {
+      "href": "/contacts",
+      "text": "Контакты"
+    }
+  ]
+}

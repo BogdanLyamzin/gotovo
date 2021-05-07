@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "href": "/about",
+      "text": "About us"
+    },
+    {
+      "href": "/about",
+      "text": "Marriage within 24 Hours"
+    },
+    {
+      "href": "/services",
+      "text": "Services"
+    },
+    {
+      "href": "/contacts",
+      "text": "Location"
+    }
+  ]
+}
