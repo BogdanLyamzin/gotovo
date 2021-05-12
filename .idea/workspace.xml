@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781e30b0-8f28-4b3e-8ba6-dddd8511667b" name="Default Changelist" comment="+++">
-      <change afterPath="$PROJECT_DIR$/auth/hooks/use-logout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ProfileForm/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FileUpload/FileUpload.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/aut.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/aut.constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/context/auth.context.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/context/auth.context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/hooks/use-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/hooks/use-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620857586850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+++">
+      <created>1620860006087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620860006088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
