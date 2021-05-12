@@ -8,11 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@reach/portal": "^0.15.0",
+    "body-scroll-lock": "^3.1.5",
+    "classnames": "^2.3.1",
+    "formik": "^2.2.6",
     "i18next": "^20.2.2",
     "next": "10.2.0",
     "next-i18next": "^8.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.32.12"
+    "react-transition-group": "^4.4.1",
+    "sass": "^1.32.12",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
   }
 }
