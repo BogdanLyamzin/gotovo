@@ -12,7 +12,10 @@ const ProfileForm = () => {
             headers: {
                 Authorization: `Bearer ${Cookie.get('accessToken')}`
             }
-        }).then(res => setDoc(res?.data?.fileName))
+        }).then(res => {
+            Cookie.remove('accessToken')
+            setDoc(res?.data?.fileName)
+        })
     }
 
     const createOrder = async (values) => {
@@ -27,7 +30,7 @@ const ProfileForm = () => {
                 }
             });
         } catch (error) {
-
+            Cookie.remove('accessToken')
         }
     }
 
