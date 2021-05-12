@@ -5,18 +5,19 @@ import {useTranslation} from 'next-i18next'
 import Logo from "../Logo";
 
 import styles from "./Navbar.module.scss";
+import useAuth from "../../../auth/hooks/use-auth";
 
 const Navbar = props => {
-
-    const router = useRouter()
+    const router = useRouter();
+    const isAuth = useAuth()
     const {t} = useTranslation('common');
     const menuItems = t('menu', {returnObjects: true});
-    const menuElements = menuItems.map(({href, text}) => {
+    const menuElements = menuItems?.map(({href, text}) => {
         return <li className={styles.menuItem}>
-                    <Link href={href} locale={router.locale}>
-                        <a className={styles.menuLink}>{text}</a>
-                    </Link>
-               </li>
+            <Link href={href} locale={router.locale}>
+                <a className={styles.menuLink}>{text}</a>
+            </Link>
+        </li>
     })
     console.log(styles)
     return (
@@ -49,17 +50,22 @@ const Navbar = props => {
                     </div>
                 </div>
                 <div>
-                    <Link href="/register">
-                        <a className={styles.authLink}>зареєструватися</a>
-                    </Link>
-                    <br />
-                    <Link href="/login">
-                        <a className={styles.authLink}>Войти</a>
-                    </Link>
-                    <br />
-                    <Link href="/logout" >
-                        <a className={styles.authLink}>Выйти</a>
-                    </Link>
+                    {isAuth ? (
+                        <Link href="/logout">
+                            <a className={styles.authLink}>Выйти</a>
+                        </Link>
+                    ) : (
+                        <>
+                            <Link href="/register">
+                                <a className={styles.authLink}>зареєструватися</a>
+                            </Link>
+                            <br/>
+                            <Link href="/login">
+                                <a className={styles.authLink}>Войти</a>
+                            </Link>
+                        </>
+                    )}
+
                 </div>
             </div>
         </nav>

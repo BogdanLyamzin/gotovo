@@ -6,8 +6,8 @@ export default class BaseHttpService {
     accessToken = null;
     refreshToken = null;
 
-    login = (data) => {
-
+    login = (credentials) => {
+        return axios.post('/auth/accounts/signin', credentials)
     }
 
     confirm = (credentials) => {

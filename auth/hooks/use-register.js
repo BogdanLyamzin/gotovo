@@ -25,7 +25,6 @@ const useRegister = () => {
     const {loading, confirmToken, dispatch} = useContext(AuthContext);
     const httpService = useMemo(() => new BaseHttpService(), [])
     const onCloseModal = () => dispatch(closeModal());
-
     const register = useCallback(async (data) => {
         dispatch(registerRequested())
         try {
