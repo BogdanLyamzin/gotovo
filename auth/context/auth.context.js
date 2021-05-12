@@ -1,16 +1,17 @@
 import {createContext, useReducer} from "react";
+import Cookies from 'js-cookie';
 import {
     CLEAR_CONFIRM_TOKEN,
     CONFIRM_FAILURE,
     CONFIRM_REQUEST,
-    CONFIRM_SUCCESS,
+    CONFIRM_SUCCESS, LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS,
     REGISTER_FAILURE,
     REGISTER_REQUEST,
     REGISTER_SUCCESS
 } from "../aut.constants";
 
 const initialState = {
-    accessToken: null,
+    accessToken: Cookies.get('accessToken') ?? null,
     confirmToken: null,
     loading: false,
     message: [],
@@ -63,6 +64,25 @@ const reducer = (state, {type, payload}) => {
             return {
                 ...state,
                 confirmToken: null,
+            }
+        case LOGIN_REQUEST:
+            return {
+                ...state,
+                loading: true,
+            }
+        case LOGIN_SUCCESS:
+            return {
+                ...state,
+                accessToken: payload.accessToken,
+                refreshToken: payload.refreshToken,
+                loading: false,
+                userInfo: payload.userInfo,
+            }
+
+        case LOGIN_FAILURE:
+            return {
+                ...state,
+                loading: false
             }
         default:
             return;
