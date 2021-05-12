@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import {Field, Form, Formik} from "formik";
 import axios from "axios";
 import Cookie from 'js-cookie'
+import useLogout from "../../auth/hooks/use-logout";
 
 const ProfileForm = () => {
     const [doc, setDoc] = useState('');
+    const logout = useLogout();
     const uploadDocument = (event) => {
         const data = new FormData()
         data.append('file', event.currentTarget.files[0]);
@@ -13,7 +15,7 @@ const ProfileForm = () => {
                 Authorization: `Bearer ${Cookie.get('accessToken')}`
             }
         }).then(res => {
-            Cookie.remove('accessToken')
+            logout()
             setDoc(res?.data?.fileName)
         })
     }
@@ -30,7 +32,7 @@ const ProfileForm = () => {
                 }
             });
         } catch (error) {
-            Cookie.remove('accessToken')
+            logout()
         }
     }
 
