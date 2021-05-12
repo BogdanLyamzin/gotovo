@@ -12,7 +12,7 @@ const loginSuccess = (payload) => ({
     type: LOGIN_SUCCESS,
     payload
 })
-const loginFailure = () => ({
+const loginFailure = (payload) => ({
     type: LOGIN_FAILURE,
     payload
 })

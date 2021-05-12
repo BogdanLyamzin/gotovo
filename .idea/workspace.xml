@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781e30b0-8f28-4b3e-8ba6-dddd8511667b" name="Default Changelist" comment="+++">
-      <change afterPath="$PROJECT_DIR$/auth/hooks/use-auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth/hooks/use-logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ProfileForm/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/aut.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/aut.constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/base-http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/base-http.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/context/auth.context.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/context/auth.context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/hooks/use-confirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/hooks/use-confirm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/hooks/use-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/hooks/use-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/hooks/use-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/hooks/use-register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LoginForm/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RegisterForm/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterForm/RegisterForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
       <list>
         <option value="SCSS File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -61,6 +58,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\yaros\Desktop\gotovo\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -101,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620853781034</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+++">
+      <created>1620857586849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620857586850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

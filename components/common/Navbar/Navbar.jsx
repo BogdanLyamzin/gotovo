@@ -6,10 +6,12 @@ import Logo from "../Logo";
 
 import styles from "./Navbar.module.scss";
 import useAuth from "../../../auth/hooks/use-auth";
+import useLogout from "../../../auth/hooks/use-logout";
 
 const Navbar = props => {
     const router = useRouter();
     const isAuth = useAuth()
+    const logout = useLogout();
     const {t} = useTranslation('common');
     const menuItems = t('menu', {returnObjects: true});
     const menuElements = menuItems?.map(({href, text}) => {
@@ -51,9 +53,9 @@ const Navbar = props => {
                 </div>
                 <div>
                     {isAuth ? (
-                        <Link href="/logout">
+                        <button onClick={logout}>
                             <a className={styles.authLink}>Выйти</a>
-                        </Link>
+                        </button>
                     ) : (
                         <>
                             <Link href="/register">
