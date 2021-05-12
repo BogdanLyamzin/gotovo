@@ -3,16 +3,17 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import Preview from "../components/Preview";
-import Layout from "../components/Layout";
+// import Preview from "../components/common/Preview";
+import Layout from "../components/common/Layout";
 
 function Home() {
   const router = useRouter()
   const { t } = useTranslation('main')
 
   return (
-      <Preview />
-      // <Layout title={t('title')}></Layout>
+      <Layout title={t('title')}>
+
+      </Layout>
   )
 }
 
