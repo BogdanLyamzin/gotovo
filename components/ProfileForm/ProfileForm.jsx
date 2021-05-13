@@ -3,9 +3,12 @@ import {ErrorMessage, Field, Form, Formik} from "formik";
 import axios from "axios";
 import Cookie from 'js-cookie'
 import useLogout from "../../auth/hooks/use-logout";
+import Modal from "../../shared/components";
+import {ModalContent} from "../../shared/components/Modal/Modal";
 
 const ProfileForm = () => {
     const [doc, setDoc] = useState('');
+    const [successOrder, setSuccessOrder] = useState(false);
     const logout = useLogout();
     const uploadDocument = (event) => {
         const data = new FormData()
@@ -34,6 +37,7 @@ const ProfileForm = () => {
                     Authorization: `Bearer ${Cookie.get('accessToken')}`
                 }
             });
+            setSuccessOrder(true)
         } catch (error) {
             if (error.status === 401) {
                 logout()
@@ -42,7 +46,8 @@ const ProfileForm = () => {
     }
 
     return (
-        <Formik initialValues={{
+        <>
+            {!successOrder && <Formik initialValues={{
             fullNameOfTheHusband: "",
             WifeSFullName: "",
             issuedBy: "",
@@ -59,29 +64,42 @@ const ProfileForm = () => {
             comment: "string",
         }} onSubmit={createOrder}>
             <Form>
-                <Field className="marriage-contacts-input" type="text" placeholder="Полное Имя Мужа" name="fullNameOfTheHusband"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Повне ім'я чоловіка" name="fullNameOfTheHusband"/>
                 <ErrorMessage className="form-error" component="p" name="fullNameOfTheHusband"/>
-                <Field className="marriage-contacts-input" type="text" placeholder="Полное Имя Жены" name="WifeSFullName"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Повне ім'я жінки" name="WifeSFullName"/>
                 <ErrorMessage className="form-error" component="p" name="WifeSFullName"/>
-                <Field className="marriage-contacts-input" type="text" placeholder="Кем выдан паспорт" name="issuedBy"/>
-                <Field className="marriage-contacts-input" type="text" placeholder="Паспорт" name="passport"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Ким виданий паспорт" name="issuedBy"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Номер паспорту" name="passport"/>
                 <Field className="marriage-contacts-input" type="tel" placeholder="Телефон" name="phone"/>
                 <Field className="marriage-contacts-input" type="email" placeholder="Email" name="email"/>
-                <Field className="marriage-contacts-input" type="text" placholder="Дата свадьбы" name="weddingDate"/>
+                <Field className="marriage-contacts-input" type="text" placholder="Бажана дата весілля у форматі дд.мм.рррр-гг-хв" name="weddingDate"/>
                 <ErrorMessage className="form-error" component="p" name="weddingDate"/>
-                <Field className="marriage-contacts-input" type="checkbox" placholder="Гражданин Украины ?" name="citizenOfUkraine"/>
-                <Field className="marriage-contacts-input" type="checkbox" placholder="Были ранее женаты ?" name="wasPreviouslyMarried"/>
-                <Field className="marriage-contacts-input" type="text" placholder="Дата рождения" name="dateOfBirth"/>
+                <label htmlFor="">
+                    Чоловік и жінка є громадянами України?
+                    <Field type="checkbox"  name="citizenOfUkraine"/>
+                </label>
+                <label htmlFor="">
+                    Чи був хто небудь із вас раніше одружений?
+                    <Field type="checkbox" name="wasPreviouslyMarried"/>
+                </label>
+
+                <Field className="marriage-contacts-input" type="text" placholder="Дата нарождення" name="dateOfBirth"/>
                 <Field name="plan" as="select"  className="marriage-contacts-input">
-                    <option value="BASIC">Базовый</option>
-                    <option value="STANDARD">Стандарный</option>
-                    <option value="PREMIUM">Премиум</option>
+                    <option value="BASIC">Базовий</option>
+                    <option value="STANDARD">Стандартний</option>
+                    <option value="PREMIUM">Преміум</option>
                 </Field>
-                <Field className="marriage-contacts-input" type="text" placeholder="Комментарий" name="comment"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Коментар" name="comment"/>
                 <input className="marriage-contacts-input" type="file" onChange={uploadDocument}/>
                 <button className="btn _dark _long" type="submit">Відправити заявку</button>
             </Form>
-        </Formik>
+        </Formik>}
+            <Modal open={successOrder} onClose={closeModal}>
+                <ModalContent>
+                    <h2 className="title">Ваша заява успішно відправлена. </h2>
+                </ModalContent>
+            </Modal>
+            </>
     );
 
 }
