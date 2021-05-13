@@ -26,7 +26,6 @@ const RegisterForm = () => {
                     <ErrorMessage className="form-error" component="p" name="fullName"/>
                     <Field className="marriage-contacts-input" name="password" placeholder="Password*" type="password"/>
                     <ErrorMessage className="form-error" component="p" name="password"/>
-                    <input className="marriage-contacts-input" type="file"  placeholder="Password*" />
                     <button className="btn _dark _long" type="submit">Зараєструватися</button>
                 </Form>
             </Formik>
