@@ -16,6 +16,10 @@ const ProfileForm = () => {
             }
         }).then(res => {
             setDoc(res?.data?.fileName)
+        }).catch(error => {
+            if (error.status === 401) {
+                logout()
+            }
         })
     }
 
@@ -31,7 +35,9 @@ const ProfileForm = () => {
                 }
             });
         } catch (error) {
-            logout()
+            if (error.status === 401) {
+                logout()
+            }
         }
     }
 
@@ -54,15 +60,15 @@ const ProfileForm = () => {
         }} onSubmit={createOrder}>
             <Form>
                 <Field type="text" placeholder="Полное Имя Мужа" name="fullNameOfTheHusband"/>
-                <ErrorMessage name="fullNameOfTheHusband" />
+                <ErrorMessage name="fullNameOfTheHusband"/>
                 <Field type="text" placeholder="Полное Имя Жены" name="WifeSFullName"/>
-                <ErrorMessage name="WifeSFullName" />
+                <ErrorMessage name="WifeSFullName"/>
                 <Field type="text" placeholder="Кем выдан паспорт" name="issuedBy"/>
                 <Field type="text" placeholder="Паспорт" name="passport"/>
                 <Field type="tel" placeholder="Телефон" name="phone"/>
                 <Field type="email" placeholder="Email" name="email"/>
                 <Field type="text" placholder="Дата свадьбы" name="weddingDate"/>
-                <ErrorMessage name="weddingDate" />
+                <ErrorMessage name="weddingDate"/>
                 <Field type="checkbox" placholder="Гражданин Украины ?" name="citizenOfUkraine"/>
                 <Field type="checkbox" placholder="Были ранее женаты ?" name="wasPreviouslyMarried"/>
                 <Field type="text" placholder="Дата рождения" name="dateOfBirth"/>
