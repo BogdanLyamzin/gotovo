@@ -7,19 +7,21 @@ import Logo from "../Logo";
 import {allLangs} from "./allLangs"
 
 import styles from "./Navbar.module.scss";
+import useAuth from "../../../auth/hooks/use-auth";
+import useLogout from "../../../auth/hooks/use-logout";
 
-const Navbar = () => {
-    const router = useRouter()
-
-    const {t} = useTranslation('navbar');
-
+const Navbar = props => {
+    const router = useRouter();
+    const isAuth = useAuth()
+    const logout = useLogout();
+    const {t} = useTranslation('common');
     const menuItems = t('menu', {returnObjects: true});
-    const menuElements = menuItems.map(({href, text}) => {
+    const menuElements = menuItems?.map(({href, text}) => {
         return <li className={styles.menuItem}>
-                    <Link href={href} locale={router.locale}>
-                        <a className={styles.menuLink}>{text}</a>
-                    </Link>
-               </li>
+            <Link href={href} locale={router.locale}>
+                <a className={styles.menuLink}>{text}</a>
+            </Link>
+        </li>
     })
     const langs = allLangs[router.locale];
 
@@ -29,6 +31,18 @@ const Navbar = () => {
                 <Logo type="main"/>
                 <ul className={styles.menu}>
                     {menuElements}
+                    {/*<li className={styles.menuItem}>*/}
+                    {/*    <a href="#" className={styles.menuLink}>Про центр</a>*/}
+                    {/*</li>*/}
+                    {/*<li className="nav-menu-item">*/}
+                    {/*    <a href="./marriage.html" className="nav-menu-link">Послуги</a>*/}
+                    {/*</li>*/}
+                    {/*<li className="nav-menu-item">*/}
+                    {/*    <a href="#" className="nav-menu-link">Контакти</a>*/}
+                    {/*</li>*/}
+                    {/*<li className="nav-menu-item">*/}
+                    {/*    <a href="#" className="nav-menu-link">Блог</a>*/}
+                    {/*</li>*/}
                 </ul>
                 <div className={styles["nav-buttons"]}>
                     <a href="tel:0800300803" className={styles["nav-tel"]}>0 800 300 803</a>
@@ -47,17 +61,22 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div>
-                    <Link href="/register">
-                        <a className={styles.authLink}>зареєструватися</a>
-                    </Link>
-                    <br />
-                    <Link href="/login">
-                        <a className={styles.authLink}>Войти</a>
-                    </Link>
-                    <br />
-                    <Link href="/logout" >
-                        <a className={styles.authLink}>Выйти</a>
-                    </Link>
+                    {isAuth ? (
+                        <button onClick={logout}>
+                            <a className={styles.authLink}>Выйти</a>
+                        </button>
+                    ) : (
+                        <>
+                            <Link href="/register">
+                                <a className={styles.authLink}>зареєструватися</a>
+                            </Link>
+                            <br/>
+                            <Link href="/login">
+                                <a className={styles.authLink}>Войти</a>
+                            </Link>
+                        </>
+                    )}
+
                 </div>
             </div>
         </nav>
