@@ -15,7 +15,6 @@ const ProfileForm = () => {
                 Authorization: `Bearer ${Cookie.get('accessToken')}`
             }
         }).then(res => {
-            logout()
             setDoc(res?.data?.fileName)
         })
     }
