@@ -9,7 +9,6 @@ import Layout from "../components/common/Layout";
 function Home() {
   const router = useRouter()
   const { t } = useTranslation('main')
-
   return (
       <Layout title={t('title')}>
 
@@ -19,7 +18,7 @@ function Home() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common', 'main']),
+    ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
   },
 })
 

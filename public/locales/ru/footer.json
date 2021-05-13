@@ -1,3 +1,25 @@
 {
-  "description": "Подвал сайта"
+  "about-title": "Про центр",
+  "about": [
+    {
+      "href": "/about-us/index",
+      "text": "Про \"Готово!\""
+    },
+    {
+      "href": "/about-us/idea",
+      "text": "Идея возникновения"
+    },
+    {
+      "href": "/about-us/building",
+      "text": "Строительство"
+    },
+    {
+      "href": "/about-us/perevagu",
+      "text": "Преимущества"
+    },
+    {
+      "href": "/about-us/clients",
+      "text": "Обслуживание"
+    }
+  ]
 }

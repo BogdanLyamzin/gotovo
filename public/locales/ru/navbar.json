@@ -1,0 +1,21 @@
+{
+  "menu": [
+    {
+      "href": "/about/index",
+      "text": "Про центр"
+    },
+    {
+      "href": "/wedding-for-day",
+      "text": "Брак за сутки"
+    },
+    {
+      "href": "/contacts",
+      "text": "Контакты"
+    }
+  ],
+  "auth": {
+    "register": "Регистрация",
+    "login": "Вход",
+    "logout": "Выйти"
+  }
+}

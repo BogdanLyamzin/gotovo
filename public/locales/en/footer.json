@@ -1,3 +1,25 @@
 {
-  "description": "This is a non-page component that requires its own namespace"
+  "about-title": "About center",
+  "about": [
+    {
+      "href": "/about-us/index",
+      "text": "About \"GOTOVO!\""
+    },
+    {
+      "href": "/about-us/idea",
+      "text": "The idea to establish"
+    },
+    {
+      "href": "/about-us/building",
+      "text": "Constraction history"
+    },
+    {
+      "href": "/about-us/perevagu",
+      "text": "Advantages"
+    },
+    {
+      "href": "/about-us/clients",
+      "text": "Service"
+    }
+  ]
 }
