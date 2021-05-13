@@ -14,8 +14,9 @@ const Navbar = props => {
     const router = useRouter();
     const isAuth = useAuth()
     const logout = useLogout();
-    const {t} = useTranslation('common');
+    const {t} = useTranslation('navbar');
     const menuItems = t('menu', {returnObjects: true});
+
     const menuElements = menuItems?.map(({href, text}) => {
         return <li className={styles.menuItem}>
             <Link href={href} locale={router.locale}>
@@ -23,6 +24,9 @@ const Navbar = props => {
             </Link>
         </li>
     })
+
+    const auth = t('auth', {returnObjects: true});
+
     const langs = allLangs[router.locale];
 
     return (
@@ -31,18 +35,6 @@ const Navbar = props => {
                 <Logo type="main"/>
                 <ul className={styles.menu}>
                     {menuElements}
-                    {/*<li className={styles.menuItem}>*/}
-                    {/*    <a href="#" className={styles.menuLink}>Про центр</a>*/}
-                    {/*</li>*/}
-                    {/*<li className="nav-menu-item">*/}
-                    {/*    <a href="./marriage.html" className="nav-menu-link">Послуги</a>*/}
-                    {/*</li>*/}
-                    {/*<li className="nav-menu-item">*/}
-                    {/*    <a href="#" className="nav-menu-link">Контакти</a>*/}
-                    {/*</li>*/}
-                    {/*<li className="nav-menu-item">*/}
-                    {/*    <a href="#" className="nav-menu-link">Блог</a>*/}
-                    {/*</li>*/}
                 </ul>
                 <div className={styles["nav-buttons"]}>
                     <a href="tel:0800300803" className={styles["nav-tel"]}>0 800 300 803</a>
@@ -55,24 +47,22 @@ const Navbar = props => {
                             <Link href={router.route} locale={langs.second.locale}>
                                 <li className={styles["nav-lang-item"]}>{langs.second.text}</li>
                             </Link>
-                            {/*<li className={styles["nav-lang-item"]}>РУС</li>*/}
-                            {/*<li className={styles["nav-lang-item"]}>ENG</li>*/}
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div className={styles.authLinks}>
                     {isAuth ? (
                         <button onClick={logout}>
-                            <a className={styles.authLink}>Выйти</a>
+                            <a className={styles.authLink}>{auth.logout}</a>
                         </button>
                     ) : (
                         <>
                             <Link href="/register">
-                                <a className={styles.authLink}>зареєструватися</a>
+                                <a className={styles.authLink}>{auth.register}</a>
                             </Link>
-                            <br/>
+                            /
                             <Link href="/login">
-                                <a className={styles.authLink}>Войти</a>
+                                <a className={styles.authLink}>{auth.login}</a>
                             </Link>
                         </>
                     )}

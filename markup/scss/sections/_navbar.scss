@@ -33,7 +33,7 @@
                 transition: 0.4s;
             }
 
-            &:hover::before {
+            &:hover::before, &.selected::before {
                 width: 100%;
             }
         }

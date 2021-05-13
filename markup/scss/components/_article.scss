@@ -1,6 +1,9 @@
 .article {
     position: relative;
-    max-width: 50%;
+
+    &._half {
+        max-width: 50%;
+    }
 
     &-heading {
         font-size: 30px;

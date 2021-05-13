@@ -1,6 +1,6 @@
 {
   "about-title": "About center",
-  "about": [
+  "about-menu": [
     {
       "href": "/about-us/index",
       "text": "About \"GOTOVO!\""
@@ -20,6 +20,13 @@
     {
       "href": "/about-us/clients",
       "text": "Service"
+    }
+  ],
+  "contacts-title": "Contacts",
+  "contacts-menu": [
+    {
+      "href": "/contacts",
+      "text": "Contacts"
     }
   ]
 }

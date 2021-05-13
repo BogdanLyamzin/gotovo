@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "href": "/about/index",
+      "href": "/about-us/about-us",
       "text": "Про центр"
     },
     {
@@ -14,8 +14,8 @@
     }
   ],
   "auth": {
-    "register": "Register",
-    "login": "Login",
-    "logout": "Logout"
+    "register": "Реєстрація",
+    "login": "Вхід",
+    "logout": "Вийти"
   }
 }

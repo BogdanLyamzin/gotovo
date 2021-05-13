@@ -1,3 +1,44 @@
-@import 'reset';
-@import 'variables';
-@import 'body';
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "reset";
+@import "body";
+@import "sections/sections";
+@import "components/components";
+
+.register-form-main {
+  position: relative;
+  padding: 40px 0;
+}
+
+.register-form-container {
+  width: 400px;
+  text-align: center;
+}
+
+.register-form-img {
+  top: 80px;
+}
+
+login-form-img {
+  width: 450px;
+}
+
+.form-error {
+  color: #FE5656;
+  text-align: left;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+  top: -10px;
+}
+
+.modal-close-button {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+

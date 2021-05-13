@@ -1,6 +1,6 @@
 {
   "about-title": "Про центр",
-  "about": [
+  "about-menu": [
     {
       "href": "/about-us/index",
       "text": "Про \"Готово!\""
@@ -20,6 +20,13 @@
     {
       "href": "/about-us/clients",
       "text": "Обслуговування"
+    }
+  ],
+  "contacts-title": "Контакти",
+  "contacts-menu": [
+    {
+      "href": "/contacts",
+      "text": "Контакти"
     }
   ]
 }

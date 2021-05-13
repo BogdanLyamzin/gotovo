@@ -1,0 +1,31 @@
+.service-cost {
+    background-color: $bg-light;
+    padding: 80px 0;
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 50px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 220px;
+        text-align: center;
+        padding: 20px 0 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 10px 30px 0px #7955481A;
+
+        &-text {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: .02em;
+            margin-bottom: 25px;
+        }
+    }
+}

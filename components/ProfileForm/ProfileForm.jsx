@@ -59,27 +59,27 @@ const ProfileForm = () => {
             comment: "string",
         }} onSubmit={createOrder}>
             <Form>
-                <Field type="text" placeholder="Полное Имя Мужа" name="fullNameOfTheHusband"/>
-                <ErrorMessage name="fullNameOfTheHusband"/>
-                <Field type="text" placeholder="Полное Имя Жены" name="WifeSFullName"/>
-                <ErrorMessage name="WifeSFullName"/>
-                <Field type="text" placeholder="Кем выдан паспорт" name="issuedBy"/>
-                <Field type="text" placeholder="Паспорт" name="passport"/>
-                <Field type="tel" placeholder="Телефон" name="phone"/>
-                <Field type="email" placeholder="Email" name="email"/>
-                <Field type="text" placholder="Дата свадьбы" name="weddingDate"/>
-                <ErrorMessage name="weddingDate"/>
-                <Field type="checkbox" placholder="Гражданин Украины ?" name="citizenOfUkraine"/>
-                <Field type="checkbox" placholder="Были ранее женаты ?" name="wasPreviouslyMarried"/>
-                <Field type="text" placholder="Дата рождения" name="dateOfBirth"/>
-                <Field name="plan" as="select">
+                <Field className="marriage-contacts-input" type="text" placeholder="Полное Имя Мужа" name="fullNameOfTheHusband"/>
+                <ErrorMessage className="form-error" component="p" name="fullNameOfTheHusband"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Полное Имя Жены" name="WifeSFullName"/>
+                <ErrorMessage className="form-error" component="p" name="WifeSFullName"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Кем выдан паспорт" name="issuedBy"/>
+                <Field className="marriage-contacts-input" type="text" placeholder="Паспорт" name="passport"/>
+                <Field className="marriage-contacts-input" type="tel" placeholder="Телефон" name="phone"/>
+                <Field className="marriage-contacts-input" type="email" placeholder="Email" name="email"/>
+                <Field className="marriage-contacts-input" type="text" placholder="Дата свадьбы" name="weddingDate"/>
+                <ErrorMessage className="form-error" component="p" name="weddingDate"/>
+                <Field className="marriage-contacts-input" type="checkbox" placholder="Гражданин Украины ?" name="citizenOfUkraine"/>
+                <Field className="marriage-contacts-input" type="checkbox" placholder="Были ранее женаты ?" name="wasPreviouslyMarried"/>
+                <Field className="marriage-contacts-input" type="text" placholder="Дата рождения" name="dateOfBirth"/>
+                <Field name="plan" as="select"  className="marriage-contacts-input">
                     <option value="BASIC">Базовый</option>
                     <option value="STANDARD">Стандарный</option>
                     <option value="PREMIUM">Премиум</option>
                 </Field>
-                <Field type="text" placeholder="Комментарий" name="comment"/>
-                <input type="file" onChange={uploadDocument}/>
-                <button type="submit">Отправить</button>
+                <Field className="marriage-contacts-input" type="text" placeholder="Комментарий" name="comment"/>
+                <input className="marriage-contacts-input" type="file" onChange={uploadDocument}/>
+                <button className="btn _dark _long" type="submit">Відправити заявку</button>
             </Form>
         </Formik>
     );

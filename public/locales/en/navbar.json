@@ -1,16 +1,16 @@
 {
   "menu": [
     {
-      "href": "/about/index",
+      "href": "/about-us/about-us",
       "text": "About center"
     },
     {
       "href": "/wedding-for-day",
-      "text": "Брак за сутки"
+      "text": "Marriage within 24 Hours"
     },
     {
       "href": "/contacts",
-      "text": "Контакты"
+      "text": "Contacts"
     }
   ],
   "auth": {

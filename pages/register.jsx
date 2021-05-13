@@ -13,14 +13,22 @@ const Register = () => {
     }
     return (
         <Layout title="reg">
-            <RegisterForm/>
+            <section className="register-form-main">
+                <div className="container">
+                    <div className="register-form-container">
+                        <h2 className="title">Створити Акаунт</h2>
+                        <RegisterForm/>
+                    </div>
+                </div>
+                <img className="header-img register-form-img" src="/img/passport.png" alt="" />
+            </section>
         </Layout>
     );
 };
 
-export const getStaticProps = async ({locale}) => ({
+export const getStaticProps = async ({ locale }) => ({
     props: {
-        ...await serverSideTranslations(locale, ['common', 'main']),
+        ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
     },
 })
 

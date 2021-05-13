@@ -18,15 +18,16 @@ const RegisterForm = () => {
                 password: '',
             }} validationSchema={signUpSchema} onSubmit={register}>
                 <Form>
-                    <Field name="email" placeholder="Email*" type="email"/>
-                    <ErrorMessage name="email"/>
-                    <Field name="phone" placeholder="Phone*" type="tel"/>
-                    <ErrorMessage name="phone"/>
-                    <Field name="fullName" placeholder="FullName*" type="text"/>
-                    <ErrorMessage name="fullName"/>
-                    <Field name="password" placeholder="Password*" type="password"/>
-                    <ErrorMessage name="password"/>
-                    <button type="submit">Register</button>
+                    <Field className="marriage-contacts-input" name="email" placeholder="Email*" type="email"/>
+                    <ErrorMessage className="form-error" component="p" name="email"/>
+                    <Field className="marriage-contacts-input" name="phone" placeholder="Phone*" type="tel"/>
+                    <ErrorMessage className="form-error" component="p" name="phone"/>
+                    <Field className="marriage-contacts-input" name="fullName" placeholder="FullName*" type="text"/>
+                    <ErrorMessage className="form-error" component="p" name="fullName"/>
+                    <Field className="marriage-contacts-input" name="password" placeholder="Password*" type="password"/>
+                    <ErrorMessage className="form-error" component="p" name="password"/>
+                    <input className="marriage-contacts-input" type="file"  placeholder="Password*" />
+                    <button className="btn _dark _long" type="submit">Зараєструватися</button>
                 </Form>
             </Formik>
 
@@ -37,8 +38,8 @@ const RegisterForm = () => {
                         verificationCode: '',
                     }} onSubmit={confirm}>
                         <Form>
-                            <Field name="verificationCode" type="text"/>
-                            <button type="submit">Submit</button>
+                            <Field name="verificationCode" type="text" className="marriage-contacts-input" placeholder="Код із листа" />
+                            <button className="btn _dark _long" type="submit">Підтвердити</button>
                         </Form>
                     </Formik>
                 </ModalContent>

@@ -11,14 +11,17 @@
 </head>
 <body>
 
-    @@include('../templates/sections/navbar.html')
+    @@include('../templates/sections/navbar.html', {
+        "selected": "services"
+    })
     @@include('../templates/sections/marriage-header.html')
+    @@include('../templates/sections/marriage-registration.html')
+    @@include('../templates/sections/marriage-gallery.html')
+    @@include('../templates/sections/marriage-documents.html')
     @@include('../templates/sections/service-cost.html')
-    <!-- @@include('../templates/sections/services.html')
-    @@include('../templates/sections/navigate.html')
-    @@include('../templates/sections/partners.html')
-    @@include('../templates/sections/contacts.html') -->
-    @@include('../templates/sections/footer.html') -->
+    @@include('../templates/sections/marriage-contacts.html')
+    @@include('../templates/sections/write-about-us.html')
+    @@include('../templates/sections/footer.html')
 
 </body>
 </html>

@@ -2,7 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10eae697-0597-4e60-a19a-b96e75dacf7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AboutUsPage/AboutUsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AboutUsPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ContactsPage/ContactsPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ContactsPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MainPage/MainPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MainPage/header-img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MainPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/WeddingPage/Wedding.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/WeddingPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/about-us/about-us.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/passport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LoginForm/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginForm/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProfileForm/ProfileForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/RegisterForm/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterForm/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Footer/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/Navbar/Navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Navbar/Navbar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/pages/marriage.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/pages/marriage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/marriage-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/marriage-header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/navigate.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/navigate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/our-target.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/our-target.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/partners.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/partners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/html/templates/sections/service-cost.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/html/templates/sections/service-cost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/_body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/_body.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/components/_article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/components/_article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/components/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/components/_components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/components/_title.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/components/_title.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/sections/_contacts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/sections/_contacts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/sections/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/sections/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/sections/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/sections/_navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/sections/_partners.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/sections/_partners.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markup/scss/sections/_sections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/markup/scss/sections/_sections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contacts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wedding-for-day.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wedding-for-day.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/map.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/map.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/ornament.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/ornament.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/footer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/navbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/navbar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ru/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/footer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ru/navbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/navbar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ua/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/footer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ua/navbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/navbar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/components/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/components/Modal/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/components/Modal/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/shared/components/Modal/Modal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_body.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +69,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="CSS File" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -33,18 +90,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GoIT\gotovo\public\img" />
+      <recent name="C:\GoIT\gotovo\components\MainPage" />
       <recent name="C:\GoIT\gotovo\public\locales\en" />
       <recent name="C:\GoIT\gotovo\public\locales\ru" />
       <recent name="C:\GoIT\gotovo\components\Logo" />
-      <recent name="C:\GoIT\gotovo\public" />
-      <recent name="C:\GoIT\gotovo\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GoIT\gotovo\components\common" />
@@ -70,6 +127,7 @@
       <workItem from="1620848067609" duration="52000" />
       <workItem from="1620848969076" duration="6561000" />
       <workItem from="1620860681094" duration="5804000" />
+      <workItem from="1620897338770" duration="3004000" />
     </task>
     <servers />
   </component>
@@ -87,5 +145,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/shared/components/Modal/Modal.jsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
