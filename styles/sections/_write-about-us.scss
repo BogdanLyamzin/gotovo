@@ -1,0 +1,26 @@
+.write-about-us {
+    padding: 60px 0 135px;
+    background-color: $bg-light;
+
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(4, 160px);
+        justify-content: center;
+        grid-column-gap: 30px;
+    }
+
+    &-item {
+        height: 110px;
+        padding: 10px;
+        border-radius: 7px;
+        box-shadow: 0 5px 30px 7px #7955481a;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-img {
+        width: 98px;
+        height: 88px;
+    }
+}

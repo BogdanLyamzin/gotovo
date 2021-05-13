@@ -12,9 +12,9 @@ const LoginForm = () => {
             password: ''
         }} validationSchema={signInSchema} onSubmit={login}>
             <Form>
-                <Field name="email" type="email"/>
-                <Field name="password" type="password"/>
-                <button type="submit">Submit</button>
+                <Field className="marriage-contacts-input" name="email" type="email"/>
+                <Field className="marriage-contacts-input" name="password" type="password"/>
+                <button className="btn _dark _long" type="submit">Увійти</button>
             </Form>
         </Formik>
     );

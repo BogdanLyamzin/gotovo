@@ -55,7 +55,7 @@ const Modal = ({ children, open, onClose }) => {
               <button
                 onClick={() => onClose()}
                 aria-label="Close panel"
-                className="hover:text-gray-500 transition ease-in-out duration-150 focus:outline-none absolute right-0 top-0 m-3"
+                className="hover:text-gray-500 transition ease-in-out duration-150 focus:outline-none absolute right-0 top-0 m-3 modal-close-button"
               >
                 <svg
                   width="25"

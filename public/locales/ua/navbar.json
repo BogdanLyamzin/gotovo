@@ -1,0 +1,21 @@
+{
+  "menu": [
+    {
+      "href": "/about-us/about-us",
+      "text": "Про центр"
+    },
+    {
+      "href": "/wedding-for-day",
+      "text": "Шлюб за добу"
+    },
+    {
+      "href": "/contacts",
+      "text": "Контакти"
+    }
+  ],
+  "auth": {
+    "register": "Реєстрація",
+    "login": "Вхід",
+    "logout": "Вийти"
+  }
+}
