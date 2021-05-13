@@ -9,7 +9,7 @@ const Login = () => {
     const isAuth = useAuth();
     const router = useRouter();
     if (isAuth) {
-        router.push('/')
+        router.push('/profile')
     }
     return (
         <Layout title="login">
