@@ -73,15 +73,18 @@ const ProfileForm = () => {
                 <Field className="marriage-contacts-input" type="email" placeholder="Email" name="email"/>
                 <Field className="marriage-contacts-input" type="text" placholder="Бажана дата весілля у форматі дд.мм.рррр-гг-хв" name="weddingDate"/>
                 <ErrorMessage className="form-error" component="p" name="weddingDate"/>
-                <label htmlFor="">
-                    Чоловік и жінка є громадянами України?
-                    <Field type="checkbox"  name="citizenOfUkraine"/>
-                </label>
-                <label htmlFor="">
-                    Чи був хто небудь із вас раніше одружений?
-                    <Field type="checkbox" name="wasPreviouslyMarried"/>
-                </label>
-
+                <div>
+                    <label htmlFor="">
+                        Чоловік и жінка є громадянами України?
+                        <Field type="checkbox"  name="citizenOfUkraine"/>
+                    </label>
+                </div>
+                <div>
+                    <label htmlFor="">
+                        Чи був хто небудь із вас раніше одружений?
+                        <Field type="checkbox" name="wasPreviouslyMarried"/>
+                    </label>
+                </div>
                 <Field className="marriage-contacts-input" type="text" placholder="Дата нарождення" name="dateOfBirth"/>
                 <Field name="plan" as="select"  className="marriage-contacts-input">
                     <option value="BASIC">Базовий</option>
