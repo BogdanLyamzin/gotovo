@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10eae697-0597-4e60-a19a-b96e75dacf7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/common/Navbar/allLangs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/en/navbar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/ru/navbar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/ua/navbar.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/Layout/Layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Layout/Layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/footer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/ru/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/ru/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/footer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/ua/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/ua/footer.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ua/footer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +69,7 @@
       <workItem from="1620842948316" duration="45000" />
       <workItem from="1620848067609" duration="52000" />
       <workItem from="1620848969076" duration="6561000" />
-      <workItem from="1620860681094" duration="5261000" />
+      <workItem from="1620860681094" duration="5804000" />
     </task>
     <servers />
   </component>
