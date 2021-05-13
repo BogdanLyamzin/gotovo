@@ -93,7 +93,7 @@ const ProfileForm = () => {
                 <button className="btn _dark _long" type="submit">Відправити заявку</button>
             </Form>
         </Formik>}
-            <Modal open={successOrder} onClose={closeModal}>
+            <Modal open={successOrder}>
                 <ModalContent>
                     <h2 className="title">Ваша заява успішно відправлена. </h2>
                 </ModalContent>
