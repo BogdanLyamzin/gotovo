@@ -3,7 +3,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../components/common/Layout";
 import ProfileForm from "../components/ProfileForm";
 
-
 const Profile = () => {
   return (
     <Layout title="Profile">

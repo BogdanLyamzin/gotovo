@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 
 const CalendarForm = dynamic(() => import("../FullCalendar/FullCalendar"), {
   ssr: false,
-  loading: () => <p>...</p>,
+  loading: () => <p>Loading...</p>,
 });
 
 const ProfileForm = () => {

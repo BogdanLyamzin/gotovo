@@ -9,6 +9,11 @@ const FullCalendarTest = () => {
     <ModalContent>
       <FullCalendar
         locale="uk"
+        selectable
+        dayCount
+        select={(info) => {
+          console.log(info);
+        }}
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
       />
