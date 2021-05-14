@@ -21,7 +21,7 @@ import {
 } from "../aut.constants";
 
 const initialState = {
-  accessToken: (Cookies && Cookies.get("accessToken")) || null,
+  accessToken: Cookies.get("accessToken") ?? null,
   confirmToken: null,
   loading: false,
   message: [],
@@ -111,28 +111,8 @@ const reducer = (state, { type, payload }) => {
 
 const AuthContext = createContext(initialState);
 
-const setTokenAction = (payload) => ({
-  type: SET_TOKEN,
-  payload,
-});
-
 const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  const setToken = useCallback(
-    (token) => dispatch(setTokenAction(token)),
-    [dispatch]
-  );
-
-  useEffect(() => {
-    if (Cookies.get("accessToken")) {
-      setToken(Cookies.get("accessToken"));
-    }
-  }, []);
-
-  useEffect(() => {
-    Cookies.set("accessToken", state.accessToken);
-  }, [state.accessToken]);
 
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>

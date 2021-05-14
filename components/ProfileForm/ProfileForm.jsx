@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
 import Cookie from "js-cookie";
@@ -18,6 +18,8 @@ const ProfileForm = () => {
   const [successOrder, setSuccessOrder] = useState(false);
   const [openCalendar, setOpenCalendar] = useState();
   const logout = useLogout();
+
+
 
   const uploadDocument = (event) => {
     const data = new FormData();
@@ -68,11 +70,7 @@ const ProfileForm = () => {
             status: "NEW",
             phone: "",
             email: "",
-            weddingDate: {
-              title: "",
-              date: "",
-              id: "",
-            },
+            weddingDate: '',
             doc,
             citizenOfUkraine: true,
             wasPreviouslyMarried: true,

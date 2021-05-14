@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ModalContent } from "../../shared/components/Modal/Modal";
 
 import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import axios from "axios";
 
 const FullCalendarTest = ({ setFieldValue, value }) => {
+  const [events, setEvents] = useState([]);
   const handleDateClick = (arg) =>
-    setFieldValue("weddingDate", { date: arg.dateStr });
+    setFieldValue("weddingDate", arg.dateStr );
+
+  const fetchData = useCallback(async () => {
+    try {
+      const { data } = await axios.get(
+        `https://cmusy-dev.space/api/v1/weddings`
+      );
+      setEvents(data);
+    } catch (error) {
+      setEvents([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
     <ModalContent>
       <FullCalendar
@@ -21,7 +39,7 @@ const FullCalendarTest = ({ setFieldValue, value }) => {
           minute: "2-digit",
           meridiem: false,
         }}
-        events={[value]}
+        events={[...events, { date: value }]}
         plugins={[timeGridPlugin, interactionPlugin]}
         initialView="timeGrid"
       />
