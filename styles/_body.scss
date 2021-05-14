@@ -1,9 +1,16 @@
 body {
-    font-family: 'Exo 2', sans-serif;
-    color: $text-color;
+  font-family: 'Exo 2', sans-serif;
+  color: $text-color;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .container {
-    max-width: 1120px;
-    margin: 0 auto;
+  max-width: 1120px;
+  margin: 0 auto;
 }

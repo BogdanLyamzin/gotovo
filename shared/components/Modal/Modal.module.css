@@ -38,6 +38,11 @@
     0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
 
+.modalFullSize {
+    max-width: 100vh !important;
+    width: 100vh !important;
+}
+
 .modal__content {
     padding: 50px 30px 30px 30px;
 
