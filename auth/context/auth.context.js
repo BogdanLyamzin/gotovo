@@ -1,4 +1,9 @@
-import React, { createContext, useReducer } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useEffect,
+  useReducer,
+} from "react";
 import Cookies from "js-cookie";
 import {
   CLEAR_CONFIRM_TOKEN,
@@ -12,6 +17,7 @@ import {
   REGISTER_FAILURE,
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
+  SET_TOKEN,
 } from "../aut.constants";
 
 const initialState = {
@@ -44,6 +50,11 @@ const reducer = (state, { type, payload }) => {
       return {
         ...state,
         loading: false,
+      };
+    case SET_TOKEN:
+      return {
+        ...state,
+        accessToken: payload,
       };
     case CONFIRM_REQUEST:
       return {
@@ -100,8 +111,29 @@ const reducer = (state, { type, payload }) => {
 
 const AuthContext = createContext(initialState);
 
+const setTokenAction = (payload) => ({
+  type: SET_TOKEN,
+  payload,
+});
+
 const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  const setToken = useCallback(
+    (token) => dispatch(setTokenAction(token)),
+    [dispatch]
+  );
+
+  useEffect(() => {
+    if (Cookies.get("accessToken")) {
+      setToken(Cookies.get("accessToken"));
+    }
+  }, []);
+
+  useEffect(() => {
+    Cookies.set("accessToken", state.accessToken);
+  }, [state.accessToken]);
+
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>
       {children}
@@ -109,7 +141,4 @@ const AuthProvider = ({ children }) => {
   );
 };
 
-export {
-    AuthContext,
-    AuthProvider
-}
+export { AuthContext, AuthProvider };

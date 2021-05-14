@@ -4,10 +4,11 @@ const { i18n } = require("./next-i18next.config");
 //   i18n,
 // };
 
-const withTM = require('next-transpile-modules')([
-  '@fullcalendar/common',
-  '@fullcalendar/react',
-  '@fullcalendar/daygrid'
+const withTM = require("next-transpile-modules")([
+  "@fullcalendar/common",
+  "@fullcalendar/react",
+  "@fullcalendar/daygrid",
+  "@fullcalendar/timegrid",
 ]);
 
 module.exports = withTM({

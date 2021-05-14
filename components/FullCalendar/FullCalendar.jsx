@@ -2,20 +2,28 @@ import React from "react";
 import { ModalContent } from "../../shared/components/Modal/Modal";
 
 import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+// import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import timeGridPlugin from "@fullcalendar/timegrid";
 
-const FullCalendarTest = () => {
+const FullCalendarTest = ({ setFieldValue, value }) => {
+  const handleDateClick = (arg) =>
+    setFieldValue("weddingDate", { date: arg.dateStr });
   return (
     <ModalContent>
       <FullCalendar
         locale="uk"
         selectable
         dayCount
-        select={(info) => {
-          console.log(info);
+        dateClick={handleDateClick}
+        eventTimeFormat={{
+          hour: "numeric",
+          minute: "2-digit",
+          meridiem: false,
         }}
-        plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
+        events={[value]}
+        plugins={[timeGridPlugin, interactionPlugin]}
+        initialView="timeGrid"
       />
     </ModalContent>
   );
