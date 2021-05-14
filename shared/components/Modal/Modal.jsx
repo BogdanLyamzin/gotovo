@@ -5,6 +5,8 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
+import css from 'classnames';
+
 import classes from "./Modal.module.css";
 import { CSSTransition } from "react-transition-group";
 import animate from "./Modal-Animate.module.css";
@@ -13,7 +15,7 @@ export const ModalContent = ({ children }) => {
   return <div className={classes.modal__content}>{children}</div>;
 };
 
-const Modal = ({ children, open, onClose }) => {
+const Modal = ({ children, open, onClose, fullSize }) => {
   const ref = useRef();
 
   const handleKey = useCallback(
@@ -51,7 +53,9 @@ const Modal = ({ children, open, onClose }) => {
             onClick={() => onClose()}
           />
           <div className={classes.dialog__container}>
-            <div role="dialog" ref={ref} className={classes.modal}>
+            <div role="dialog" ref={ref} className={css(classes.modal, {
+              [classes.modalFullSize]: fullSize,
+            })}>
               <button
                 onClick={() => onClose()}
                 aria-label="Close panel"
