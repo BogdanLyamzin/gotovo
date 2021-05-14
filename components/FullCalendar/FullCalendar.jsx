@@ -17,7 +17,9 @@ const FullCalendarTest = ({ setFieldValue, value }) => {
       const { data } = await axios.get(
         `https://cmusy-dev.space/api/v1/weddings`
       );
-      setEvents(data);
+      setEvents(
+        data.map(({ date }) => ({ date, title: 'Зайнято' }))
+      );
     } catch (error) {
       setEvents([]);
     }
