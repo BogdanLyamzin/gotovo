@@ -1,0 +1,41 @@
+.our-target {
+    position: relative;
+    padding-bottom: 170px;
+    background-color: $bg-light;
+
+    &-content {
+        position: relative;
+    }
+
+    .article {
+        margin-bottom: 100px;
+    }
+
+    &-map {
+        position: absolute;
+        right: 40px;
+        bottom: 0;
+
+        &-text {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            grid-gap: 20px;
+
+            &-bold {
+                font-size: 28px;
+                font-weight: 700;
+                justify-self: center;
+            }
+
+            &-thin {
+                font-size: 14px;
+                font-weight: 500;
+                justify-self: center;
+            }
+        }
+    }
+}

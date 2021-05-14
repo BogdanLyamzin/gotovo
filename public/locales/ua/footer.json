@@ -1,3 +1,32 @@
 {
-  "description": "Пiдвал сайту"
+  "about-title": "Про центр",
+  "about-menu": [
+    {
+      "href": "/about-us/index",
+      "text": "Про \"Готово!\""
+    },
+    {
+      "href": "/about-us/idea",
+      "text": "Iдея виникнення"
+    },
+    {
+      "href": "/about-us/building",
+      "text": "Будiвництво"
+    },
+    {
+      "href": "/about-us/perevagu",
+      "text": "Переваги"
+    },
+    {
+      "href": "/about-us/clients",
+      "text": "Обслуговування"
+    }
+  ],
+  "contacts-title": "Контакти",
+  "contacts-menu": [
+    {
+      "href": "/contacts",
+      "text": "Контакти"
+    }
+  ]
 }

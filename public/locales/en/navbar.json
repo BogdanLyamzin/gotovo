@@ -1,0 +1,21 @@
+{
+  "menu": [
+    {
+      "href": "/about-us/about-us",
+      "text": "About center"
+    },
+    {
+      "href": "/wedding-for-day",
+      "text": "Marriage within 24 Hours"
+    },
+    {
+      "href": "/contacts",
+      "text": "Contacts"
+    }
+  ],
+  "auth": {
+    "register": "Register",
+    "login": "Login",
+    "logout": "Logout"
+  }
+}
