@@ -14,12 +14,11 @@ const CalendarForm = dynamic(() => import("../FullCalendar/FullCalendar"), {
 });
 
 const ProfileForm = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [doc, setDoc] = useState("");
   const [successOrder, setSuccessOrder] = useState(false);
-  const [openCalendar, setOpenCalendar] = useState();
+  const [openCalendar, setOpenCalendar] = useState(false);
   const logout = useLogout();
-
-
 
   const uploadDocument = (event) => {
     const data = new FormData();
@@ -52,12 +51,14 @@ const ProfileForm = () => {
         },
       });
       setSuccessOrder(true);
+      setIsModalOpen(true);
     } catch (error) {
       if (error.status === 401) {
         logout();
       }
     }
   };
+
   return (
     <>
       {!successOrder && (
@@ -76,7 +77,7 @@ const ProfileForm = () => {
             wasPreviouslyMarried: true,
             dateOfBirth: "",
             plan: "BASIC",
-            comment: "string",
+            comment: "",
           }}
           onSubmit={createOrder}
         >
@@ -128,9 +129,9 @@ const ProfileForm = () => {
                 placeholder="Email"
                 name="email"
               />
-              <button onClick={() => setOpenCalendar(true)}>
+              <span className="select-date" onClick={() => setOpenCalendar(true)}>
                 Выбрать дату
-              </button>
+              </span>
               <ErrorMessage
                 className="form-error"
                 component="p"
@@ -191,7 +192,7 @@ const ProfileForm = () => {
           )}
         </Formik>
       )}
-      <Modal open={successOrder}>
+      <Modal open={successOrder && isModalOpen} onClose={()=>setIsModalOpen(false)}>
         <ModalContent>
           <h2 className="title">Ваша заява успішно відправлена. </h2>
         </ModalContent>

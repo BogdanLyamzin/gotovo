@@ -20,6 +20,7 @@ const Modal = ({ children, open, onClose, fullSize }) => {
 
   const handleKey = useCallback(
     (e) => {
+      console.log(e)
       if (e.key === "Escape") {
         return onClose();
       }
