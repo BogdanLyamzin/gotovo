@@ -1,6 +1,6 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import Layout from "../components/common/Layout";
-import Wedding from "../components/WeddingPage";
+import Layout from "../src/components/Layout";
+import Wedding from "../old/WeddingPage";
 
 const WeddingForDay = () => {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../components/common/Layout";
-import ProfileForm from "../components/ProfileForm";
+import Layout from "../src/components/Layout";
+import ProfileForm from "../old/ProfileForm";
 
 const Profile = () => {
   return (

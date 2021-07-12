@@ -1,6 +1,6 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import ContactsPage from "../components/ContactsPage";
-import Layout from "../components/common/Layout";
+import ContactsPage from "../old/ContactsPage";
+import Layout from "../src/components/Layout";
 const Contacts = () => {
     return (
         <Layout>

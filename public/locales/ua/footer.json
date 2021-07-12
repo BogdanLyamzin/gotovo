@@ -1,4 +1,8 @@
 {
+  "working-time": {
+    "workDays": "Пн-Пт",
+    "weekend": "Сб-Нд"
+  },
   "about-title": "Про центр",
   "about-menu": [
     {
@@ -14,12 +18,39 @@
       "text": "Будiвництво"
     },
     {
-      "href": "/about-us/perevagu",
-      "text": "Переваги"
+      "href": "/about-us/service",
+      "text": "Обслуговування"
+    }
+  ],
+  "service-title": "Послуги",
+  "service-menu": [
+    {
+      "href": "/wedding-for-day",
+      "text": "Шлюб за добу"
     },
     {
-      "href": "/about-us/clients",
-      "text": "Обслуговування"
+      "href": "/services/insurance",
+      "text": "Страхування"
+    },
+    {
+      "href": "/services/passport",
+      "text": "Паспортний сервiс"
+    },
+    {
+      "href": "/services/apostille",
+      "text": "Апостилювання"
+    },
+    {
+      "href": "/services/newpost",
+      "text": "Нова пошта"
+    },
+    {
+      "href": "/services/ups",
+      "text": "UPS - Україна"
+    },
+    {
+      "href": "/services/diya",
+      "text": "Дiя"
     }
   ],
   "contacts-title": "Контакти",

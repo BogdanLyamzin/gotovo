@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../../components/common/Layout";
-import AboutUsPage from "../../components/AboutUsPage/AboutUsPage";
+import Layout from "../../src/components/Layout";
+import AboutUsPage from "../../old/AboutUsPage/AboutUsPage";
 
 const AboutPage = () => {
   return (

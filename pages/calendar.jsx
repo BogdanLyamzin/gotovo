@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
-import Layout from "../components/common/Layout";
+import Layout from "../src/components/Layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import { ModalContent } from "../shared/components/Modal/Modal";
+import { ModalContent } from "../src/components/Modal/Modal";
 import axios from 'axios';
 
 const CalendarPage = () => {

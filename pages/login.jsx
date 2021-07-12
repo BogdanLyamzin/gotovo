@@ -1,10 +1,10 @@
 import React from "react";
-import LoginForm from "../components/LoginForm";
-import Layout from "../components/common/Layout";
+import LoginForm from "../old/LoginForm";
+import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
-import RegisterForm from "../components/RegisterForm";
+import RegisterForm from "../old/RegisterForm";
 
 const Login = () => {
     const isAuth = useAuth();

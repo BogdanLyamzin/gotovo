@@ -1,14 +1,17 @@
 {
   "menu": [
     {
+      "id": "1",
       "href": "/about-us/",
       "text": "Про центр"
     },
     {
+      "id": "2",
       "href": "/wedding-for-day",
       "text": "Шлюб за добу"
     },
     {
+      "id": "3",
       "href": "/contacts",
       "text": "Контакти"
     }

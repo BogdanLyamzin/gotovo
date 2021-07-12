@@ -1,20 +1,20 @@
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import Layout from "../components/common/Layout";
+import Layout from "../src/components/Layout";
 
 function Home() {
-  const { t } = useTranslation('main')
+
   return (
-      <Layout title={t('title')}>
-        {/*<MainPage />*/}
+      <Layout fileName="index">
+
       </Layout>
   )
 }
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
+    ...await serverSideTranslations(locale, ['navbar', 'footer', 'index']),
   },
 })
 
