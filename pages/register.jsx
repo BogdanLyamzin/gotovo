@@ -1,4 +1,3 @@
-import React from 'react';
 import RegisterForm from "../old/RegisterForm/RegisterForm";
 import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";

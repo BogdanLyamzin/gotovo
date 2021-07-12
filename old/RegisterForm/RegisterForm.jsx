@@ -1,8 +1,7 @@
-import React from 'react';
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import useRegister from "../../auth/hooks/use-register";
 import signUpSchema from "./register-form.schema";
-import Modal from "../../shared/components";
+import Modal from "../../src/components/Modal";
 import {ModalContent} from "../../src/components/Modal/Modal";
 import useConfirm from "../../auth/hooks/use-confirm";
 
@@ -18,13 +17,13 @@ const RegisterForm = () => {
                 password: '',
             }} validationSchema={signUpSchema} onSubmit={register}>
                 <Form>
-                    <Field className="marriage-contacts-input" name="email" placeholder="Email*" type="email"/>
+                    <Field className="text-field" name="email" placeholder="Email*" type="email"/>
                     <ErrorMessage className="form-error" component="p" name="email"/>
-                    <Field className="marriage-contacts-input" name="phone" placeholder="Phone*" type="tel"/>
+                    <Field className="text-field" name="phone" placeholder="Phone*" type="tel"/>
                     <ErrorMessage className="form-error" component="p" name="phone"/>
-                    <Field className="marriage-contacts-input" name="fullName" placeholder="FullName*" type="text"/>
+                    <Field className="text-field" name="fullName" placeholder="FullName*" type="text"/>
                     <ErrorMessage className="form-error" component="p" name="fullName"/>
-                    <Field className="marriage-contacts-input" name="password" placeholder="Password*" type="password"/>
+                    <Field className="text-field" name="password" placeholder="Password*" type="password"/>
                     <ErrorMessage className="form-error" component="p" name="password"/>
                     <button className="btn _dark _long" type="submit">Зараєструватися</button>
                 </Form>
@@ -37,7 +36,7 @@ const RegisterForm = () => {
                         verificationCode: '',
                     }} onSubmit={confirm}>
                         <Form>
-                            <Field name="verificationCode" type="text" className="marriage-contacts-input" placeholder="Код із листа" />
+                            <Field name="verificationCode" type="text" className="text-field" placeholder="Код із листа" />
                             <button className="btn _dark _long" type="submit">Підтвердити</button>
                         </Form>
                     </Formik>

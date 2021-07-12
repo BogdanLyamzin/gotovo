@@ -4,7 +4,7 @@ import axios from "axios";
 import Cookie from "js-cookie";
 
 import useLogout from "../../auth/hooks/use-logout";
-import Modal from "../../shared/components";
+import Modal from "../../src/components/Modal";
 import { ModalContent } from "../../src/components/Modal/Modal";
 import dynamic from "next/dynamic";
 
@@ -84,7 +84,7 @@ const ProfileForm = () => {
           {({ setFieldValue, values }) => (
             <Form>
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placeholder="Повне ім'я чоловіка"
                 name="fullNameOfTheHusband"
@@ -95,7 +95,7 @@ const ProfileForm = () => {
                 name="fullNameOfTheHusband"
               />
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placeholder="Повне ім'я жінки"
                 name="WifeSFullName"
@@ -106,25 +106,25 @@ const ProfileForm = () => {
                 name="WifeSFullName"
               />
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placeholder="Ким виданий паспорт"
                 name="issuedBy"
               />
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placeholder="Номер паспорту"
                 name="passport"
               />
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="tel"
                 placeholder="Телефон"
                 name="phone"
               />
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -150,7 +150,7 @@ const ProfileForm = () => {
                 </label>
               </div>
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placholder="Дата нарождення"
                 name="dateOfBirth"
@@ -158,20 +158,20 @@ const ProfileForm = () => {
               <Field
                 name="plan"
                 as="select"
-                className="marriage-contacts-input"
+                className="text-field"
               >
                 <option value="BASIC">Базовий</option>
                 <option value="STANDARD">Стандартний</option>
                 <option value="PREMIUM">Преміум</option>
               </Field>
               <Field
-                className="marriage-contacts-input"
+                className="text-field"
                 type="text"
                 placeholder="Коментар"
                 name="comment"
               />
               <input
-                className="marriage-contacts-input"
+                className="text-field"
                 type="file"
                 onChange={uploadDocument}
               />
