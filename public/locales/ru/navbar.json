@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": "1",
-      "href": "/about-us/",
+      "href": "/about-us",
       "text": "Про центр"
     },
     {
@@ -12,6 +12,11 @@
     },
     {
       "id": "3",
+      "href": "/services",
+      "text": "Услуги"
+    },
+    {
+      "id": "4",
       "href": "/contacts",
       "text": "Контакты"
     }

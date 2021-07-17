@@ -1,11 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../../src/components/Layout";
-import AboutUsPage from "../../old/AboutUsPage/AboutUsPage";
+import AboutUs from "../../src/sections/AboutUs";
 
 const AboutPage = () => {
   return (
     <Layout>
-      <AboutUsPage />
+      <AboutUs />
     </Layout>
   );
 };

@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": "1",
-      "href": "/about-us/",
+      "href": "/about-us",
       "text": "About center"
     },
     {
@@ -12,6 +12,11 @@
     },
     {
       "id": "3",
+      "href": "/services",
+      "text": "Services"
+    },
+    {
+      "id": "4",
       "href": "/contacts",
       "text": "Contacts"
     }

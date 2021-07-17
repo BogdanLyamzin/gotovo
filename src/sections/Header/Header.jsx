@@ -10,7 +10,7 @@ const Header = () => {
                 <h2 className={styles["header-text-big"]}>{t("title")}</h2>
                 <p className={styles["header-text-small"]}>{t("subtitle")}</p>
                 <div className={styles["header-buttons"]}>
-                    <a href="#services" className="btn _dark _shadow anchor">{t("service-btn-text")}</a>
+                    <a href="#services" className={`btn _dark _shadow anchor ${styles["header-buttons-btn"]}`}>{t("service-btn-text")}</a>
                     <a href="#contacts" className="btn _light _shadow anchor">{t("contacts-btn-text")}</a>
                 </div>
             </div>
