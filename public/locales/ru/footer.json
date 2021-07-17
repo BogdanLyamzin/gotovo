@@ -1,8 +1,12 @@
 {
+  "working-time": {
+    "workDays": "Пн-Пт",
+    "weekend": "Сб-Вс"
+  },
   "about-title": "Про центр",
   "about-menu": [
     {
-      "href": "/about-us/index",
+      "href": "/about-us",
       "text": "Про \"Готово!\""
     },
     {
@@ -14,12 +18,39 @@
       "text": "Строительство"
     },
     {
-      "href": "/about-us/perevagu",
-      "text": "Преимущества"
+      "href": "/about-us/service",
+      "text": "Обслуживание"
+    }
+  ],
+  "service-title": "Услуги",
+  "service-menu": [
+    {
+      "href": "/wedding-for-day",
+      "text": "Брак за сутки"
     },
     {
-      "href": "/about-us/clients",
-      "text": "Обслуживание"
+      "href": "/services/insurance",
+      "text": "Страхование"
+    },
+    {
+      "href": "/services/passport",
+      "text": "Паспортный сервис"
+    },
+    {
+      "href": "/services/apostille",
+      "text": "Апостилизация"
+    },
+    {
+      "href": "/services/newpost",
+      "text": "Новая почта"
+    },
+    {
+      "href": "/services/ups",
+      "text": "UPS - Украина"
+    },
+    {
+      "href": "/services/diya",
+      "text": "Дия"
     }
   ],
   "contacts-title": "Контакты",

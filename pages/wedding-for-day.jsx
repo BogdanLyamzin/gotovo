@@ -1,11 +1,24 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import Layout from "../components/common/Layout";
-import Wedding from "../components/WeddingPage";
+
+import Layout from "../src/components/Layout";
+import MarriageHeader from "../src/sections/MarriageHeader";
+import MarriageRegistration from "../src/sections/MarriageRegistration";
+import MarriageGallery from "../src/sections/MarriageGallery";
+import MarriageDocuments from "../src/sections/MarriageDocuments";
+import ServiceCost from "../src/sections/ServiceCost";
+import MarriageContacts from "../src/sections/MarriageContacts";
+import WriteAboutUs from "../src/sections/WriteAboutUs";
 
 const WeddingForDay = () => {
     return (
         <Layout>
-            <Wedding />
+            <MarriageHeader />
+            <MarriageRegistration />
+            <MarriageGallery />
+            <MarriageDocuments />
+            <ServiceCost />
+            <MarriageContacts />
+            <WriteAboutUs />
         </Layout>
     );
 };

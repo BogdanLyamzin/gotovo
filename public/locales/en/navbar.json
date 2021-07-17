@@ -1,14 +1,22 @@
 {
   "menu": [
     {
-      "href": "/about-us/",
+      "id": "1",
+      "href": "/about-us",
       "text": "About center"
     },
     {
+      "id": "2",
       "href": "/wedding-for-day",
       "text": "Marriage within 24 Hours"
     },
     {
+      "id": "3",
+      "href": "/services",
+      "text": "Services"
+    },
+    {
+      "id": "4",
       "href": "/contacts",
       "text": "Contacts"
     }

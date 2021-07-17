@@ -1,10 +1,11 @@
 import {appWithTranslation} from 'next-i18next'
 
-import '@fullcalendar/common/main.min.css'
-import '@fullcalendar/daygrid/main.min.css'
-import '@fullcalendar/timegrid/main.min.css'
+// import '@fullcalendar/common/main.min.css'
+// import '@fullcalendar/daygrid/main.min.css'
+// import '@fullcalendar/timegrid/main.min.css'
 
-import '../styles/globals.scss'
+import '../src/styles/main.scss';
+
 import {AuthProvider} from "../auth/context/auth.context";
 
 function MyApp({Component, pageProps}) {

@@ -1,8 +1,12 @@
 {
+  "working-time": {
+    "workDays": "Mon-Fri",
+    "weekend": "Sat-Nd"
+  },
   "about-title": "About center",
   "about-menu": [
     {
-      "href": "/about-us/index",
+      "href": "/about-us",
       "text": "About \"GOTOVO!\""
     },
     {
@@ -14,15 +18,42 @@
       "text": "Constraction history"
     },
     {
-      "href": "/about-us/perevagu",
-      "text": "Advantages"
-    },
-    {
-      "href": "/about-us/clients",
+      "href": "/about-us/service",
       "text": "Service"
     }
   ],
   "contacts-title": "Contacts",
+  "service-title": "Послуги",
+  "service-menu": [
+    {
+      "href": "/wedding-for-day",
+      "text": "Шлюб за добу"
+    },
+    {
+      "href": "/services/insurance",
+      "text": "Insurance"
+    },
+    {
+      "href": "/services/passport",
+      "text": "Passport service"
+    },
+    {
+      "href": "/services/apostille",
+      "text": "Apostilization"
+    },
+    {
+      "href": "/services/newpost",
+      "text": "Nova Poshta"
+    },
+    {
+      "href": "/services/ups",
+      "text": "UPS - Ukraine"
+    },
+    {
+      "href": "/services/diya",
+      "text": "Diia"
+    }
+  ],
   "contacts-menu": [
     {
       "href": "/contacts",

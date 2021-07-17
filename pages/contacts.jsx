@@ -1,10 +1,14 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import ContactsPage from "../components/ContactsPage";
-import Layout from "../components/common/Layout";
+
+import Layout from "../src/components/Layout";
+import ContactsList from "../src/sections/ContactsList";
+import ContactsSchedule from "../src/sections/ContactsSchedule";
+
 const Contacts = () => {
     return (
         <Layout>
-            <ContactsPage />
+            <ContactsList />
+            <ContactsSchedule />
         </Layout>
     );
 };
