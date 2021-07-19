@@ -12,7 +12,7 @@ const AboutPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "footer", "about-service", "main"])),
   },
 });
 

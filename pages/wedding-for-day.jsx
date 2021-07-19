@@ -25,7 +25,7 @@ const WeddingForDay = () => {
 
 export const getStaticProps = async ({ locale }) => ({
     props: {
-        ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
+        ...await serverSideTranslations(locale, ['navbar', 'marriage-header', 'marriage-registration', 'marriage-gallery', 'marriage-contacts', 'write-about-us', 'footer', 'main']),
     },
 })
 

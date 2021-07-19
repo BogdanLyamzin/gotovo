@@ -1,10 +1,11 @@
 import {useTranslation} from "next-i18next";
 
 const Partners = () => {
+    const { t } = useTranslation("partners");
     return (
         <section className="partners">
             <div className="container">
-                <h3 className="title">Партнери</h3>
+                <h3 className="title">{t("title")}</h3>
                 <div className="partners-content">
                     <div className="partners-item">
                         <img className="partners-img" src="/img/Partners/item-1.png" alt="partner-logo" />
