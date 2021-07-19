@@ -1,10 +1,11 @@
 import {useTranslation} from "next-i18next";
 
 const MarriageGallery = () => {
+    const { t } = useTranslation("marriage-gallery");
     return (
         <section className="marriage-gallery">
             <div className="container">
-                <h2 className="title">Як виглядає зал для весільної церемонії</h2>
+                <h2 className="title">{t("title")}</h2>
                 <div className="marriage-gallery-content">
                     <div className="marriage-gallery-item _1"></div>
                     <div className="marriage-gallery-item _2"></div>

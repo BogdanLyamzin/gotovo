@@ -1,38 +1,39 @@
 import {useTranslation} from "next-i18next";
 
 const ContactsList = () => {
+    const { t } = useTranslation("contacts");
     return (
         <section className="contacts-2">
             <div className="container">
-                <h2 className="title contacts-2-title">Контакти</h2>
+                <h2 className="title contacts-2-title">{t("heading-2")}</h2>
                 <div className="contacts-2-content">
                     <div className="contacts-item">
                         <span className="contacts-icon">
                             <img src="/img/Contacts/item-1.png" alt="contact icon" />
                         </span>
-                        <p className="contacts-name">Адреса</p>
-                        <p className="contacts-text">01010, м Київ, вулиця Генерала Алмазова, 11</p>
+                        <p className="contacts-name">{t("address-name")}</p>
+                        <p className="contacts-text">{t("address-text")}</p>
                     </div>
                     <div className="contacts-item">
                         <span className="contacts-icon">
                             <img src="/img/Contacts/item-2.png" alt="contact icon" />
                         </span>
-                        <p className="contacts-name">Електронна пошта</p>
-                        <a href="mailto:gotovo.ds@gmail.com" className="contacts-link">gotovo.ds@gmail.com</a>
+                        <p className="contacts-name">{t("email-name")}</p>
+                        <a href="mailto:gotovo.ds@gmail.com" className="contacts-link">{t("email-text")}</a>
                     </div>
                     <div className="contacts-item">
                         <span className="contacts-icon">
                             <img src="/img/Contacts/item-3.png" alt="contact icon" />
                         </span>
-                        <p className="contacts-name">Генеральний директор</p>
-                        <p className="contacts-text">Кузмицька Анастасія Ігорівна</p>
+                        <p className="contacts-name">{t("director-name")}</p>
+                        <p className="contacts-text">{t("director-text")}</p>
                     </div>
                     <div className="contacts-item">
                         <span className="contacts-icon">
                             <img src="/img/Contacts/item-4.png" alt="contact icon" />
                         </span>
-                        <p className="contacts-name">Телефон гарячої лінії</p>
-                        <a href="tel:0800300803" className="contacts-link">0 800 300 803</a>
+                        <p className="contacts-name">{t("tel-name")}</p>
+                        <a href="tel:0800300803" className="contacts-link">{t("tel-text")}</a>
                     </div>
                 </div>
             </div>

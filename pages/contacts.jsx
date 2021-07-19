@@ -15,7 +15,7 @@ const Contacts = () => {
 
 export const getStaticProps = async ({ locale }) => ({
     props: {
-        ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
+        ...await serverSideTranslations(locale, ['navbar', 'footer', 'contacts', 'contacts-schedule', 'main']),
     },
 })
 

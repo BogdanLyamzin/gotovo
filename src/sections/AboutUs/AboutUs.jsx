@@ -1,20 +1,15 @@
 import {useTranslation} from "next-i18next";
 
 const AboutUs = () => {
+    const { t } = useTranslation("about-us");
     return (
         <section className="about-us">
             <div className="container">
                 <div className="article">
-                    <h3 className="article-heading">Про центр</h3>
-                    <p className="article-text">
-                        Документ-сервіс «ГОТОВО» - це сучасна установа, яка надає адміністративні послуги за абсолютно новими підходами і принципами, швидко і зручно для кожного.
-                    </p>
-                    <p className="article-text">
-                        З повагою до людей!
-                    </p>
-                    <p className="article-text">
-                        Наша мета – знищити побутову корупцію в дозвільній сфері, спростити взаємини громадян та держави, покращити якість життя українців шляхом надання швидких, зручних та якісних адміністративних послуг.
-                    </p>
+                    <h3 className="article-heading">{t("title")}</h3>
+                    <p className="article-text">{t("text-1")}</p>
+                    <p className="article-text">{t("text-2")}</p>
+                    <p className="article-text">{t("text-3")}</p>
                 </div>
                 <div className="about-us-gallery">
                     <div className="about-us-gallery-img _1"></div>

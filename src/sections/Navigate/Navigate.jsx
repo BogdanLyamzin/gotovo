@@ -1,6 +1,7 @@
 import {useTranslation} from "next-i18next";
 
 const Navigate = () => {
+    const { t } = useTranslation("navigate");
     return (
         <section className="navigate">
             <div className="navigate-content">
@@ -8,12 +9,10 @@ const Navigate = () => {
                 <img className="ornament _right" src="/img/ornament.svg" alt="Орнамент" />
                 <div className="container navigate-container">
                     <div className="article _half">
-                        <h3 className="article-heading">Орієнтуватися у документ-сервісі дуже просто.</h3>
-                        <p className="article-text">
-                            Відвідувача, який зайшов до примiщення, зустрiчають адміністратори на ресепшен, якi проiнформують його по всiх питаннях та нададуть покрокову інструкцію дiй
-                        </p>
+                        <h3 className="article-heading">{t("heading")}</h3>
+                        <p className="article-text">{t("text")}</p>
                     </div>
-                    <a href="#" className="btn _dark">Дiзнатись бiльше</a>
+                    <a href="#" className="btn _dark">{t("btn")}</a>
                 </div>
             </div>
         </section>

@@ -24,7 +24,7 @@ function Home() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['navbar', 'footer', 'header', 'our-target', 'index']),
+    ...await serverSideTranslations(locale, ['navbar', 'footer', 'header', 'our-target', 'services', 'services-list', 'navigate', 'partners', 'contacts', 'index']),
   },
 })
 
