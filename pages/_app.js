@@ -1,8 +1,8 @@
 import {appWithTranslation} from 'next-i18next'
 
-// import '@fullcalendar/common/main.min.css'
-// import '@fullcalendar/daygrid/main.min.css'
-// import '@fullcalendar/timegrid/main.min.css'
+import '@fullcalendar/common/main.min.css'
+import '@fullcalendar/daygrid/main.min.css'
+import '@fullcalendar/timegrid/main.min.css'
 
 import '../src/styles/main.scss';
 
