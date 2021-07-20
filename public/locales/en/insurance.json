@@ -1,0 +1,18 @@
+{
+    "btn": "Back",
+    "title": "Insurance",
+    "name-1": "Travel medical insurance",
+    "item-title": "List of documents:",
+    "item-1-text-1": "Passport of a citizen of Ukraine for traveling abroad;",
+    "item-1-text-2": "Taxpayer identification code;",
+    "item-1-text-3": "For a child: the child's passport and the passport of the parent with whom the child is traveling.",
+    "name-2": "International motor insurance \"Green Card\" system",
+    "item-2-text-1": "Passport for traveling abroad;",
+    "item-2-text-2": "Taxpayer Identification Code;",
+    "item-2-text-3": "Driver's license;",
+    "item-2-text-4": "Vehicle registration certificate.",
+    "name-3": "Obligatory insurance of civil liability of vehicles owners",
+    "item-3-text-1": "Passport or driver's license;",
+    "item-3-text-2": "Taxpayer identification code;",
+    "item-3-text-3": "Vehicle registration certificate."
+}

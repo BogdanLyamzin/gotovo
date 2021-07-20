@@ -3,9 +3,11 @@
     "marriage": "Marriage within 24 hours",
     "insurance": "Insurance",
     "passport": "Passport service",
+    "written-translation": "Written translation",
+    "notarized-translation": "Notarized translation",
     "apostille": "Apostilization of documents",
-    "immovables": "Legal services in the field of real estate registration",
+    "events": "Hosting the event",
     "newpost": "Post office \"Nova Poshta\" №400",
     "ups": "UPS",
-    "diya": "\"Diia\" Qualified electronic signature"
+    "diya": "\"Diia\" QES"
 }

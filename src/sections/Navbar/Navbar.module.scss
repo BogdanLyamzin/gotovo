@@ -225,4 +225,9 @@
   cursor: pointer;
   display: inline-block;
   margin: 0 5px;
+  transition: 0.3s;
+
+  &:hover {
+    color: $main-color;
+  }
 }
