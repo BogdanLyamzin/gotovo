@@ -4,7 +4,7 @@ import NotarizedTranslation from "../../src/sections/NotarizedTranslation";
 
 const ServicesPage = () => {
     return (
-      <Layout>
+      <Layout fileName="notarized-translation-page">
         <NotarizedTranslation />
       </Layout>
     );
@@ -12,7 +12,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "notarized-translation", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "notarized-translation", "footer", "main", "notarized-translation-page"])),
   },
 });
 

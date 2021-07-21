@@ -4,7 +4,7 @@ import Apostille from "../../src/sections/Apostille";
 
 const ServicesPage = () => {
   return (
-    <Layout>
+    <Layout fileName="apostillization-page">
         <Apostille />
     </Layout>
   );
@@ -12,7 +12,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "apostillization", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "apostillization", "footer", "main", "apostillization-page"])),
   },
 });
 

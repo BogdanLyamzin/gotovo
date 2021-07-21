@@ -3,7 +3,7 @@
     "workDays": "Mon-Fri",
     "weekend": "Sat-Nd"
   },
-  "about-title": "About center",
+  "about-title": "About us",
   "about-menu": [
     {
       "href": "/about-us",
@@ -26,35 +26,46 @@
       "text": "Service"
     }
   ],
-  "contacts-title": "Contacts",
-  "service-title": "Послуги",
+  "service-title": "Services",
   "service-menu": [
     {
       "href": "/wedding-for-day",
-      "text": "Шлюб за добу"
+      "text": "Marriage within 24 hours"
     },
     {
       "href": "/services/insurance",
       "text": "Insurance"
     },
     {
-      "href": "/services/passport",
+      "href": "https://gotovo.pasport.org.ua/",
       "text": "Passport service"
     },
     {
-      "href": "/services/apostille",
+      "href": "/services/written-translation",
+      "text": "Written translation"
+    },
+    {
+      "href": "/services/notarized-translation",
+      "text": "Notarized translation"
+    },
+    {
+      "href": "/services/apostillization",
       "text": "Apostilization"
     },
     {
-      "href": "/services/newpost",
+      "href": "/services/events",
+      "text": "Hosting the event"
+    },
+    {
+      "href": "https://novaposhta.ua/",
       "text": "Nova Poshta"
     },
     {
-      "href": "/services/ups",
+      "href": "https://www.ups.com/ua/uk/Home.page",
       "text": "UPS - Ukraine"
     },
     {
-      "href": "/services/diya",
+      "href": "https://ca.diia.gov.ua/",
       "text": "Diia"
     }
   ],

@@ -4,7 +4,7 @@ import AboutIdea from "../../src/sections/AboutIdea";
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout fileName="idea-page">
       <AboutIdea />
     </Layout>
   );
@@ -12,7 +12,7 @@ const AboutPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "about-idea", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "footer", "about-idea", "main", "idea-page"])),
   },
 });
 

@@ -4,7 +4,7 @@ import Events from "../../src/sections/Events";
 
 const ServicesPage = () => {
   return (
-    <Layout>
+    <Layout fileName="events-page">
         <Events />
     </Layout>
   );
@@ -12,7 +12,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "events", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "events", "footer", "main", "events-page"])),
   },
 });
 

@@ -3,7 +3,7 @@
     "workDays": "Пн-Пт",
     "weekend": "Сб-Вс"
   },
-  "about-title": "Про центр",
+  "about-title": "О центре",
   "about-menu": [
     {
       "href": "/about-us",
@@ -37,23 +37,35 @@
       "text": "Страхование"
     },
     {
-      "href": "/services/passport",
+      "href": "https://gotovo.pasport.org.ua/",
       "text": "Паспортный сервис"
     },
     {
-      "href": "/services/apostille",
+      "href": "/services/written-translation",
+      "text": "Письменный перевод"
+    },
+    {
+      "href": "/services/notarized-translation",
+      "text": "Нотариальный перевод"
+    },
+    {
+      "href": "/services/apostillization",
       "text": "Апостилизация"
     },
     {
-      "href": "/services/newpost",
+      "href": "/services/events",
+      "text": "Проведение мероприятий"
+    },
+    {
+      "href": "https://novaposhta.ua/",
       "text": "Новая почта"
     },
     {
-      "href": "/services/ups",
+      "href": "https://www.ups.com/ua/uk/Home.page",
       "text": "UPS - Украина"
     },
     {
-      "href": "/services/diya",
+      "href": "https://ca.diia.gov.ua/",
       "text": "Дия"
     }
   ],

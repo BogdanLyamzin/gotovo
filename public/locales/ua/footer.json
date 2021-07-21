@@ -37,23 +37,35 @@
       "text": "Страхування"
     },
     {
-      "href": "/services/passport",
+      "href": "https://gotovo.pasport.org.ua/",
       "text": "Паспортний сервiс"
     },
     {
-      "href": "/services/apostille",
+      "href": "/services/written-translation",
+      "text": "Письмовий переклад"
+    },
+    {
+      "href": "/services/notarized-translation",
+      "text": "Нотаріальний переклад"
+    },
+    {
+      "href": "/services/apostillization",
       "text": "Апостилювання"
     },
     {
-      "href": "/services/newpost",
+      "href": "/services/events",
+      "text": "Проведення заходів"
+    },
+    {
+      "href": "https://novaposhta.ua/",
       "text": "Нова пошта"
     },
     {
-      "href": "/services/ups",
+      "href": "https://www.ups.com/ua/uk/Home.page",
       "text": "UPS - Україна"
     },
     {
-      "href": "/services/diya",
+      "href": "https://ca.diia.gov.ua/",
       "text": "Дiя"
     }
   ],

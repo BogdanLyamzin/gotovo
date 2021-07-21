@@ -4,7 +4,7 @@ import WrittenTranslation from "../../src/sections/WrittenTranslation";
 
 const ServicesPage = () => {
     return (
-      <Layout>
+      <Layout fileName="written-translation-page">
         <WrittenTranslation />
       </Layout>
     );
@@ -12,7 +12,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "written-translation", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "written-translation", "footer", "main", "written-translation-page"])),
   },
 });
 

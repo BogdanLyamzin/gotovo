@@ -4,7 +4,7 @@ import ServicesList from "../../src/components/ServicesList";
 
 const ServicesPage = () => {
   return (
-    <Layout>
+    <Layout fileName="services-page">
         <div className="services-page">
             <div className="container">
                 <ServicesList />
@@ -16,7 +16,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "services-list", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "footer", "services-list", "main", "services-page"])),
   },
 });
 

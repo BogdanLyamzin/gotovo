@@ -20,12 +20,12 @@ const ServicesList = () => {
                 <a href="https://gotovo.pasport.org.ua/" className="btn _light" target="_blank">{t("btn")}</a>
             </div>
             <div className="services-item">
-                <img className="services-item-img" src="/img/Services/icon-3.png" alt="services-icon" />
+                <img className="services-item-img" src="/img/Services/write6.png" alt="services-icon" />
                 <p className="services-item-text">{t("written-translation")}</p>
                 <a href="./services/written-translation" className="btn _light">{t("btn")}</a>
             </div>
             <div className="services-item">
-                <img className="services-item-img" src="/img/Services/icon-3.png" alt="services-icon" />
+                <img className="services-item-img" src="/img/Services/notary3.png" alt="services-icon" />
                 <p className="services-item-text">{t("notarized-translation")}</p>
                 <a href="./services/notarized-translation" className="btn _light">{t("btn")}</a>
             </div>

@@ -12,7 +12,7 @@ const Navigate = () => {
                         <h3 className="article-heading">{t("heading")}</h3>
                         <p className="article-text">{t("text")}</p>
                     </div>
-                    <a href="./about-us/service" className="btn _dark">{t("btn")}</a>
+                    <a href="/about-us/service" className="btn _dark">{t("btn")}</a>
                 </div>
             </div>
         </section>
