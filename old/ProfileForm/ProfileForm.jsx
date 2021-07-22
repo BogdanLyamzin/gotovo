@@ -338,7 +338,7 @@ const ProfileForm = () => {
                             </div>
                             <div>
                                 <label className="form-label" htmlFor="">
-                                    Чи був чоловік раніше одружений?
+                                    Чи була жiнка раніше одружена?
                                     <Field type="checkbox" name="wasWifePreviouslyMarried"/>
                                 </label>
                             </div>
