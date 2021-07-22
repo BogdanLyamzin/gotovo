@@ -6,7 +6,7 @@ import ContactsSchedule from "../src/sections/ContactsSchedule";
 
 const Contacts = () => {
     return (
-        <Layout>
+        <Layout fileName="contacts-page">
             <ContactsList />
             <ContactsSchedule />
         </Layout>
@@ -15,7 +15,7 @@ const Contacts = () => {
 
 export const getStaticProps = async ({ locale }) => ({
     props: {
-        ...await serverSideTranslations(locale, ['navbar', 'footer', 'contacts', 'contacts-schedule', 'main']),
+        ...await serverSideTranslations(locale, ['navbar', 'footer', 'contacts', 'contacts-schedule', 'main', 'contacts-page']),
     },
 })
 

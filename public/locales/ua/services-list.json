@@ -1,11 +1,65 @@
 {
     "btn": "Детальніше",
-    "marriage": "Шлюб за добу",
-    "insurance": "Страхування",
-    "passport": "Паспортний сервiс",
-    "apostille": "Апостилювання документів",
-    "immovables": "Юридичнi послуги у сферi реєстрування нерухомого майна",
-    "newpost": "Нова пошта №400",
-    "ups": "UPS",
-    "diya": "“Дiя” КЕП"
+    "services-items": [
+        {
+            "img": "/img/Services/icon-1.png",
+            "href": "/wedding-for-day",
+            "target": "_self",
+            "text": "Шлюб за добу"
+        },
+        {
+            "img": "/img/Services/icon-2.png",
+            "href": "/services/insurance",
+            "target": "_self",
+            "text": "Страхування"
+        },
+        {
+            "img": "/img/Services/icon-3.png",
+            "href": "https://gotovo.pasport.org.ua/",
+            "target": "_blank",
+            "text": "Паспортний сервiс"
+        },
+        {
+            "img": "/img/Services/write6.png",
+            "href": "/services/written-translation",
+            "target": "_self",
+            "text": "Письмовий переклад"
+        },
+        {
+            "img": "/img/Services/notary3.png",
+            "href": "/services/notarized-translation",
+            "target": "_self",
+            "text": "Нотаріальний переклад"
+        },
+        {
+            "img": "/img/Services/icon-4.png",
+            "href": "/services/apostillization",
+            "target": "_self",
+            "text": "Апостилювання документів"
+        },
+        {
+            "img": "/img/Services/icon-5.png",
+            "href": "/services/events",
+            "target": "_self",
+            "text": "Проведення заходів"
+        },
+        {
+            "img": "/img/Services/icon-6.png",
+            "href": "https://novaposhta.ua/",
+            "target": "_blank",
+            "text": "Нова пошта №400"
+        },
+        {
+            "img": "/img/Services/icon-7.png",
+            "href": "https://www.ups.com/ua/uk/Home.page",
+            "target": "_blank",
+            "text": "UPS"
+        },
+        {
+            "img": "/img/Services/diya-logo.png",
+            "href": "https://ca.diia.gov.ua/",
+            "target": "_blank",
+            "text": "“Дiя” КЕП"
+        }
+    ]
 }

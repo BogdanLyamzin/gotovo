@@ -4,7 +4,7 @@ import AboutService from "../../src/sections/AboutService";
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout fileName="about-service-page">
       <AboutService />
     </Layout>
   );
@@ -12,7 +12,7 @@ const AboutPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "about-service", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "footer", "about-service", "main", "about-service-page"])),
   },
 });
 

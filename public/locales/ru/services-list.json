@@ -1,11 +1,65 @@
 {
     "btn": "Подробнее",
-    "marriage": "Брак за сутки",
-    "insurance": "Страхование",
-    "passport": "Паспортный сервис",
-    "apostille": "Апостилизация документов",
-    "immovables": "Юридические услуги в сфере регистрации недвижимости",
-    "newpost": "Новая Почта №400",
-    "ups": "UPS",
-    "diya": "\"Дія\" ЭЦП"
+    "services-items": [
+        {
+            "img": "/img/Services/icon-1.png",
+            "href": "/wedding-for-day",
+            "target": "_self",
+            "text": "Брак за сутки"
+        },
+        {
+            "img": "/img/Services/icon-2.png",
+            "href": "/services/insurance",
+            "target": "_self",
+            "text": "Страхование"
+        },
+        {
+            "img": "/img/Services/icon-3.png",
+            "href": "https://gotovo.pasport.org.ua/",
+            "target": "_blank",
+            "text": "Паспортный сервис"
+        },
+        {
+            "img": "/img/Services/write6.png",
+            "href": "/services/written-translation",
+            "target": "_self",
+            "text": "Письменный перевод"
+        },
+        {
+            "img": "/img/Services/notary3.png",
+            "href": "/services/notarized-translation",
+            "target": "_self",
+            "text": "Нотариальный перевод"
+        },
+        {
+            "img": "/img/Services/icon-4.png",
+            "href": "/services/apostillization",
+            "target": "_self",
+            "text": "Апостилизация документов"
+        },
+        {
+            "img": "/img/Services/icon-5.png",
+            "href": "/services/events",
+            "target": "_self",
+            "text": "Проведение мероприятий"
+        },
+        {
+            "img": "/img/Services/icon-6.png",
+            "href": "https://novaposhta.ua/",
+            "target": "_blank",
+            "text": "Новая Почта №400"
+        },
+        {
+            "img": "/img/Services/icon-7.png",
+            "href": "https://www.ups.com/ua/uk/Home.page",
+            "target": "_blank",
+            "text": "UPS"
+        },
+        {
+            "img": "/img/Services/diya-logo.png",
+            "href": "https://ca.diia.gov.ua/",
+            "target": "_blank",
+            "text": "\"Дія\" ЭЦП"
+        }
+    ]
 }

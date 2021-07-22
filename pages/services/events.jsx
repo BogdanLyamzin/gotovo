@@ -1,18 +1,18 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../../src/components/Layout";
-import Apostille from "../../src/sections/Apostille";
+import Events from "../../src/sections/Events";
 
 const ServicesPage = () => {
   return (
-    <Layout>
-        <Apostille />
+    <Layout fileName="events-page">
+        <Events />
     </Layout>
   );
 };
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "events", "footer", "main", "events-page"])),
   },
 });
 

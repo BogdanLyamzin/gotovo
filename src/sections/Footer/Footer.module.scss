@@ -74,14 +74,8 @@
   &-ornament {
     position: absolute;
     width: 152px;
-    height: 166px;
-    overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
-
-    img {
-      transform: translateY(-40%);
-    }
 
     &._left {
       left: 0;

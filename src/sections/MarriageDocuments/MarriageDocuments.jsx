@@ -1,22 +1,22 @@
 import {useTranslation} from "next-i18next";
 
 const MarriageDocuments = () => {
+    const { t } = useTranslation("marriage-documents");
     return (
         <section className="marriage-documents">
             <div className="container">
-                <h2 className="title">Необхідні документи</h2>
+                <h2 className="title">{t("title")}</h2>
                 <div className="marriage-documents-content">
                     <ol>
-                        <li className="marriage-documents-tab selected underline">Державна реєстрація шлюбу між громадянами України</li>
-                        <li className="marriage-documents-tab">Державна реєстрація шлюбу між чоловіком та жінкою, які не є громадянами України (або один із них)</li>
-                        <li className="marriage-documents-tab">Проставлення апостиля</li>
+                        <li className="marriage-documents-tab selected">{t("tab-1")}</li>
+                        <li className="marriage-documents-tab">{t("tab-2")}</li>
+                        <li className="marriage-documents-tab">{t("tab-3")}</li>
                     </ol>
                     <ul>
-                        <li className="marriage-documents-item">Паспорт громадянина України (при наданні id-картки додатково подається додаток №13 «Довідка про реєстрацію місця проживання особи»)</li>
-                        <li className="marriage-documents-item">Ідентифікаційний код</li>
-                        <li className="marriage-documents-item">Особи, в яких було вилучено паспорт громадянина України, у зв'язку з взяттям на консульський облік в іншій державі, надають паспорт громадянина України для виїзду за кордон з відповідною відміткою про це в паспорті</li>
-                        <li className="marriage-documents-item">Якщо особа раніше перебувала в шлюбі, то додатково надається документ, що підтверджує припинення попереднього шлюбу або визнання шлюбу недійсним (свідоцтво про розірвання шлюбу, видане на ім’я замовника; рішення суду про розірвання шлюбу, про визнання шлюбу недійсним, яке набрало законної сили з відміткою; свідоцтво про смерть одного з подружжя; висновок відділу державної реєстрації актів цивільного стану про анулювання актового запису про шлюб, який є недійсним тощо).»
-                            Деталі за телефоном: +38 096 056 44 44 (Viber, WhatsApp, Telegram)</li>
+                        <li className="marriage-documents-item">{t("tab-1-text-1")}</li>
+                        <li className="marriage-documents-item">{t("tab-1-text-2")}</li>
+                        <li className="marriage-documents-item">{t("tab-1-text-3")}</li>
+                        <li className="marriage-documents-item">{t("tab-1-text-4")}</li>
                     </ul>
                 </div>
             </div>

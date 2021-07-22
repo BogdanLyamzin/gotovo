@@ -4,7 +4,7 @@ import Insurance from "../../src/sections/Insurance";
 
 const ServicesPage = () => {
     return (
-      <Layout>
+      <Layout fileName="insurance-page">
         <Insurance />
       </Layout>
     );
@@ -12,7 +12,7 @@ const ServicesPage = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "insurance", "footer", "main", "insurance-page"])),
   },
 });
 

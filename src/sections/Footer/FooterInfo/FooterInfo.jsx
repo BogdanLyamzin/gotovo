@@ -19,10 +19,10 @@ const FooterInfo = () => {
                 </div>
             </div>
             <div className={styles["footer-socials"]}>
-                <a href="#" target="_blank" className={styles["footer-socials-item"]}>
+                <a href="https://www.instagram.com/gotovo.ua/" target="_blank" className={styles["footer-socials-item"]}>
                     <Image src="/img/instagram.png" alt="ig" width="14" height="14" />
                 </a>
-                <a href="#" target="_blank" className={styles["footer-socials-item"]}>
+                <a href="https://www.facebook.com/gotovo.ua/" target="_blank" className={styles["footer-socials-item"]}>
                     <Image src="/img/facebook.png" alt="ig" width="16" height="16" />
                 </a>
             </div>
