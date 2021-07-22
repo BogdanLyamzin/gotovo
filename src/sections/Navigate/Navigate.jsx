@@ -1,5 +1,7 @@
 import {useTranslation} from "next-i18next";
 
+import CustomLink from "../../components/Link";
+
 const Navigate = () => {
     const { t } = useTranslation("navigate");
     return (
@@ -12,7 +14,9 @@ const Navigate = () => {
                         <h3 className="article-heading">{t("heading")}</h3>
                         <p className="article-text">{t("text")}</p>
                     </div>
-                    <a href="/about-us/service" className="btn _dark">{t("btn")}</a>
+                    <CustomLink href={t("href")} className="btn _dark">
+                        {t("btn")}
+                    </CustomLink>
                 </div>
             </div>
         </section>

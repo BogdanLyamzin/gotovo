@@ -2,13 +2,13 @@
   "menu": [
     {
       "id": "1",
-      "href": "/about-us",
-      "text": "About us"
+      "href": "/wedding-for-day",
+      "text": "Marriage within 24 Hours"
     },
     {
       "id": "2",
-      "href": "/wedding-for-day",
-      "text": "Marriage within 24 Hours"
+      "href": "/about-us",
+      "text": "About us"
     },
     {
       "id": "3",
@@ -17,6 +17,11 @@
     },
     {
       "id": "4",
+      "href": "/branded-product",
+      "text": "Branded product"
+    },
+    {
+      "id": "5",
       "href": "/contacts",
       "text": "Contacts"
     }

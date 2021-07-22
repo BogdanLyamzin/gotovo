@@ -1,0 +1,29 @@
+{
+    "title": "Branded products",
+    "products": [
+        {
+            "name": "Marriage certificate folder \"GOTOVO\"",
+            "price": "660 UAH",
+            "img": "/img/branded-product/papka.jpg",
+            "link": ""
+        },
+        {
+            "name": "Marriage certificate folder \"Exclusive\"",
+            "price": "795 UAH",
+            "img": "/img/branded-product/papka-2.jpg",
+            "link": ""
+        },
+        {
+            "name": "Metalic pen \"GOTOVO\"",
+            "price": "50.40 UAH",
+            "img": "/img/branded-product/pen.jpg",
+            "link": ""
+        },
+        {
+            "name": "Notebook \"GOTOVO\"",
+            "price": "217 грн",
+            "img": "/img/branded-product/notebook.jpg",
+            "link": ""
+        }
+    ]
+}

@@ -1,13 +1,65 @@
 {
     "btn": "Details",
-    "marriage": "Marriage within 24 hours",
-    "insurance": "Insurance",
-    "passport": "Passport service",
-    "written-translation": "Written translation",
-    "notarized-translation": "Notarized translation",
-    "apostille": "Apostilization of documents",
-    "events": "Hosting the event",
-    "newpost": "Post office \"Nova Poshta\" №400",
-    "ups": "UPS",
-    "diya": "\"Diia\" QES"
+    "services-items": [
+        {
+            "img": "/img/Services/icon-1.png",
+            "href": "/wedding-for-day",
+            "target": "_self",
+            "text": "Marriage within 24 hours"
+        },
+        {
+            "img": "/img/Services/icon-2.png",
+            "href": "/services/insurance",
+            "target": "_self",
+            "text": "Insurance"
+        },
+        {
+            "img": "/img/Services/icon-3.png",
+            "href": "https://gotovo.pasport.org.ua/",
+            "target": "_blank",
+            "text": "Passport service"
+        },
+        {
+            "img": "/img/Services/write6.png",
+            "href": "/services/written-translation",
+            "target": "_self",
+            "text": "Written translation"
+        },
+        {
+            "img": "/img/Services/notary3.png",
+            "href": "/services/notarized-translation",
+            "target": "_self",
+            "text": "Notarized translation"
+        },
+        {
+            "img": "/img/Services/icon-4.png",
+            "href": "/services/apostillization",
+            "target": "_self",
+            "text": "Apostilization of documents"
+        },
+        {
+            "img": "/img/Services/icon-5.png",
+            "href": "/services/events",
+            "target": "_self",
+            "text": "Hosting the event"
+        },
+        {
+            "img": "/img/Services/icon-6.png",
+            "href": "https://novaposhta.ua/",
+            "target": "_blank",
+            "text": "Post office \"Nova Poshta\" №400"
+        },
+        {
+            "img": "/img/Services/icon-7.png",
+            "href": "https://www.ups.com/ua/uk/Home.page",
+            "target": "_blank",
+            "text": "UPS"
+        },
+        {
+            "img": "/img/Services/diya-logo.png",
+            "href": "https://ca.diia.gov.ua/",
+            "target": "_blank",
+            "text": "\"Diia\" QES"
+        }
+    ]
 }

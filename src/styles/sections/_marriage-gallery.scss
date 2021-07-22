@@ -3,11 +3,11 @@
 
     &-content {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 300px 180px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 460px 180px;
         grid-gap: 20px;
-        grid-template-areas: "item-1 item-1 item-1 item-2"  
-                             "item-3 item-4 item-5 item-6";
+        grid-template-areas: "item-1 item-1 item-1 item-1 item-1"  
+                             "item-2 item-3 item-4 item-5 item-6";
     }
 
     &-item {

@@ -1,6 +1,6 @@
 .dropdown {
     margin-bottom: 20px;
-
+    
     &-btn {
         position: relative;
         padding: 16px 27px;
@@ -43,9 +43,24 @@
         }
     }
 
-    &-list {
-        padding: 30px 40px 20px 65px;
+    &-content {
+        // max-height: 0;
+        // overflow: hidden;
+        // transition: max-height 0.2s ease-out;
         display: none;
+    }
+
+    &-list {
+        padding: 30px 40px 5px 65px;
+        // display: none;
+        
+
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
     }
 
     &-item {
@@ -79,14 +94,14 @@
             top: 5px;
         }
 
-        &._title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
+        // &._title {
+        //     font-size: 18px;
+        //     font-weight: 700;
+        //     margin-bottom: 20px;
 
-            &::before, &::after {
-                display: none;
-            }
-        }
+        //     &::before, &::after {
+        //         display: none;
+        //     }
+        // }
     }
 }
