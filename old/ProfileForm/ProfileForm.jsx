@@ -8,13 +8,41 @@ import useLogout from "../../auth/hooks/use-logout";
 import Modal from "../../src/components/Modal";
 import {ModalContent} from "../../src/components/Modal/Modal";
 import dynamic from "next/dynamic";
-
+import MaskedInput from "react-text-mask";
 // import Calendar from "../../src/components/Calendar";
 
 const CalendarForm = dynamic(() => import("../FullCalendar/FullCalendar"), {
     ssr: false,
     loading: () => <p>Loading...</p>,
 });
+
+const phoneNumberMask = [
+    "(",
+    /[1-9]/,
+    /\d/,
+    /\d/,
+    ")",
+    " ",
+    /\d/,
+    /\d/,
+    /\d/,
+    "-",
+    /\d/,
+    /\d/,
+    /\d/,
+    /\d/
+];
+
+const passportMask = [
+    /[\А-Я]/,
+    /[\А-Я]/,
+    /[1-9]/,
+    /[1-9]/,
+    /[1-9]/,
+    /[1-9]/,
+    /[1-9]/,
+    /[1-9]/,
+];
 
 const ProfileForm = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -141,6 +169,7 @@ const ProfileForm = () => {
                                     return  <input {...props.field} type="hidden" />
                                 }}
                             </Field>
+                            <label className="form-label">Повне ім'я чоловіка</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -152,6 +181,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="fullNameOfTheHusband"
                             />
+                            <label className="form-label">Повне ім'я жінки</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -163,10 +193,20 @@ const ProfileForm = () => {
                                 component="p"
                                 name="wifeSFullName"
                             />
+                            <label className="form-label">Номер паспорту чоловіка</label>
                             <Field
-                                className="text-field"
-                                type="text"
-                                placeholder="Номер паспорту чоловіка"
+                                render={({ field, handleChange, handleBlur }) => (
+                                    <MaskedInput
+                                        {...field}
+                                        mask={passportMask}
+                                        id="phone"
+                                        className="text-field"
+                                        placeholder="ЕН345555"
+                                        type="text"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                )}
                                 name="husbandPassport"
                             />
                             <ErrorMessage
@@ -174,6 +214,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="husbandPassport"
                             />
+                            <label className="form-label">Де і ким виданний паспорт чоловіку</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -185,10 +226,20 @@ const ProfileForm = () => {
                                 component="p"
                                 name="husbandIssuedBy"
                             />
+                            <label className="form-label">Номер паспорту жінки</label>
                             <Field
-                                className="text-field"
-                                type="text"
-                                placeholder="Номер паспорту жінки"
+                                render={({ field, handleChange, handleBlur }) => (
+                                    <MaskedInput
+                                        {...field}
+                                        mask={passportMask}
+                                        id="phone"
+                                        className="text-field"
+                                        placeholder="ЕН345555"
+                                        type="text"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                )}
                                 name="wifePassport"
                             />
                             <ErrorMessage
@@ -196,6 +247,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="wifePassport"
                             />
+                            <label className="form-label">Де і ким виданний паспорт жінці</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -207,9 +259,10 @@ const ProfileForm = () => {
                                 component="p"
                                 name="wifeIssuedBy"
                             />
+                            <label className="form-label">Дата народження чоловіка</label>
                             <Field
                                 className="text-field"
-                                type="text"
+                                type="date"
                                 placeholder="Дата народження чоловіка"
                                 name="dateOfBirth"
                             />
@@ -218,9 +271,10 @@ const ProfileForm = () => {
                                 component="p"
                                 name="dateOfBirth"
                             />
+                            <label className="form-label">Дата народження жінки</label>
                             <Field
                                 className="text-field"
-                                type="text"
+                                type="date"
                                 placeholder="Дата народження жінки"
                                 name="wifeDateOfBirth"
                             />
@@ -229,10 +283,20 @@ const ProfileForm = () => {
                                 component="p"
                                 name="wifeDateOfBirth"
                             />
+                            <label className="form-label">Телефон</label>
                             <Field
-                                className="text-field"
-                                type="tel"
-                                placeholder="Телефон"
+                                render={({ field, handleChange, handleBlur }) => (
+                                    <MaskedInput
+                                        {...field}
+                                        mask={phoneNumberMask}
+                                        id="phone"
+                                        className="text-field"
+                                        placeholder="(___) ___-____"
+                                        type="text"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                )}
                                 name="phone"
                             />
                             <ErrorMessage
@@ -240,6 +304,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="phone"
                             />
+                            <label className="form-label">Email</label>
                             <Field
                                 className="text-field"
                                 type="email"
@@ -277,6 +342,7 @@ const ProfileForm = () => {
                                     <Field type="checkbox" name="wasWifePreviouslyMarried"/>
                                 </label>
                             </div>
+                            <label className="form-label">Відношення до війскової служби</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -288,6 +354,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="attitudeMilitary"
                             />
+                            <label className="form-label">Місто реєстрації</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -299,6 +366,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="registeredPlace"
                             />
+                            <label className="form-label">Де проходив війскову службу</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -310,6 +378,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="servicePlace"
                             />
+                            <label className="form-label">Вйскове звання, якщо є</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -321,6 +390,7 @@ const ProfileForm = () => {
                                 component="p"
                                 name="militaryRank"
                             />
+                            <label className="form-label">Документ, що підтвержджує проходження віскової служби</label>
                             <Field
                                 className="text-field"
                                 type="text"
@@ -332,12 +402,14 @@ const ProfileForm = () => {
                                 component="p"
                                 name="militaryDocument"
                             />
+                            <label className="form-label">Коментар</label>
                             <Field
                                 className="text-field"
                                 type="text"
                                 placeholder="Коментар"
                                 name="comment"
                             />
+                            <label className="form-label">Додати файли (тiльки у форматi jpg, jpeg, png або pdf)</label>
                             <input
                                 className="text-field"
                                 type="file"
