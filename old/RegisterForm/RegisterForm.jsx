@@ -5,6 +5,7 @@ import Modal from "../../src/components/Modal";
 import {ModalContent} from "../../src/components/Modal/Modal";
 import useConfirm from "../../auth/hooks/use-confirm";
 
+
 const RegisterForm = () => {
     const {register, closeModal, confirmToken} = useRegister();
     const confirm = useConfirm();
@@ -26,6 +27,8 @@ const RegisterForm = () => {
                     <Field className="text-field" name="password" placeholder="Password*" type="password"/>
                     <ErrorMessage className="form-error" component="p" name="password"/>
                     <button className="btn _dark _long" type="submit">Зараєструватися</button>
+                    <a href="">Facebook</a>
+                    <a href="http://localhost:3001/api/v1/auth/accounts/google">Google</a>
                 </Form>
             </Formik>
 

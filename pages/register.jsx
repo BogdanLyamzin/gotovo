@@ -1,8 +1,8 @@
+import {useRouter} from "next/router";
 import RegisterForm from "../old/RegisterForm/RegisterForm";
 import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import useAuth from "../auth/hooks/use-auth";
-import {useRouter} from "next/router";
 
 const Register = () => {
     const isAuth = useAuth();
