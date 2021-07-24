@@ -24,6 +24,11 @@
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0px 10px 30px 0px #7955481A;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
 
         &-img {
             max-height: 100%;

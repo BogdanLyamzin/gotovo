@@ -1,7 +1,7 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-import Layout from "../src/components/Layout";
-import BrandedProduct from "../src/sections/BrandedProduct";
+import Layout from "../../src/components/Layout";
+import BrandedProduct from "../../src/sections/BrandedProduct";
 
 const WeddingForDay = () => {
     return (

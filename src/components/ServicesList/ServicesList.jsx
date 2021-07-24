@@ -5,9 +5,9 @@ import CustomLink from "../Link";
 const ServicesList = () => {
     const { t } = useTranslation("services-list");
     const servicesItems = t('services-items', {returnObjects: true});
-    const servicesElements = servicesItems.map(({img, href, target, text}) => {
+    const servicesElements = servicesItems.map(({id, img, href, target, text}) => {
         return (
-            <div className="services-item">
+            <div key={id} className="services-item">
                 <img className="services-item-img" src={img} alt="services-icon" />
                 <p className="services-item-text">{text}</p>
                 <CustomLink href={href} className="btn _light" target={target}>
