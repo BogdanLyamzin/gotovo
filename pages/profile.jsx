@@ -23,7 +23,7 @@ const Profile = () => {
   );
 };
 
-export const getServerSideProps = async ({ locale }) => ({
+export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
   },
