@@ -3,7 +3,9 @@ import React, {
     useReducer,
     useEffect
 } from "react";
+import {useRouter} from 'next/router';
 import Cookies from "js-cookie";
+import axios from 'axios';
 import {
     CLEAR_CONFIRM_TOKEN,
     CONFIRM_FAILURE,
@@ -21,7 +23,7 @@ import {
 } from "../aut.constants";
 
 const initialState = {
-    accessToken: Cookies.get("accessToken") ?? null,
+    accessToken: null,
     confirmToken: null,
     loading: false,
     message: [],
@@ -121,25 +123,28 @@ const reducer = (state, {type, payload}) => {
 
 const AuthContext = createContext(initialState);
 
-const AuthProvider = ({children, user}) => {
-    const [state, dispatch] = useReducer(reducer, initialState, (state) => {
-        if (user?.accessToken) {
+const AuthProvider = ({children}) => {
+    const {query} = useRouter();
+    const [state, dispatch] = useReducer(reducer, initialState, (initState) => {
+        if (Cookies.get("accessToken")) {
             return {
-                ...state,
-                accessToken: user?.accessToken,
-                refreshToken: user?.refreshToken,
-                userInfo: user,
-            };
+                ...initState,
+                accessToken: Cookies.get("accessToken")
+            }
         }
-        return state;
+        return initialState;
     });
 
     useEffect(() => {
-        if (user) {
-            Cookies.set('accessToken', user.accessToken, {expires: 7});
-            Cookies.set('refreshToken', user.refreshToken, {expires: 7});
+        if ('accessToken' in query) {
+            axios.get(`https://cmusy-dev.space/api/v1/auth/accounts/info`,
+                {headers: {Authorization: 'Bearer ' + query.accessToken}}).then(({data}) => {
+                dispatch({type: AUTH_AUTO_LOGIN, payload: {...data, ...query}})
+                Cookies.set('accessToken', query.accessToken, {expires: 7});
+                Cookies.set('refreshToken', query.refreshToken, {expires: 7});
+            }).catch(err => err);
         }
-    }, []);
+    }, [query]);
 
     return (
         <AuthContext.Provider value={{...state, dispatch}}>
