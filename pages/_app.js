@@ -19,9 +19,9 @@ function MyApp({Component, pageProps, user}) {
 
 MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext)
-    const query = new URLSearchParams(appContext.ctx.req.url.replace('/profile?', ''));
+    const query = new URLSearchParams(appContext.router.asPath.replace('/profile?', ''));
     const params = Object.fromEntries(query.entries());
-    console.log(params);
+    console.log(appContext);
     if (!params.accessToken) {
         return {...appProps, params};
     }
