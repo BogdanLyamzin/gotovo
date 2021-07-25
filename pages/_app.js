@@ -9,8 +9,7 @@ import '@fullcalendar/timegrid/main.min.css'
 
 import '../src/styles/main.scss';
 
-function MyApp({Component, pageProps, user, params}) {
-    console.log(params)
+function MyApp({Component, pageProps, user}) {
     return (
         <AuthProvider user={user}>
             <Component {...pageProps} />
@@ -20,7 +19,7 @@ function MyApp({Component, pageProps, user, params}) {
 
 MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext)
-    const query = new URLSearchParams(appContext.ctx.asPath.replace('/profile?', ''));
+    const query = new URLSearchParams(appContext.ctx.req.url.replace('/profile?', ''));
     const params = Object.fromEntries(query.entries());
     console.log(params);
     if (!params.accessToken) {
