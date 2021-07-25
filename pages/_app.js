@@ -1,4 +1,5 @@
-import App from "next/app"
+import App from "next/app";
+import axios from 'axios';
 import {appWithTranslation} from 'next-i18next'
 import {AuthProvider} from "../auth/context/auth.context";
 
@@ -18,10 +19,21 @@ function MyApp({Component, pageProps, user}) {
 
 MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext)
-    const query = new URLSearchParams(appContext.ctx.asPath);
-    const user = Object.fromEntries(query.entries());
-    return { ...appProps, user };
+    const query = new URLSearchParams(appContext.ctx.asPath.replace('/profile?', ''));
+    const params = Object.fromEntries(query.entries());
+
+    if (!params.accessToken) {
+        return {...appProps};
+    }
+
+    try {
+        const {data: user} = await axios.get(`https://cmusy-dev.space/api/v1/auth/accounts/info`,
+            {headers: {Authorization: 'Bearer ' + params.accessToken}});
+        return {...appProps, user: {...params, ...user}};
+    } catch (error) {
+        return {...appProps};
+    }
 }
 
-export default appWithTranslation(MyApp)
+export default appWithTranslation(MyApp);
 

@@ -126,8 +126,8 @@ const AuthProvider = ({children, user}) => {
         if (user?.accessToken) {
             return {
                 ...state,
-                accessToken: user.accessToken,
-                refreshToken: user.refreshToken,
+                accessToken: user?.accessToken,
+                refreshToken: user?.refreshToken,
                 userInfo: user,
             };
         }
@@ -135,8 +135,10 @@ const AuthProvider = ({children, user}) => {
     });
 
     useEffect(() => {
-        Cookies.set('accessToken', user.accessToken, {expires: 7});
-        Cookies.set('refreshToken', user.refreshToken, {expires: 7});
+        if (user) {
+            Cookies.set('accessToken', user.accessToken, {expires: 7});
+            Cookies.set('refreshToken', user.refreshToken, {expires: 7});
+        }
     }, []);
 
     return (
