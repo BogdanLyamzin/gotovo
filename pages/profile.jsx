@@ -24,7 +24,6 @@ const Profile = () => {
 };
 
 export const getServerSideProps = async ({ locale }) => ({
-  notFound: false,
   props: {
     ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
   },
