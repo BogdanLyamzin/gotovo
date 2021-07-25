@@ -10,6 +10,7 @@ import '@fullcalendar/timegrid/main.min.css'
 import '../src/styles/main.scss';
 
 function MyApp({Component, pageProps, user}) {
+
     return (
         <AuthProvider user={user}>
             <Component {...pageProps} />
@@ -19,11 +20,10 @@ function MyApp({Component, pageProps, user}) {
 
 MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext)
-    const query = new URLSearchParams(appContext.router.asPath.replace('/profile?', ''));
-    const params = Object.fromEntries(query.entries());
-    console.log(appContext);
+    const params = appContext.router.query;
+
     if (!params.accessToken) {
-        return {...appProps, params};
+        return {...appProps};
     }
 
     try {
@@ -31,7 +31,7 @@ MyApp.getInitialProps = async (appContext) => {
             {headers: {Authorization: 'Bearer ' + params.accessToken}});
         return {...appProps, user: {...params, ...user}};
     } catch (error) {
-        return {...appProps, params};
+        return {...appProps, user: {accessToken: null, refreshToken: null}};
     }
 }
 
