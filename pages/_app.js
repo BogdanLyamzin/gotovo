@@ -22,7 +22,7 @@ MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext)
     const query = new URLSearchParams(appContext.ctx.asPath.replace('/profile?', ''));
     const params = Object.fromEntries(query.entries());
-
+    console.log(params);
     if (!params.accessToken) {
         return {...appProps, params};
     }
