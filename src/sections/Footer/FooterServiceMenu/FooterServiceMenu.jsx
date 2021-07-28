@@ -18,7 +18,7 @@ const FooterServiceMenu = () => {
     });
 
     return (
-        <div className={styles["footer-menu-col"]}>
+        <div className={`${styles["footer-menu-col"]} ${styles["_services"]}`}>
             <p className={styles["footer-menu-heading"]}>{t('service-title')}</p>
             <ul className={styles["footer-menu-list"]}>
                 {menuElements}

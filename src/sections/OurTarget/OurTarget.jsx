@@ -16,10 +16,10 @@ const OurTarget = () => {
             <div className="our-target-map">
                 <div className="our-target-map-text">
                     <span className="our-target-map-text-bold">1</span>
-                    <span className="our-target-map-text-bold">/</span>
-                    <span className="our-target-map-text-bold">128,650,000</span>
                     <span className="our-target-map-text-thin">{t("center")}</span>
+                    <span className="our-target-map-text-bold _slash">/</span>
                     <span className="our-target-map-text-thin"></span>
+                    <span className="our-target-map-text-bold">128,650,000</span>
                     <span className="our-target-map-text-thin">{t("visitors")}</span>
                 </div>
                 <img src="/img/map.svg" alt="Карта" />

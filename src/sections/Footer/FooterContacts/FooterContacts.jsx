@@ -17,7 +17,7 @@ const FooterContacts = ()=>{
     });
 
     return (
-        <div className={styles["footer-menu-col"]}>
+        <div className={`${styles["footer-menu-col"]} ${styles["_contacts"]}`}>
             <p className={styles["footer-menu-heading"]}>{t('contacts-title')}</p>
             <ul className={styles["footer-menu-list"]} >
                 {contactsMenuElements}

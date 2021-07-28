@@ -11,14 +11,14 @@ const Footer = () => {
     return (
         <footer className={styles["footer"]}>
             <div className={`${styles["footer-ornament"]} ${styles._left}`}>
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
             </div>
             <div className={`${styles["footer-ornament"]} ${styles._right}`}>
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
-                <Image  src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
+                <Image src="/img/ornament-full.png" alt="#" width="152" height="136" />
             </div>
             <div className={`container ${styles["footer-content"]}`}>
                 <FooterInfo />

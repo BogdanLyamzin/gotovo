@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import CustomLink from "../../../components/Link";
 import styles from "../Navbar.module.scss";
 
-const NavbarMenu = ()=>{
+const NavbarMenu = () => {
     const { t } = useTranslation("navbar");
     const menuItems = t("menu", { returnObjects: true });
 

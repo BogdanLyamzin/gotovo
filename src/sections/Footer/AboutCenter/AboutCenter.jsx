@@ -17,7 +17,7 @@ const AboutCenter = () => {
         )
     });
     return (
-        <div className={styles["footer-menu-col"]}>
+        <div className={`${styles["footer-menu-col"]} ${styles["_about"]}`}>
             <p className={styles["footer-menu-heading"]}>{t('about-title')}</p>
             <ul className={styles["footer-menu-list"]}>
                 {menuElements}

@@ -18,7 +18,8 @@ const MarriageHeader = () => {
                     </div>
                 </div>
             </div>
-            <img className="header-img _mr-80" src="/img/marriage-header.png" alt="" />
+            <img className="header-img _mr-80" src="/img/marriage-header.png" alt="Letter" />
+            <img className="header-img-mob" src="/img/marriage-header-mob.png" alt="Letter" />
         </header>
     )
 };

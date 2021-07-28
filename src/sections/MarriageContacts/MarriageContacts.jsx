@@ -11,7 +11,7 @@ const MarriageContacts = () => {
                     <input placeholder={t("input-email")} type="text" className="marriage-contacts-input" />
                     <input placeholder={t("input-tel")} type="text" className="marriage-contacts-input" />
                     <textarea placeholder={t("input-text")} name="" id="" cols="30" rows="10"className="marriage-contacts-input" />
-                    <a href="#" className="btn _dark _long marriage-contacts-btn">{t("btn")}</a>
+                    <a href="#" className="btn _dark marriage-contacts-btn">{t("btn")}</a>
                 </div>
                 <div>
                     <div className="contacts-item marriage-contacts-item">

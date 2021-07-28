@@ -1,12 +1,12 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 import Layout from "../../src/components/Layout";
-import BrandedProduct from "../../src/sections/BrandedProduct";
+import BrandedProductsList from "../../src/sections/BrandedProductsList";
 
-const WeddingForDay = () => {
+const BrandedProducts = () => {
     return (
         <Layout fileName="branded-product-page">
-            <BrandedProduct />
+            <BrandedProductsList />
         </Layout>
     );
 };
@@ -17,4 +17,4 @@ export const getStaticProps = async ({ locale }) => ({
     },
 })
 
-export default WeddingForDay;
+export default BrandedProducts;

@@ -1,19 +1,8 @@
 .marriage-contacts {
-    padding: 60px 0;
     background-color: $bg-light;
-
-    &-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 130px;
-    }
 
     &-form {
         display: grid;
-    }
-
-    &-label.title {
-        text-align: start;
     }
 
     &-input {
@@ -27,10 +16,6 @@
         &:focus {
             outline: 2px solid $main-color;
         }
-    }
-
-    &-btn {
-        justify-self: end;
     }
 
     &-schedule {
@@ -51,5 +36,45 @@
     &-map {
         width: 100%;
         height: 390px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .marriage-contacts {
+        padding: 30px 15px;
+
+        &-btn {
+            width: 100%;
+        }
+
+        &-form {
+            margin-bottom: 50px;
+        }
+
+        &-map {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (min-width: 481px) {
+    .marriage-contacts {
+        padding: 60px 0;
+
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 130px;
+        }
+
+        &-label {
+            text-align: start;
+        }
+
+        &-btn {
+            padding: 12px 30px;
+            width: max-content;
+            justify-self: end;
+        }
     }
 }
