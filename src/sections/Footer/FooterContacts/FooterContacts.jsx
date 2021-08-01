@@ -6,9 +6,9 @@ import styles from "../Footer.module.scss";
 const FooterContacts = ()=>{
     const {t} = useTranslation('footer');
     const contactsMenuItems = t('contacts-menu', {returnObjects: true});
-    const contactsMenuElements = contactsMenuItems.map(({href, text}) => {
+    const contactsMenuElements = contactsMenuItems.map(({id, href, text}) => {
         return (
-            <li className={styles["footer-menu-item"]}>
+            <li key={id} className={styles["footer-menu-item"]}>
                 <CustomLink href={href} className={styles["footer-menu-link"]}>
                     {text}
                 </CustomLink>
@@ -17,7 +17,7 @@ const FooterContacts = ()=>{
     });
 
     return (
-        <div className={styles["footer-menu-col"]}>
+        <div className={`${styles["footer-menu-col"]} ${styles["_contacts"]}`}>
             <p className={styles["footer-menu-heading"]}>{t('contacts-title')}</p>
             <ul className={styles["footer-menu-list"]} >
                 {contactsMenuElements}

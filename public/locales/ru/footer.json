@@ -1,79 +1,95 @@
 {
-  "working-time": {
-    "workDays": "Пн-Пт",
-    "weekend": "Сб-Вс"
-  },
-  "about-title": "О центре",
-  "about-menu": [
-    {
-      "href": "/about-us",
-      "text": "Про \"Готово!\""
+    "working-time": {
+        "workDays": "Пн-Пт",
+        "weekend": "Сб-Вс"
     },
-    {
-      "href": "/about-us/idea",
-      "text": "Идея возникновения"
-    },
-    {
-      "href": "/about-us/building",
-      "text": "Строительство"
-    },
-    {
-      "href": "/about-us/advantages",
-      "text": "Преимущества"
-    },
-    {
-      "href": "/about-us/service",
-      "text": "Обслуживание"
-    }
-  ],
-  "service-title": "Услуги",
-  "service-menu": [
-    {
-      "href": "/wedding-for-day",
-      "text": "Брак за сутки"
-    },
-    {
-      "href": "/services/insurance",
-      "text": "Страхование"
-    },
-    {
-      "href": "https://gotovo.pasport.org.ua/",
-      "text": "Паспортный сервис"
-    },
-    {
-      "href": "/services/written-translation",
-      "text": "Письменный перевод"
-    },
-    {
-      "href": "/services/notarized-translation",
-      "text": "Нотариальный перевод"
-    },
-    {
-      "href": "/services/apostillization",
-      "text": "Апостилизация"
-    },
-    {
-      "href": "/services/events",
-      "text": "Проведение мероприятий"
-    },
-    {
-      "href": "https://novaposhta.ua/",
-      "text": "Новая почта"
-    },
-    {
-      "href": "https://www.ups.com/ua/uk/Home.page",
-      "text": "UPS - Украина"
-    },
-    {
-      "href": "https://ca.diia.gov.ua/",
-      "text": "Дия"
-    }
-  ],
-  "contacts-title": "Контакты",
-  "contacts-menu": [
-    {
-      "href": "/contacts",
-      "text": "Контакты"
-    }
-  ]
+    "about-title": "О центре",
+    "about-menu": [
+        {
+            "id": "1",
+            "href": "/about-us",
+            "text": "Про \"Готово!\""
+        },
+        {
+            "id": "2",
+            "href": "/about-us/idea",
+            "text": "Идея возникновения"
+        },
+        {
+            "id": "3",
+            "href": "/about-us/building",
+            "text": "Строительство"
+        },
+        {
+            "id": "4",
+            "href": "/about-us/advantages",
+            "text": "Преимущества"
+        },
+        {
+            "id": "5",
+            "href": "/about-us/service",
+            "text": "Обслуживание"
+        }
+    ],
+    "service-title": "Услуги",
+    "service-menu": [
+        {
+            "id": "1",
+            "href": "/wedding-for-day",
+            "text": "Брак за сутки"
+        },
+        {
+            "id": "2",
+            "href": "/services/insurance",
+            "text": "Страхование"
+        },
+        {
+            "id": "3",
+            "href": "https://gotovo.pasport.org.ua/",
+            "text": "Паспортный сервис"
+        },
+        {
+            "id": "4",
+            "href": "/services/written-translation",
+            "text": "Письменный перевод"
+        },
+        {
+            "id": "5",
+            "href": "/services/notarized-translation",
+            "text": "Нотариальный перевод"
+        },
+        {
+            "id": "6",
+            "href": "/services/apostillization",
+            "text": "Апостилизация"
+        },
+        {
+            "id": "7",
+            "href": "/services/events",
+            "text": "Проведение мероприятий"
+        },
+        {
+            "id": "8",
+            "href": "https://novaposhta.ua/",
+            "text": "Новая почта"
+        },
+        {
+            "id": "9",
+            "href": "https://www.ups.com/ua/uk/Home.page",
+            "text": "UPS - Украина"
+        },
+        {
+            "id": "10",
+            "href": "https://ca.diia.gov.ua/",
+            "text": "Дия"
+        }
+    ],
+    "contacts-title": "Контакты",
+    "contacts-menu": [
+        {
+            "id": "1",
+            "href": "/contacts",
+            "text": "Контакты"
+        }
+    ]
 }

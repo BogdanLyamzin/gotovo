@@ -1,11 +1,13 @@
 import {useTranslation} from "next-i18next";
 
-const BrandedProduct = () => {
+import CustomLink from "../../components/Link";
+
+const BrandedProductsList = () => {
     const { t } = useTranslation("branded-product");
     const productsItems = t("products", {returnObjects: true});
-    const productsElements = productsItems.map(({img, name, price}) => {
+    const productsElements = productsItems.map(({id, img, name, price, link}) => {
         return (
-            <a href="#" className="branded-item">
+            <CustomLink href={link} key={id} className="branded-item">
                 <div className="branded-item-photo">
                     <img className="branded-item-img" src={img} alt="Product item image" />
                 </div>
@@ -13,7 +15,7 @@ const BrandedProduct = () => {
                     <p className="branded-item-name">{name}</p>
                     <p className="branded-item-price">{price}</p>
                 </div>
-            </a>
+            </CustomLink>
         )
     });
     return (
@@ -28,4 +30,4 @@ const BrandedProduct = () => {
     )
 };
 
-export default BrandedProduct;
+export default BrandedProductsList;

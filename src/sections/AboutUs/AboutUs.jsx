@@ -11,13 +11,7 @@ const AboutUs = () => {
                     <p className="article-text">{t("text-2")}</p>
                     <p className="article-text">{t("text-3")}</p>
                 </div>
-                {/* <div className="about-us-gallery">
-                    <div className="about-us-gallery-img _1"></div>
-                    <div className="about-us-gallery-img _2"></div>
-                    <div className="about-us-gallery-img _3"></div>
-                    <div className="about-us-gallery-img _4"></div>
-                </div> */}
-                <img className="about-us-picture" src="/img/About-us/img-1.jpg" alt="" />
+                <img className="about-us-picture" src="/img/About-us/img-1.jpg" alt="About us picture" />
             </div>
             <img className="about-us-img _1" src="/img/dots.png" alt="" />
             <img className="about-us-img _2" src="/img/dots.png" alt="" />

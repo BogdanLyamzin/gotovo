@@ -1,22 +1,17 @@
 .write-about-us {
-    padding: 60px 0 135px;
     background-color: $bg-light;
 
     &-content {
         display: grid;
-        grid-template-columns: repeat(4, 200px);
-        justify-content: center;
-        grid-column-gap: 30px;
     }
 
     &-item {
         position: relative;
-        padding: 20px 25px;
-        border-radius: 7px;
-        box-shadow: 0 5px 30px 7px #7955481a;
         display: grid;
         justify-content: center;
         align-items: center;
+        border-radius: 7px;
+        box-shadow: 0 5px 30px 7px #7955481a;
 
         &::after {
             content: '';
@@ -38,5 +33,56 @@
     &-img {
         max-width: 100%;
         height: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .write-about-us {
+        padding: 60px 20px 110px;
+
+        &-content {
+            grid-gap: 20px;
+            grid-template-areas: "ictv tsn"
+                                 "ictv tsn"
+                                 "trk tsn"
+                                 "trk cor"
+                                 "trk cor";
+        }
+
+        &-item {
+            padding: 17px;
+
+            &._ictv {
+                grid-area: ictv;
+            }
+
+            &._tsn {
+                grid-area: tsn;
+            }
+
+            &._trk {
+                grid-area: trk;
+            }
+
+            &._cor {
+                grid-area: cor;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) {
+    .write-about-us {
+        padding: 60px 0 135px;
+
+        &-content {
+            grid-template-columns: repeat(4, 200px);
+            justify-content: center;
+            grid-column-gap: 30px;
+        }
+
+        &-item {
+            padding: 20px 25px;
+        }
     }
 }

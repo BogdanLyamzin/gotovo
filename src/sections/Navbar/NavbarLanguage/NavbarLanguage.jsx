@@ -5,7 +5,7 @@ import styles from "../Navbar.module.scss";
 
 import { allLangs } from "./allLangs";
 
-const NavbarButtons = ()=>{
+const NavbarLanguage = ()=>{
     const router = useRouter();
 
     const langs = [...allLangs];
@@ -21,18 +21,13 @@ const NavbarButtons = ()=>{
     ));
 
     return (
-        <div className={styles["nav-buttons"]}>
-            <a href="tel:0800300803" className={styles["nav-tel"]}>
-                0 800 300 803
-            </a>
-            <div className={styles["nav-lang"]}>
-                <div className={styles["nav-lang-btn"]}>{currentLang.text}</div>
-                <ul className={styles["nav-lang-list"]}>
-                    {otherLangs}
-                </ul>
-            </div>
+        <div className={styles["nav-lang"]}>
+            <div className={styles["nav-lang-btn"]}>{currentLang.text}</div>
+            <ul className={styles["nav-lang-list"]}>
+                {otherLangs}
+            </ul>
         </div>
     )
 }
 
-export default NavbarButtons;
+export default NavbarLanguage;

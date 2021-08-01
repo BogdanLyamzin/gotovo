@@ -1,9 +1,7 @@
 .service-page {
-    padding: 50px 0 150px;
     background-color: $bg-light;
 
     &-header {
-        position: relative;
         padding-bottom: 50px;
     }
 
@@ -20,10 +18,35 @@
         color: $text-color;
         text-align: center;
     }
+}
 
-    &-btn {
-        position: absolute;
-        left: 0;
-        top: 0;
+@media (min-width: 320px) and (max-width: 480px) {
+    .service-page {
+        padding: 30px 15px 80px;
+
+        &-header {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    
+        &-btn {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 481px) {
+    .service-page {
+        padding: 50px 0 150px;
+    
+        &-header {
+            position: relative;
+        }
+
+        &-btn {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 }
