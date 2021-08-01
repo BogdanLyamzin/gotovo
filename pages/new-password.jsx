@@ -1,23 +1,22 @@
-import React from "react";
-import LoginForm from "../old/LoginForm";
+import NewPasswordForm from "../old/NewPasswordForm";
 import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
 
-const Login = () => {
+const NewPassword = () => {
     const isAuth = useAuth();
     const router = useRouter();
     if (isAuth) {
         router.push('/profile')
     }
     return (
-        <Layout title="login">
+        <Layout title="reset password">
             <section className="register-form-main">
                 <div className="container">
                     <div className="register-form-container">
-                        <h2 className="title">Увійти</h2>
-                        <LoginForm />
+                        <h2 className="title">Новий пароль</h2>
+                        <NewPasswordForm />
                     </div>
                 </div>
                 <img className="header-img login-form-img" src="/img/passport.png" alt="" />
@@ -34,4 +33,4 @@ export const getStaticProps = async ({ locale }) => ({
 })
 
 
-export default Login;
+export default NewPassword;
