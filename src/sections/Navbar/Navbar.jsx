@@ -12,9 +12,9 @@ const Navbar = () => {
             <div className={styles["nav-container"]}>
                 <NavbarMobileMenu />
                 <Logo type="main" />
-                <NavbarMenu />
+                <NavbarMenu type="desktop" />
                 <NavbarLanguage />
-                <NavbarAuth />
+                <NavbarAuth type="desktop" />
             </div>
         </nav>
     );

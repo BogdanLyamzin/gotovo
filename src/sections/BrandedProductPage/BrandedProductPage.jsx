@@ -1,7 +1,9 @@
 import {useTranslation} from "next-i18next";
+import { useState } from "react";
 
 const BrandedProductPage = ({page}) => {
     const { t } = useTranslation("product-list");
+    const [count, setCount] = useState(1);
     const productItems = t('product-items', {returnObjects: true});
     const {img, name, description, price} = productItems[page];
     const featuresElements = productItems[page].features.map(({id, text}) => {
@@ -9,6 +11,10 @@ const BrandedProductPage = ({page}) => {
             <p key={id} className="product-features-item">{text}</p>
         )
     });
+
+    const minus = (n) => {
+        return (n > 1) ? n - 1 : 1;
+    }
 
     return (
         <div className="product">
@@ -25,9 +31,9 @@ const BrandedProductPage = ({page}) => {
                         <div className="product-buy">
                             <p className="product-price">{price}</p>
                             <div className="product-counter">
-                                <span className="product-counter-btn"></span>
-                                <span className="product-counter-value">1</span>
-                                <span className="product-counter-btn _plus"></span>
+                                <span className="product-counter-btn" onClick={() => setCount((num) => minus(num))}></span>
+                                <span className="product-counter-value">{count}</span>
+                                <span className="product-counter-btn _plus" onClick={() => setCount((num) => num + 1)}></span>
                             </div>
                         </div>
                         

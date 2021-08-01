@@ -7,14 +7,14 @@ import CustomLink from "../../../components/Link";
 
 import styles from "../Navbar.module.scss";
 
-const NavbarAuth = () => {
+const NavbarAuth = ({ type }) => {
     const isAuth = useAuth();
     const logout = useLogout();
     const { t } = useTranslation("navbar");
 
     const auth = t("auth", { returnObjects: true });
     return (
-        <div className={styles.authLinks}>
+        <div className={`${styles.authLinks} ${styles[type]}`}>
             {isAuth ? (
                 <button onClick={logout}>
                     <a className={styles.authLink}>{auth.logout}</a>

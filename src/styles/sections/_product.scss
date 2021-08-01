@@ -220,7 +220,8 @@
         }
 
         &-counter-value {
-            margin: 0 16px;
+            min-width: 40px;
+            text-align: center;
         }
 
         &-input, &-btn {
