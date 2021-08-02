@@ -36,51 +36,61 @@
         {
             "id": "1",
             "href": "/wedding-for-day",
+            "target": "_self",
             "text": "Шлюб за добу"
         },
         {
             "id": "2",
             "href": "/services/insurance",
+            "target": "_self",
             "text": "Страхування"
         },
         {
             "id": "3",
             "href": "https://gotovo.pasport.org.ua/",
+            "target": "_blank",
             "text": "Паспортний сервiс"
         },
         {
             "id": "4",
             "href": "/services/written-translation",
+            "target": "_self",
             "text": "Письмовий переклад"
         },
         {
             "id": "5",
             "href": "/services/notarized-translation",
+            "target": "_self",
             "text": "Нотаріальний переклад"
         },
         {
             "id": "6",
             "href": "/services/apostillization",
+            "target": "_self",
             "text": "Апостилювання"
         },
         {
             "id": "7",
             "href": "/services/events",
+            "target": "_self",
             "text": "Проведення заходів"
         },
         {
             "id": "8",
             "href": "https://novaposhta.ua/",
+            "target": "_blank",
             "text": "Нова пошта"
         },
         {
             "id": "9",
             "href": "https://www.ups.com/ua/uk/Home.page",
+            "target": "_blank",
             "text": "UPS - Україна"
         },
         {
             "id": "10",
             "href": "https://ca.diia.gov.ua/",
+            "target": "_blank",
             "text": "Дiя"
         }
     ],

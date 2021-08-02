@@ -4,9 +4,9 @@
         {
             "id": "1",
             "img": "/img/Services/icon-1.png",
-            "href": "/wedding-for-day",
+            "href": "/services/marriage-application",
             "target": "_self",
-            "text": "Marriage within 24 hours"
+            "text": "How to apply for marriage online"
         },
         {
             "id": "2",

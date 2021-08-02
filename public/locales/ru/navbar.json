@@ -44,52 +44,62 @@
             "list": [
                 {
                     "id": "1",
-                    "href": "/",
-                    "text": "HHH"
+                    "href": "/services/marriage-application",
+                    "target": "_self",
+                    "text": "Как подать заявку на брак онлайн"
                 },
                 {
                     "id": "2",
                     "href": "/services/insurance",
+                    "target": "_self",
                     "text": "Страхование"
                 },
                 {
                     "id": "3",
                     "href": "https://gotovo.pasport.org.ua/",
+                    "target": "_blank",
                     "text": "Паспортный сервис"
                 },
                 {
                     "id": "4",
                     "href": "/services/written-translation",
+                    "target": "_self",
                     "text": "Письменный перевод"
                 },
                 {
                     "id": "5",
                     "href": "/services/notarized-translation",
+                    "target": "_self",
                     "text": "Нотариальный перевод"
                 },
                 {
                     "id": "6",
                     "href": "/services/apostillization",
+                    "target": "_self",
                     "text": "Апостилизация"
                 },
                 {
                     "id": "7",
                     "href": "/services/events",
+                    "target": "_self",
                     "text": "Проведение мероприятий"
                 },
                 {
                     "id": "8",
                     "href": "https://novaposhta.ua/",
+                    "target": "_blank",
                     "text": "Новая почта"
                 },
                 {
                     "id": "9",
                     "href": "https://www.ups.com/ua/uk/Home.page",
+                    "target": "_blank",
                     "text": "UPS - Украина"
                 },
                 {
                     "id": "10",
                     "href": "https://ca.diia.gov.ua/",
+                    "target": "_blank",
                     "text": "Дия"
                 }
             ]

@@ -36,51 +36,61 @@
         {
             "id": "1",
             "href": "/wedding-for-day",
+            "target": "_self",
             "text": "Marriage within 24 hours"
         },
         {
             "id": "2",
             "href": "/services/insurance",
+            "target": "_self",
             "text": "Insurance"
         },
         {
             "id": "3",
             "href": "https://gotovo.pasport.org.ua/",
+            "target": "_blank",
             "text": "Passport service"
         },
         {
             "id": "4",
             "href": "/services/written-translation",
+            "target": "_self",
             "text": "Written translation"
         },
         {
             "id": "5",
             "href": "/services/notarized-translation",
+            "target": "_self",
             "text": "Notarized translation"
         },
         {
             "id": "6",
             "href": "/services/apostillization",
+            "target": "_self",
             "text": "Apostilization"
         },
         {
             "id": "7",
             "href": "/services/events",
+            "target": "_self",
             "text": "Hosting the event"
         },
         {
             "id": "8",
             "href": "https://novaposhta.ua/",
+            "target": "_blank",
             "text": "Nova Poshta"
         },
         {
             "id": "9",
             "href": "https://www.ups.com/ua/uk/Home.page",
+            "target": "_blank",
             "text": "UPS - Ukraine"
         },
         {
             "id": "10",
             "href": "https://ca.diia.gov.ua/",
+            "target": "_blank",
             "text": "Diia"
         }
     ],

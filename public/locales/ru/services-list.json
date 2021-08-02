@@ -4,9 +4,9 @@
         {
             "id": "1",
             "img": "/img/Services/icon-1.png",
-            "href": "/wedding-for-day",
+            "href": "/services/marriage-application",
             "target": "_self",
-            "text": "Брак за сутки"
+            "text": "Как подать заявку на брак онлайн"
         },
         {
             "id": "2",
