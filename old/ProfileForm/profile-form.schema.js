@@ -1,29 +1,42 @@
 import * as Yup from "yup";
 
-const profileFormSchema = Yup.object().shape({
-    fullNameOfTheHusband: Yup.string().required('Поле обязательное!'),
-    wifeSFullName: Yup.string().required('Поле обязательное!'),
-    husbandPassport: Yup.string().required(),
-    husbandIssuedBy: Yup.string().required(),
-    wifePassport: Yup.string().required(),
-    wifeIssuedBy: Yup.string().required(),
-    dateOfBirth: Yup.string().required(),
-    wifeDateOfBirth: Yup.string().required(),
-    status: Yup.string().required(),
-    phone: Yup.string().required(),
-    email: Yup.string().email("Введите валидный email!"),
-    // weddingDate: Yup.string().required('Поле обязательное!'),
-    citizenOfUkraine: Yup.bool().notRequired(),
-    wasHusbandPreviouslyMarried: Yup.bool().notRequired(),
-    wasWifePreviouslyMarried: Yup.bool().notRequired(),
-    attitudeMilitary: Yup.string().required(),
-    registeredPlace: Yup.string().notRequired(),
-    servicePlace: Yup.string().notRequired(),
-    militaryRank: Yup.string().notRequired(),
-    militaryDocument: Yup.string().notRequired(),
-    plan: Yup.string().required(),
-    comment: Yup.string().notRequired(),
-    docs: Yup.string().notRequired(),
-});
+const requiredField = {
+    ua: "Поле обов'язкове",
+    ru: "Поле обязательное",
+    en: "Field required"
+}
 
-export default profileFormSchema;
+const createProfileSchema = (locale) => {
+    const requiredText = requiredField[locale];
+    const profileFormSchema = Yup.object().shape({
+        fullNameOfTheHusband: Yup.string().notRequired(requiredText),
+        wifeSFullName: Yup.string().notRequired(requiredText),
+        husbandPassport: Yup.string().length(6).notRequired(),
+        husbandIssuedBy: Yup.string().notRequired(requiredText),
+        wifePassport: Yup.string().notRequired(),
+        wifeIssuedBy: Yup.string().notRequired(requiredText),
+        dateOfBirth: Yup.string().notRequired(requiredText),
+        wifeDateOfBirth: Yup.string().notRequired(requiredText),
+        status: Yup.string().notRequired(requiredText),
+        phone: Yup.string().notRequired(requiredText),
+        email: Yup.string().email("Введите валидный email!"),
+        // weddingDate: Yup.string().required('Поле обязательное!'),
+        citizenOfUkraine: Yup.bool().notRequired(requiredText),
+        wasHusbandPreviouslyMarried: Yup.bool().notRequired(),
+        wasWifePreviouslyMarried: Yup.bool().notRequired(),
+        attitudeMilitary: Yup.string().required(),
+        registeredPlace: Yup.string().notRequired(),
+        servicePlace: Yup.string().notRequired(),
+        militaryRank: Yup.string().notRequired(),
+        militaryDocument: Yup.string().notRequired(),
+        plan: Yup.string().notRequired(requiredText),
+        comment: Yup.string().notRequired(),
+        docs: Yup.string().notRequired(),
+    });
+
+    return profileFormSchema;
+}
+
+
+
+export default createProfileSchema;
