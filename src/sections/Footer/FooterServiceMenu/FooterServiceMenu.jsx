@@ -7,10 +7,10 @@ import styles from "../Footer.module.scss";
 const FooterServiceMenu = () => {
     const {t} = useTranslation('footer');
     const menuItems = t('service-menu', {returnObjects: true});
-    const menuElements = menuItems.map(({id, href, text}) => {
+    const menuElements = menuItems.map(({ id, href, text, target = "_self" }) => {
         return (
             <li key={id} className={styles["footer-menu-item"]}>
-                <CustomLink href={href} className={styles["footer-menu-link"]}>
+                <CustomLink href={href} target={target} className={styles["footer-menu-link"]}>
                     {text}
                 </CustomLink>
             </li>

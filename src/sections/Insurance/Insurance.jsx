@@ -1,13 +1,23 @@
 import {useTranslation} from "next-i18next";
 
+import { useState } from "react";
+
 import Dropdown from "../../components/Dropdown";
 
 const Insurance = () => {
     const { t } = useTranslation("insurance");
     const dropdownItems = t('dropdown', {returnObjects: true});
-    const dropdownElements = dropdownItems.map(({id, heading, listTitle, list}) => {
+
+    const [openMenuIdx, setOpenMenuIdx] = useState(false);
+    const toggle = (idx) => {
+        setOpenMenuIdx(prevState => {
+            return (prevState === idx) ? false : idx;
+        });
+    };
+
+    const dropdownElements = dropdownItems.map(({id, heading, listTitle, list}, index) => {
         return (
-            <Dropdown heading={heading} listTitle={listTitle} list={list} key={id}/>
+            <Dropdown heading={heading} listTitle={listTitle} list={list} key={id} openMenuIdx={openMenuIdx} toggle={toggle} index={index}/>
         )
     });
     return (
