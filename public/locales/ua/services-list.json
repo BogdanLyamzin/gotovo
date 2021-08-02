@@ -4,9 +4,9 @@
         {
             "id": "1",
             "img": "/img/Services/icon-1.png",
-            "href": "/wedding-for-day",
+            "href": "/services/marriage-application",
             "target": "_self",
-            "text": "Шлюб за добу"
+            "text": "Як подати заявку на шлюб онлайн"
         },
         {
             "id": "2",
