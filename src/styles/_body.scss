@@ -19,4 +19,8 @@ body {
     body {
         padding-top: 81px;
     }
+
+    * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
 }

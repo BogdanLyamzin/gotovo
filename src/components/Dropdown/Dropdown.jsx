@@ -1,4 +1,4 @@
-import {useState, useRef} from "react";
+import {useRef} from "react";
 
 const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle = null }) => {
     const contentRef = useRef(null);
@@ -9,8 +9,7 @@ const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle = null 
 
     let elementStyle = {};
 
-    console.log(contentRef.current);
-    if(contentRef.current && (index === openMenuIdx)) {
+    if (contentRef.current && (index === openMenuIdx)) {
         const {style, scrollHeight} = contentRef.current;
         elementStyle.maxHeight = style.maxHeight ? null : `${scrollHeight}px`;
     }
