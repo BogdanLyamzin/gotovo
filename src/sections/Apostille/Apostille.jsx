@@ -9,6 +9,7 @@ const Apostille = () => {
             <div className="container">
                 <div className="service-page-header">
                     <a href="./" className="btn _light service-page-btn"><span className="btn-back"></span>{t("btn")}</a>
+                    <a href="./" className="service-page-mob-btn"></a>
                     <img className="service-page-logo" src="/img/Services/icon-4.png" alt="" />
                     <h2 className="service-page-title">{t("title")}</h2>
                 </div>

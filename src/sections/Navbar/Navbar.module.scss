@@ -282,6 +282,7 @@
 
             &:hover {
                 .nav-menu-dropdown.desktop {
+                    opacity: 1;
                     transform: translateX(-50%) translateY(0) scaleY(1);
                 }
 
@@ -325,6 +326,7 @@
             }
 
             &.desktop {
+                opacity: 0;
                 transform: translateX(-50%) translateY(-50%) scaleY(0);
             }
         }

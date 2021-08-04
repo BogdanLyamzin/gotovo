@@ -131,6 +131,9 @@
             font-size: 18px;
             font-weight: 500;
             color: $text-color;
+            min-width: 30px;
+            margin: 0 5px;
+            text-align: center;
         }
     }
 
@@ -183,10 +186,6 @@
             margin-right: 25px;
         }
 
-        &-counter-value {
-            margin: 0 13px;
-        }
-
         &-input, &-btn {
             width: 100%;
         }
@@ -217,11 +216,6 @@
 
         &-price {
             font-size: 22px;
-        }
-
-        &-counter-value {
-            min-width: 40px;
-            text-align: center;
         }
 
         &-input, &-btn {

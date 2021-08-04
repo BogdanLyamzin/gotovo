@@ -39,9 +39,15 @@ const NavbarMenu = ({ type }) => {
 
             return (
                 <li className={styles["nav-menu-item"]} key={id} >
-                    <span className={`${styles["nav-menu-link"]} ${styles[isActive]}`} onClick={() => toggle(index)} >
-                        {text}
-                    </span>
+                    {(type === "mobile") ? (
+                        <span className={`${styles["nav-menu-link"]} ${styles[isActive]}`} onClick={() => toggle(index)} >
+                            {text}
+                        </span>
+                    ) : (
+                        <CustomLink href={href} className={styles["nav-menu-link"]}>
+                            {text}
+                        </CustomLink>
+                    )}
                     <div className={`${styles["nav-menu-dropdown"]} ${styles[isActive]} ${styles[type]}`} ref={type === "mobile" ? contentRef : deskRef} style={elementStyle}>
                         <ul className={`${styles["nav-menu-dropdown-list"]}`}>
                             {menuElementList}
