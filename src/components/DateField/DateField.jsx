@@ -13,6 +13,7 @@ const DateField = (props) => {
                 {...field}
                 {...props}
                 className="text-field"
+                dateFormat="dd/MM/yyyy"
                 selected={(field.value && new Date(field.value)) || null}
                 onChange={val => {
                     setFieldValue(field.name, val);

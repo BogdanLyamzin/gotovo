@@ -1,13 +1,16 @@
-import {ErrorMessage, Field} from "formik";
+import {ErrorMessage, Field, useField, useFormikContext} from "formik";
 import React from "react";
 import MaskedInput from "react-text-mask";
 
-const MaskedField = ({label, type = "text", placeholder = "", name, mask, required = false}) => {
+const MaskedField = (props) => {
+    const {handleChange, label, type = "text", placeholder = "", name, mask, required = false} = props;
+    const {setFieldValue } = useFormikContext();
+
     return (
         <>
             {label && <label className="form-label">{label}</label>}
-            <Field
-                render={({ field, handleChange, handleBlur }) => (
+            <Field name={name}
+                render={({ field, handleBlur }) => (
                     <MaskedInput
                         {...field}
                         mask={mask}

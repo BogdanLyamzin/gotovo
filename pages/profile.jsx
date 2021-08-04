@@ -24,7 +24,7 @@ const Profile = ({locale}) => {
       <section className="register-form-main">
         <div className="container">
           <div className="register-form-container">
-            <h2 className="title">{t("title")}</h2>
+            <h2 className="title">{t("form-title")}</h2>
             <ProfileForm locale={locale} />
           </div>
         </div>

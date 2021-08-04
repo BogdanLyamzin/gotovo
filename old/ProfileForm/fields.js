@@ -3,7 +3,7 @@ import {phoneNumberMask, passportMask} from "./masks";
 export const fields = {
     plan: {
         name: "plan",
-        value: "BASIC",
+        value: "",
     },
     total: {
         type: "hidden",
