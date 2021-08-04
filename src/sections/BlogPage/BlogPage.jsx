@@ -1,51 +1,65 @@
 import {useTranslation} from "next-i18next";
 
+import Image from 'next/image';
 import CustomLink from "../../components/Link";
+import BlogItem from "../../components/BlogItem";
 
 const BlogPage = ({ pageNumber }) => {
     const { t } = useTranslation("blog");
     const blogItems = t("list", {returnObjects: true});
 
-    const { id, title, date, img, text } = blogItems[pageNumber - 1];
+    const { title, date, img, text } = blogItems[pageNumber - 1];
 
     const listElements = text.map(({id, text}) => {
-        return (
-            <p key={id} className="blog-page-text">{text}</p>
-        )
+        return <p key={id} className="blog-page-text">{text}</p>
     });
 
     const newsElements = blogItems.map(({id, title, date, img, link}) => {
-        return (
-            <CustomLink href={link} key={id} className="blog-item">
-                <div className="blog-item-photo">
-                    <img src={img} alt="Blog photo" className="blog-item-img" />
-                </div>
-                <div className="blog-item-info">
-                    <p className="blog-item-title">{title}</p>
-                    <p className="blog-item-date">{date}</p>
-                    
-                </div>
-            </CustomLink>
-        )
+        return <BlogItem key={id} title={title} date={date} img={img} link={link} />
     });
-    
+
+    const prevBtn = (pageNumber > 1) ? (
+        <CustomLink href={`/news/${pageNumber - 1}`} className="btn _dark _shadow blog-page-btn">{t("prevBtn")}</CustomLink>
+    ) : (
+        <div></div>
+    );
+
+    const nextBtn = (pageNumber < blogItems.length) ? (
+        <CustomLink href={`/news/${Number(pageNumber) + 1}`} className="btn _dark _shadow blog-page-btn">{t("nextBtn")}</CustomLink>
+    ) : (
+        <div></div>
+    )
+
     return (
         <div className="blog-page">
             <div className="container">
                 <h1 className="title">{t("title")}</h1>
                 <div className="blog-page-content">
-                    <div className="blog-page-item">
-                        <img className="blog-page-img" src={img} alt="photo" />
-                        <div className="blog-page-info">
-                            <h2 className="blog-page-title">{title}</h2>
-                            {listElements}
+
+                    <div className="blog-page-item-container">
+                        <div className="blog-page-item">
+                            <div className="blog-page-img">
+                                <Image src={img} alt="Blog photo" width={784} height={784} layout="responsive" />
+                            </div>
+                            {/* <img className="blog-page-img" src={img} alt="photo" /> */}
+                            <div className="blog-page-info">
+                                <h2 className="blog-page-title">{title}</h2>
+                                {listElements}
+                                <p className="blog-page-date">{date}</p>
+                            </div>
+                        </div>
+                        <div className="blog-page-buttons">
+                            {prevBtn}
+                            {nextBtn}
                         </div>
                     </div>
+
                     <div className="blog-page-news">
                         {newsElements[0]}
                         {newsElements[1]}
                         {newsElements[2]}
                     </div>
+
                 </div>
             </div>
         </div>
