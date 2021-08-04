@@ -4,10 +4,15 @@ import signUpSchema from "./register-form.schema";
 import Modal from "../../src/components/Modal";
 import {ModalContent} from "../../src/components/Modal/Modal";
 import useConfirm from "../../auth/hooks/use-confirm";
+import {useTranslation} from "next-i18next";
+
+import styles from "./RegisterForm.module.scss";
 
 const RegisterForm = () => {
     const {register, closeModal, confirmToken} = useRegister();
     const confirm = useConfirm();
+    const { t } = useTranslation("register");
+    const form = t("form", { returnObjects: true });
     return (
         <>
             <Formik initialValues={{
@@ -17,15 +22,17 @@ const RegisterForm = () => {
                 password: '',
             }} validationSchema={signUpSchema} onSubmit={register}>
                 <Form>
-                    <Field className="text-field" name="email" placeholder="Email*" type="email"/>
+                    <Field className="text-field" name="email" placeholder={`${form.email}*`} type="email"/>
                     <ErrorMessage className="form-error" component="p" name="email"/>
-                    <Field className="text-field" name="phone" placeholder="Phone*" type="tel"/>
+                    <Field className="text-field" name="phone" placeholder={`${form.phone}*`} type="tel"/>
                     <ErrorMessage className="form-error" component="p" name="phone"/>
-                    <Field className="text-field" name="fullName" placeholder="FullName*" type="text"/>
+                    <Field className="text-field" name="fullName" placeholder={`${form.fullName}*`} type="text"/>
                     <ErrorMessage className="form-error" component="p" name="fullName"/>
-                    <Field className="text-field" name="password" placeholder="Password*" type="password"/>
+                    <Field className="text-field" name="password" placeholder={`${form.password}*`} type="password"/>
                     <ErrorMessage className="form-error" component="p" name="password"/>
-                    <button className="btn _dark _long" type="submit">Зараєструватися</button>
+                    <button className="btn _dark _long" type="submit">{form.submitButton}</button>
+                    <a className={styles.social} href="https://cmusy-dev.space/api/v1/auth/accounts/facebook">Facebook</a>
+                    <a className={styles.social} href="https://cmusy-dev.space/api/v1/auth/accounts/google">Google</a>
                 </Form>
             </Formik>
 

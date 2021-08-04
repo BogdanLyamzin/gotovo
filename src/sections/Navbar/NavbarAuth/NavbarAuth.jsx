@@ -16,9 +16,12 @@ const NavbarAuth = ({ type }) => {
     return (
         <div className={`${styles.authLinks} ${styles[type]}`}>
             {isAuth ? (
-                <button onClick={logout}>
-                    <a className={styles.authLink}>{auth.logout}</a>
-                </button>
+                <>
+                    <a href="#" className={styles.authLink} onClick={logout}>{auth.logout}</a>
+                    <CustomLink href="/profile" className={styles.authLink}>
+                        {auth.profile}
+                    </CustomLink>
+                </>
             ) : (
                 <>
                     <CustomLink href="/register" className={styles.authLink}>

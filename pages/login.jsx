@@ -4,20 +4,22 @@ import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
-import RegisterForm from "../old/RegisterForm";
+import {useTranslation} from "next-i18next";
 
 const Login = () => {
     const isAuth = useAuth();
     const router = useRouter();
+
     if (isAuth) {
-        router.push('/profile')
+        router.push('/profile');
     }
+    const { t } = useTranslation("login");
     return (
         <Layout title="login">
             <section className="register-form-main">
                 <div className="container">
                     <div className="register-form-container">
-                        <h2 className="title">Увійти</h2>
+                        <h2 className="title">{t("title")}</h2>
                         <LoginForm />
                     </div>
                 </div>
@@ -30,7 +32,7 @@ const Login = () => {
 
 export const getStaticProps = async ({ locale }) => ({
     props: {
-        ...await serverSideTranslations(locale, ['navbar', 'footer', 'main']),
+        ...await serverSideTranslations(locale, ['navbar', 'footer', 'main', 'login']),
     },
 })
 
