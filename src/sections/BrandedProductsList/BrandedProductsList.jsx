@@ -11,7 +11,7 @@ const BrandedProductsList = () => {
             <CustomLink href={link} key={id} className="branded-item">
                 <div className="branded-item-photo">
                     <div className="branded-item-img" >
-                        <Image link={img} defaultFormat='jpg' />
+                        <Image link={img} imgWidth="275" />
                     </div>
                     {/* <img className="branded-item-img" src={img} alt="Product item image" /> */}
                 </div>

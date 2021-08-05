@@ -23,7 +23,7 @@ const BrandedProductPage = ({page}) => {
             <div className="container">
                 <div className="product-item">
                     <div className="product-img" >
-                        <Image link={img} defaultFormat='jpg' />
+                        <Image link={img} imgWidth="560" />
                     </div>
                     {/* <img className="product-img" src={img} alt="photo" /> */}
                     <div className="product-info">

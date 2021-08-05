@@ -5,10 +5,10 @@ const BlogItem = ({ title, date, img, link }) => {
     return (
         <CustomLink href={link} className="blog-item">
             <div className="blog-item-photo">
-                <div className="blog-item-img" >
-                    <Image link={img} defaultFormat='jpeg' />
-                </div>
-                {/* <img src={img} alt="Blog photo" className="blog-item-img" /> */}
+                {/* <div className="blog-item-img" >
+                    <Image link={img} />
+                </div> */}
+                <img src={img} alt="Blog photo" className="blog-item-img" />
             </div>
             <div className="blog-item-info">
                 <p className="blog-item-title">{title}</p>

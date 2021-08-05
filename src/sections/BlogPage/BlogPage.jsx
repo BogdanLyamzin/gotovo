@@ -38,10 +38,10 @@ const BlogPage = ({ pageNumber }) => {
 
                     <div className="blog-page-item-container">
                         <div className="blog-page-item">
-                            <div className="blog-page-img" >
-                                <Image link={img} defaultFormat='jpeg' />
-                            </div>
-                            {/* <img className="blog-page-img" src={img} alt="photo" /> */}
+                            {/* <div className="blog-page-img" >
+                                <Image link={img} />
+                            </div> */}
+                            <img className="blog-page-img" src={img} alt="photo" />
                             <div className="blog-page-info">
                                 <h2 className="blog-page-title">{title}</h2>
                                 {listElements}

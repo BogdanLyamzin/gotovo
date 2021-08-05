@@ -1,8 +1,9 @@
-const Image = ({ link, defaultFormat }) => {
+const Image = ({ link, imgWidth }) => {
+    const [ imgLink, format ] = link.split('.');
     return (
         <picture>
-            <source srcSet={`${link}.webp`} />
-            <img src={`${link}.${defaultFormat}`} alt="Image" className="custom-image" />
+            <source srcSet={`${imgLink}_${imgWidth}.webp`} />
+            <img src={`${imgLink}_${imgWidth}.${format}`} alt="Image" className="custom-image" />
         </picture>
     )
 };

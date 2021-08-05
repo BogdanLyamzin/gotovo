@@ -32,12 +32,10 @@
             display: grid;
             grid-template-rows: 4fr 1fr;
             grid-gap: 10px;
-            padding: 20px 25px 30px;
             background-color: #fff;
         }
 
         &-name {
-            font-size: 18px;
             line-height: 1.2;
         }
 
@@ -89,9 +87,18 @@
         &-item {
             display: grid;
             grid-template-columns: 35% 65%;
+            height: 36vw;
     
             &-photo {
                 height: 100%;
+            }
+
+            &-info {
+                padding: 15px 20px 25px;
+            }
+
+            &-name {
+                font-size: 16px;
             }
     
             &-price::after {
@@ -110,8 +117,18 @@
             justify-content: space-between;
         }
 
-        &-item-photo {
-            height: 300px;
+        &-item {
+            &-photo {
+                height: 300px;
+            }
+
+            &-info {
+                padding: 20px 25px 30px;
+            }
+
+            &-name {
+                font-size: 18px;
+            }
         }
     }
 }
