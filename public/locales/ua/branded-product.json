@@ -5,28 +5,28 @@
             "id": "1",
             "name": "Папка для свідоцтва про шлюб \"ГОТОВО\"",
             "price": "660 грн",
-            "img": "/img/branded-product/papka.jpg",
+            "img": "/img/branded-product/papka",
             "link": "/branded-products/folder-gotovo"
         },
         {
             "id": "2",
             "name": "Папка для свідоцтва про шлюб \"Ексклюзив\"",
             "price": "795 грн",
-            "img": "/img/branded-product/papka-2.jpg",
+            "img": "/img/branded-product/papka-2",
             "link": "/branded-products/folder-exclusive"
         },
         {
             "id": "3",
             "name": "Ручка металева \"ГОТОВО\"",
             "price": "50.40 грн",
-            "img": "/img/branded-product/pen.jpg",
+            "img": "/img/branded-product/pen",
             "link": "/branded-products/pen"
         },
         {
             "id": "4",
             "name": "Блокнот \"ГОТОВО\"",
             "price": "217 грн",
-            "img": "/img/branded-product/notebook.jpg",
+            "img": "/img/branded-product/notebook",
             "link": "/branded-products/notebook"
         }
     ]

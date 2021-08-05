@@ -1,8 +1,8 @@
 import {useTranslation} from "next-i18next";
 
-import Image from 'next/image';
 import CustomLink from "../../components/Link";
 import BlogItem from "../../components/BlogItem";
+import Image from "../../components/Image";
 
 const BlogPage = ({ pageNumber }) => {
     const { t } = useTranslation("blog");
@@ -38,8 +38,8 @@ const BlogPage = ({ pageNumber }) => {
 
                     <div className="blog-page-item-container">
                         <div className="blog-page-item">
-                            <div className="blog-page-img">
-                                <Image src={img} alt="Blog photo" width={784} height={784} layout="responsive" />
+                            <div className="blog-page-img" >
+                                <Image link={img} defaultFormat='jpeg' />
                             </div>
                             {/* <img className="blog-page-img" src={img} alt="photo" /> */}
                             <div className="blog-page-info">
