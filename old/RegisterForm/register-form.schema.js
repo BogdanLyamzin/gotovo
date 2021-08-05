@@ -6,11 +6,7 @@ const signUpSchema = Yup.object().shape({
         .required("Поле обязательное!")
         .email("Введите пожалуйста валидный email!"),
     password: Yup.string()
-        .required("Поле обязательное!")
-        .matches(
-            isStrongPassword,
-            "Пароль должен содержать минимум 8 символов, заглавную букву, буквы в нижнем регистре, 1 число и 1 спецсимвол!"
-        ),
+        .required("Поле обязательное!"),
     phone: Yup.string()
         .required("Поле обязательное!"),
     fullName: Yup.string().required("Поле обязательное!"),

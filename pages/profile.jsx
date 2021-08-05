@@ -1,16 +1,31 @@
-import React from "react";
+import {useEffect} from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
+
 import Layout from "../src/components/Layout";
 import ProfileForm from "../old/ProfileForm";
+import useAuth from "../auth/hooks/use-auth";
 
-const Profile = () => {
+const Profile = ({locale}) => {
+  const isAuth = useAuth();
+  const router = useRouter();
+
+  useEffect(()=>{
+    if (!isAuth) {
+      router.push('/login');
+    }
+  }, [isAuth]);
+
+  const { t } = useTranslation("profile");
+
   return (
     <Layout title="Profile">
       <section className="register-form-main">
         <div className="container">
           <div className="register-form-container">
-            <h2 className="title">Створити заяву на заключення шлюбу</h2>
-            <ProfileForm />
+            <h2 className="title">{t("form-title")}</h2>
+            <ProfileForm locale={locale} />
           </div>
         </div>
         <img
@@ -25,7 +40,7 @@ const Profile = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "main"])),
+    ...(await serverSideTranslations(locale, ["navbar", "footer", "main", 'profile'])), locale
   },
 });
 

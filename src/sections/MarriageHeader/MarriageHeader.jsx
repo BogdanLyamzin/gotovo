@@ -8,7 +8,7 @@ const MarriageHeader = () => {
                 <h2 className="header-text-big">{t("title")}</h2>
                 <p className="header-text-small">{t("text")}</p>
                 <div className="header-buttons">
-                    <a href="#" className="btn _dark _shadow _long">{t("btn")}</a>
+                    <a href="http://dpdoc.cherg.net/?type=gotovo" target="_blank" className="btn _dark _shadow _long">{t("btn")}</a>
                     <div className="contacts-item">
                         <span className="contacts-icon">
                             <img src="/img/Contacts/item-4.png" alt="contact icon" />

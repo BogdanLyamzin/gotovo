@@ -4,8 +4,18 @@
 }
 
 .register-form-container {
-  width: 400px;
+  max-width: 400px;
+  padding: 0 15px;
   text-align: center;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+
+  & input {
+    margin-bottom: 0;
+  }
 }
 
 .register-form-img {
@@ -28,6 +38,26 @@
   position: relative;
   padding-left: 25px;
   top: -10px;
+}
+
+.form-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+.form-checkbox {
+  margin-right: 15px;
+}
+
+.form-field-description {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .modal-close-button {
