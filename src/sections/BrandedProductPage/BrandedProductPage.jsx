@@ -1,7 +1,7 @@
 import {useTranslation} from "next-i18next";
 import { useState } from "react";
 
-import Image from 'next/image';
+import Image from "../../components/Image";
 
 const BrandedProductPage = ({page}) => {
     const { t } = useTranslation("product-list");
@@ -22,8 +22,8 @@ const BrandedProductPage = ({page}) => {
         <div className="product">
             <div className="container">
                 <div className="product-item">
-                    <div className="product-img">
-                        <Image src={img} alt="Blog photo" width={560} height={747} layout="responsive" />
+                    <div className="product-img" >
+                        <Image link={img} defaultFormat='jpg' />
                     </div>
                     {/* <img className="product-img" src={img} alt="photo" /> */}
                     <div className="product-info">

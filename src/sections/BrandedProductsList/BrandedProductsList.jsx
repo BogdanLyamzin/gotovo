@@ -1,7 +1,7 @@
 import {useTranslation} from "next-i18next";
 
 import CustomLink from "../../components/Link";
-import Image from 'next/image';
+import Image from "../../components/Image";
 
 const BrandedProductsList = () => {
     const { t } = useTranslation("branded-product");
@@ -10,10 +10,10 @@ const BrandedProductsList = () => {
         return (
             <CustomLink href={link} key={id} className="branded-item">
                 <div className="branded-item-photo">
+                    <div className="branded-item-img" >
+                        <Image link={img} defaultFormat='jpg' />
+                    </div>
                     {/* <img className="branded-item-img" src={img} alt="Product item image" /> */}
-                    {/* <div className="branded-item-img"> */}
-                        <Image className="branded-item-img" src={img} alt="Blog photo" width={560} height={746} layout="responsive" />
-                    {/* </div> */}
                 </div>
                 <div className="branded-item-info">
                     <p className="branded-item-name">{name}</p>
