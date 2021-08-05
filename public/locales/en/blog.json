@@ -1,5 +1,7 @@
 {
     "title": "Latest news",
+    "prevBtn": "Prev",
+    "nextBtn": "Next",
     "list": [
         {
             "id": "1",
@@ -226,6 +228,150 @@
                 {
                     "id": "3",
                     "text": "For more information call the hotline 0 800 300 803, or on our website https://gotovo.net.ua/."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "title": "Festival of Love! Love is...",
+            "date": "10 June 2021",
+            "img": "/img/Blog/img-9.jpeg",
+            "link": "/news/9",
+            "text": [
+                {
+                    "id": "1",
+                    "text": "Want to see the most romantic wedding in the capital! ?? We ask everyone!"
+                },
+                {
+                    "id": "2",
+                    "text": "Document service \"GOTOVO\" June 12-13 is the title partner of the first festival of love \"Love is...\" in Kiev, which will be held in the most creative place of the capital - Art Factory Platform @artzavodplatforma"
+                },
+                {
+                    "id": "3",
+                    "text": "What awaits you?"
+                },
+                {
+                    "id": "4",
+                    "text": "Fantastically beautiful area for exchanging marriage vows. Even the least emotional people have a heart attack at this point, try it."
+                },
+                {
+                    "id": "5",
+                    "text": "Right at the festival you can apply for marriage registration or arrange a real rehearsal for a future wedding."
+                },
+                {
+                    "id": "6",
+                    "text": "June 12-13, Platform Art Factory, at the Love is… festival we are waiting for you!"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "title": "Excursion for young professionals!",
+            "date": "2 June 2021",
+            "img": "/img/Blog/img-10.jpeg",
+            "link": "/news/10",
+            "text": [
+                {
+                    "id": "1",
+                    "text": "The doors of the document service \"Gotovo\" are always open and we welcome every visitor and guest!"
+                },
+                {
+                    "id": "2",
+                    "text": "This time we were visited by students of the National University of the State Fiscal Service of Ukraine, for whom the head of \"Gotovo\" Anastasia Kuzmytska conducted a tour, acquainting future professionals with the structure, organization and nuances of our service."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "title": "Wedding in June!",
+            "date": "1 June 2021",
+            "img": "/img/Blog/img-11.jpeg",
+            "link": "/news/11",
+            "text": [
+                {
+                    "id": "1",
+                    "text": "Many hearts in love, convinced of the strength of their own feelings and mutual desire to become a single family, begin to plan a wedding. Wedding in June is a dream of many couples. This is the most long-awaited time, because June symbolizes romance with gentle rays of the sun, rich greenery and warm evenings. The wedding in June is a truly fabulous celebration and for the newlyweds the wedding in June 2021 will be an unforgettable pleasant event!"
+                },
+                {
+                    "id": "2",
+                    "text": "In order to realize your cherished dreams, we offer you to choose the optimal date for the wedding celebration in our cozy hall of the center \"Gotovo\"."
+                },
+                {
+                    "id": "3",
+                    "text": "Dates are already open for booking, find out more by calling the hotline 0 800 300 803, or on our website https://gotovo.net.ua/."
+                },
+                {
+                    "id": "4",
+                    "text": "Thank you for choosing \"Gotovo\""
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "title": "Where to go on vacation?",
+            "date": "5 June 2021",
+            "img": "/img/Blog/img-12.jpeg",
+            "link": "/news/12",
+            "text": [
+                {
+                    "id": "1",
+                    "text": "The hot summer has already come and Ukrainians are actively planning a summer vacation. Some popular resorts are now open to tourists from our country."
+                },
+                {
+                    "id": "2",
+                    "text": "However, under certain conditions, which should be learned immediately before the trip at the consulate of the desired country and the Ministry of Foreign Affairs of Ukraine."
+                },
+                {
+                    "id": "3",
+                    "text": "And what is known at this hour? Where exactly you can go on vacation this summer and under what conditions, let's find out together:"
+                },
+                {
+                    "id": "4",
+                    "text": "Turkey. From 01.06.2021, Turkey introduces a mandatory requirement for a negative PCR test COVID-19 when crossing the border for persons traveling from Ukraine, and to purchase insurance against COVID-19 in Ukraine or while crossing the Turkish border."
+                },
+                {
+                    "id": "5",
+                    "text": "Bulgaria. From June 1 to July 31, 2021, citizens of Ukraine are allowed to enter the territory of the Republic of Bulgaria subject to a negative PCR test, vaccination certificate or a document stating that a person has contracted the coronavirus no more than six months ago."
+                },
+                {
+                    "id": "6",
+                    "text": "Greece. It is the only Schengen country that already receives Ukrainian tourists, provided it provides one of four documents: a vaccination certificate, a negative PCR test, a certificate of COVID-19 or a document on the presence of antibodies to it."
+                },
+                {
+                    "id": "7",
+                    "text": "Other requirements you may face while on vacation:"
+                },
+                {
+                    "id": "8",
+                    "text": "Strict mask regime in airports, airplanes and land transport."
+                },
+                {
+                    "id": "9",
+                    "text": "Curfew (at night and on weekends) in some tourist countries."
+                },
+                {
+                    "id": "10",
+                    "text": "Re-testing at the entrance to some countries, and testing and self-isolation after returning to Ukraine."
+                },
+                {
+                    "id": "11",
+                    "text": "A certificate is a document that contains information about vaccination against coronavirus, the absence of disease or immunity to it."
+                },
+                {
+                    "id": "12",
+                    "text": "Insurance. Another prerequisite for traveling abroad is travel insurance for travelers. Increasingly, with the condition of covering the cost of treatment of symptoms of COVID-19."
+                },
+                {
+                    "id": "13",
+                    "text": "By the way, you can get a travel insurance policy in \"Gotovo\". In just 10 minutes, without queues and hassles, get the desired document!"
+                },
+                {
+                    "id": "14",
+                    "text": "You can find more detailed information at website https://gotovo.net.ua/service/ctrahuvannya or by calling the hotline 0 800 300 803"
+                },
+                {
+                    "id": "15",
+                    "text": "See you in \"Gotovo\", You will always be happy!"
                 }
             ]
         }

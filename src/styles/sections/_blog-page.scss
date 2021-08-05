@@ -30,6 +30,11 @@
         line-height: 1.2em;
         margin-bottom: 20px;
     }
+
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -39,13 +44,22 @@
         &-news {
             align-items: center;
         }
-
-        &-item {
-            margin-bottom: 50px;
-        }
     
         &-info {
-            padding: 30px 22px 20px;
+            padding: 30px 22px;
+        }
+
+        &-date {
+            margin-top: 30px;
+        }
+
+        &-buttons {
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+
+        &-btn {
+            width: 100px;
         }
     }
 }
@@ -66,6 +80,16 @@
     
         &-info {
             padding: 30px 40px;
+        }
+
+        &-date {
+            margin-top: 40px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
         }
     }
 }
