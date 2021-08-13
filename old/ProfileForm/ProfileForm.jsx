@@ -7,12 +7,12 @@ import createProfileSchema from "./profile-form.schema";
 
 import useLogout from "../../auth/hooks/use-logout";
 
-import CalendarField from "../../src/components/CalendarField";
-import FormField from "../../src/components/FormField";
-import MaskedField from "../../src/components/MaskedField";
-import DateField from "../../src/components/DateField";
-import Modal from "../../src/components/Modal";
-import {ModalContent} from "../../src/components/Modal/Modal";
+import CalendarField from "../../src/shared/components/CalendarField";
+import FormField from "../../src/shared/components/FormField";
+import MaskedField from "../../src/shared/components/MaskedField";
+import DateField from "../../src/shared/components/DateField";
+import Modal from "../../src/shared/components/Modal";
+import {ModalContent} from "../../src/shared/components/Modal/Modal";
 import dynamic from "next/dynamic";
 
 const CalendarForm = dynamic(() => import("../FullCalendar/FullCalendar"), {

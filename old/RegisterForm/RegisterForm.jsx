@@ -1,8 +1,8 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import useRegister from "../../auth/hooks/use-register";
 import signUpSchema from "./register-form.schema";
-import Modal from "../../src/components/Modal";
-import {ModalContent} from "../../src/components/Modal/Modal";
+import Modal from "../../src/shared/components/Modal";
+import {ModalContent} from "../../src/shared/components/Modal/Modal";
 import useConfirm from "../../auth/hooks/use-confirm";
 import {useTranslation} from "next-i18next";
 

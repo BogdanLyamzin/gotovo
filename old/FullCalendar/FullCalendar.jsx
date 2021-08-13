@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ModalContent } from "../../src/components/Modal/Modal";
+import { ModalContent } from "../../src/shared/components/Modal/Modal";
 
 import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";

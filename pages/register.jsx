@@ -1,9 +1,11 @@
-import {useRouter} from "next/router";
-import RegisterForm from "../old/RegisterForm/RegisterForm";
-import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+import {useRouter} from "next/router";
 import useAuth from "../auth/hooks/use-auth";
 import {useTranslation} from "next-i18next";
+
+import RegisterForm from "../old/RegisterForm/RegisterForm";
+import Layout from "../src/shared/components/Layout";
 
 const Register = () => {
     const isAuth = useAuth();

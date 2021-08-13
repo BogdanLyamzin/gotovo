@@ -1,19 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../../src/components/Layout";
-import Apostille from "../../src/sections/Apostille";
+
+import Layout from "../../src/shared/components/Layout";
+import Apostille from "../../src/client/Apostille";
 
 const ServicesPage = () => {
-  return (
-    <Layout fileName="apostillization-page">
-        <Apostille />
-    </Layout>
-  );
+    return (
+        <Layout fileName="apostillization-page">
+            <Apostille />
+        </Layout>
+    );
 };
 
 export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["navbar", "apostillization", "footer", "main", "apostillization-page"])),
-  },
+    props: {
+        ...(await serverSideTranslations(locale, ["navbar", "apostillization", "footer", "main", "apostillization-page"])),
+    },
 });
 
 export default ServicesPage;

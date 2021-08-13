@@ -1,7 +1,7 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-import Layout from "../../src/components/Layout";
-import BrandedProductsList from "../../src/sections/BrandedProductsList";
+import Layout from "../../src/shared/components/Layout";
+import BrandedProductsList from "../../src/client/BrandedProductsList";
 
 const BrandedProducts = () => {
     return (

@@ -1,19 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../../src/components/Layout";
-import WrittenTranslation from "../../src/sections/WrittenTranslation";
+
+import Layout from "../../src/shared/components/Layout";
+import WrittenTranslation from "../../src/client/WrittenTranslation";
 
 const ServicesPage = () => {
     return (
-      <Layout fileName="written-translation-page">
-        <WrittenTranslation />
-      </Layout>
+        <Layout fileName="written-translation-page">
+            <WrittenTranslation />
+        </Layout>
     );
 };
 
 export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["navbar", "written-translation", "footer", "main", "written-translation-page"])),
-  },
+    props: {
+        ...(await serverSideTranslations(locale, ["navbar", "written-translation", "footer", "main", "written-translation-page"])),
+    },
 });
 
 export default ServicesPage;

@@ -1,31 +1,30 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import Layout from "../src/components/Layout";
-import Header from "../src/sections/Header";
-import OurTarget from "../src/sections/OurTarget";
-import Services from "../src/sections/Services";
-import Navigate from "../src/sections/Navigate";
-import Partners from "../src/sections/Partners";
-import Contacts from "../src/sections/Contacts";
+import Layout from "../src/shared/components/Layout";
+import MainHeader from "../src/client/MainHeader";
+import OurTarget from "../src/client/OurTarget";
+import Services from "../src/client/Services";
+import Navigate from "../src/client/Navigate";
+import Partners from "../src/client/Partners";
+import MainContacts from "../src/client/MainContacts";
 
-function Home() {
-
-  return (
-      <Layout fileName="index">
-        <Header />
+const Home = () => {
+    return (
+        <Layout fileName="index">
+        <MainHeader />
         <OurTarget />
         <Services />
         <Navigate />
         <Partners />
-        <Contacts />
-      </Layout>
-  )
+        <MainContacts />
+        </Layout>
+    )
 }
 
 export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...await serverSideTranslations(locale, ['navbar', 'footer', 'header', 'our-target', 'services', 'services-list', 'navigate', 'partners', 'contacts', 'index']),
-  },
+    props: {
+        ...await serverSideTranslations(locale, ['navbar', 'footer', 'header', 'our-target', 'services', 'services-list', 'navigate', 'partners', 'contacts', 'index']),
+    },
 })
 
 export default Home

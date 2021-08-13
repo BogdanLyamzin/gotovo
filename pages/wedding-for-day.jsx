@@ -1,14 +1,14 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-import Layout from "../src/components/Layout";
-import MarriageHeader from "../src/sections/MarriageHeader";
-import MarriageRegistration from "../src/sections/MarriageRegistration";
-import MarriageGallery from "../src/sections/MarriageGallery";
-import MarriageDocuments from "../src/sections/MarriageDocuments";
-import ServiceCost from "../src/sections/ServiceCost";
-import MarriageQuestions from "../src/sections/MarriageQuestions";
-import MarriageContacts from "../src/sections/MarriageContacts";
-import WriteAboutUs from "../src/sections/WriteAboutUs";
+import Layout from "../src/shared/components/Layout";
+import MarriageHeader from "../src/client/MarriageHeader";
+import MarriageRegistration from "../src/client/MarriageRegistration";
+import MarriageGallery from "../src/client/MarriageGallery";
+import MarriageDocuments from "../src/client/MarriageDocuments";
+import ServiceCost from "../src/client/ServiceCost";
+import MarriageQuestions from "../src/client/MarriageQuestions";
+import MarriageContacts from "../src/client/MarriageContacts";
+import WriteAboutUs from "../src/client/WriteAboutUs";
 
 const WeddingForDay = () => {
     return (
