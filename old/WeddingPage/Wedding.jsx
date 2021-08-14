@@ -2,7 +2,7 @@ import { FastField, Form, Formik } from "formik";
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "../../shared/components";
-import { ModalContent } from "../../src/components/Modal/Modal";
+import { ModalContent } from "../../src/shared/components/Modal/Modal";
 
 const useSubmit = () => {
   const [loading, setLoading] = useState(false);

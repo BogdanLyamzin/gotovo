@@ -1,10 +1,13 @@
-import React from "react";
-import LoginForm from "../old/LoginForm";
-import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+import React from "react";
+
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
 import {useTranslation} from "next-i18next";
+
+import LoginForm from "../old/LoginForm";
+import Layout from "../src/shared/components/Layout";
 
 const Login = () => {
     const isAuth = useAuth();

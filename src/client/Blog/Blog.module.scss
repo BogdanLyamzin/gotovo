@@ -1,0 +1,22 @@
+.blog {
+    background-color: $bg-light;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .blog {
+        padding: 30px 15px 60px;
+    }
+}
+
+@media (min-width: 481px) {
+    .blog {
+        padding: 60px 0 110px;
+    }
+
+    .list {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        height: 1230px;
+    }
+}

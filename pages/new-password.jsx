@@ -1,8 +1,10 @@
-import NewPasswordForm from "../old/NewPasswordForm";
-import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
+
+import NewPasswordForm from "../old/NewPasswordForm";
+import Layout from "../src/shared/components/Layout";
 
 const NewPassword = () => {
     const isAuth = useAuth();

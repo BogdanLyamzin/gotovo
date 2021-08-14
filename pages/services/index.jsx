@@ -1,23 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../../src/components/Layout";
-import Services from "../../src/sections/Services";
+
+import Layout from "../../src/shared/components/Layout";
+import Services from "../../src/client/Services";
 
 const ServicesPage = () => {
   return (
     <Layout fileName="services-page">
-        <div className="services-page">
-            <div className="container">
-                <Services />
-            </div>
-        </div>
+        <Services />
     </Layout>
   );
 };
 
 export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["navbar", "footer", "services", 'services-list', "main", "services-page"])),
-  },
+    props: {
+        ...(await serverSideTranslations(locale, ["navbar", "footer", "services", 'services-list', "main", "services-page"])),
+    },
 });
 
 export default ServicesPage;

@@ -1,7 +1,7 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-import Layout from "../../src/components/Layout";
-import Blog from "../../src/sections/Blog";
+import Layout from "../../src/shared/components/Layout";
+import Blog from "../../src/client/Blog";
 
 const News = () => {
     return (

@@ -1,0 +1,31 @@
+.products {
+    background-color: $bg-light;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .products {
+        padding: 30px 15px 80px;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+@media (min-width: 481px) {
+    .products {
+        padding: 60px 0 120px;  
+    }
+
+    .list {
+        grid-template-columns: repeat(4, 250px);
+        justify-content: space-between;
+    }
+}

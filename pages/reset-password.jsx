@@ -1,8 +1,10 @@
-import ResetPasswordForm from "../old/ResetPasswordForm";
-import Layout from "../src/components/Layout";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
 import useAuth from "../auth/hooks/use-auth";
 import {useRouter} from "next/router";
+
+import ResetPasswordForm from "../old/ResetPasswordForm";
+import Layout from "../src/shared/components/Layout";
 
 const ResetPassword = () => {
     const isAuth = useAuth();
