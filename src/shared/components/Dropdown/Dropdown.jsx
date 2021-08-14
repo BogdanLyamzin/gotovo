@@ -1,11 +1,18 @@
+import PropTypes from 'prop-types';
+
 import {useRef} from "react";
 
-const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle = null }) => {
-    const contentRef = useRef(null);
-    const isActive = (index === openMenuIdx) ? "dropdown-btn active" : "dropdown-btn";
-    const listTitleElement = listTitle ? <li className="dropdown-list-title">{listTitle}</li> : null;
+import styles from "./Dropdown.module.scss";
 
-    const listElements = list.map(({ id, text }) => <li className="dropdown-item" key={id}>{text}</li>);
+const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle }) => {
+
+    const contentRef = useRef(null);
+
+    const isActive = (index === openMenuIdx) ? styles["active"] : '';
+
+    const listTitleElement = listTitle ? <li className={styles["list-title"]}>{listTitle}</li> : null;
+
+    const listElements = list.map(({ id, text }) => <li className={styles["item"]} key={id}>{text}</li>);
 
     let elementStyle = {};
 
@@ -15,10 +22,10 @@ const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle = null 
     }
 
     return (
-        <div className="dropdown" onClick={() => toggle(index)}>
-            <div className={isActive} >{heading}</div>
-            <div className="dropdown-content" ref={contentRef} style={elementStyle}>
-                <ul className="dropdown-list">
+        <div className={styles["dropdown"]} onClick={() => toggle(index)}>
+            <div className={`${styles["btn"]} ${isActive}`}>{heading}</div>
+            <div className={styles["content"]} ref={contentRef} style={elementStyle}>
+                <ul className={styles["list"]}>
                     {listTitleElement}
                     {listElements}
                 </ul>
@@ -26,5 +33,21 @@ const Dropdown = ({ heading, list, openMenuIdx, toggle, index, listTitle = null 
         </div>
     )
 };
+
+Dropdown.defaultProps = {
+    listTitle: ''
+}
+
+Dropdown.propTypes = {
+    heading: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(PropTypes.object),
+    openMenuIdx: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number
+    ]),
+    toggle: PropTypes.func,
+    index: PropTypes.number,
+    listTitle: PropTypes.string
+}
 
 export default Dropdown;

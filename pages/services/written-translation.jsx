@@ -1,12 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 import Layout from "../../src/shared/components/Layout";
-import WrittenTranslation from "../../src/client/WrittenTranslation";
+import ServicePage from "../../src/client/ServicePage";
+import ServiceArticle from "../../src/shared/components/ServiceArticle";
 
 const ServicesPage = () => {
+
+    const { t } = useTranslation("written-translation");
+    const content = t("content", {returnObjects: true});
+
     return (
         <Layout fileName="written-translation-page">
-            <WrittenTranslation />
+            <ServicePage img="/img/Services/write6.png" title={t("title")} btnText={t("btn")} >
+                <ServiceArticle content={content} />
+            </ServicePage>
         </Layout>
     );
 };

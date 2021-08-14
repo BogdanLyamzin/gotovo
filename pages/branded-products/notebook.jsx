@@ -1,12 +1,12 @@
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 import Layout from "../../src/shared/components/Layout";
-import BrandedProductPage from "../../src/client/BrandedProductPage";
+import Product from "../../src/client/Product";
 
 const ProductPage = () => {
     return (
         <Layout fileName="branded-product-page">
-            <BrandedProductPage page='3'/>
+            <Product page='3'/>
         </Layout>
     );
 };

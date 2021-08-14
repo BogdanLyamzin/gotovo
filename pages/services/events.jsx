@@ -1,12 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 import Layout from "../../src/shared/components/Layout";
-import Events from "../../src/client/Events";
+import ServicePage from "../../src/client/ServicePage";
+import ServiceArticle from "../../src/shared/components/ServiceArticle";
 
 const ServicesPage = () => {
+
+    const { t } = useTranslation("events");
+    const content = t("content", {returnObjects: true});
+
     return (
         <Layout fileName="events-page">
-            <Events />
+            <ServicePage img="/img/Services/icon-5.png" title={t("title")} btnText={t("btn")} >
+                <ServiceArticle content={content} />
+            </ServicePage>
         </Layout>
     );
 };

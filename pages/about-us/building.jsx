@@ -1,12 +1,17 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 import Layout from "../../src/shared/components/Layout";
-import AboutBuilding from "../../src/client/AboutBuilding";
+import About from "../../src/client/About";
 
 const AboutPage = () => {
+
+    const { t } = useTranslation("about-building");
+    const article = t("article", {returnObjects: true});
+
     return (
         <Layout fileName="building-page">
-            <AboutBuilding />
+            <About title={t("title")} article={article} img="/img/About-us/about-building.png" />
         </Layout>
     );
 };

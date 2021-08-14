@@ -1,26 +1,31 @@
 import {useTranslation} from "next-i18next";
 import { useState } from "react";
 
+import Container from "../../shared/components/Container";
+import Title from "../../shared/components/Title";
+
+import styles from "./MarriageDocuments.module.scss";
+
 const MarriageDocuments = () => {
+
     const [activeTab, setActiveTab] = useState(0);
+
     const { t } = useTranslation("marriage-documents");
     const tabItems = t("tabs", {returnObjects: true});
 
-    const tabHeading = tabItems.map(({id, title}, index) => {
-        const fullClassName = (activeTab === index) ? "marriage-documents-tab selected" : "marriage-documents-tab";
-        return <li key={id} className={fullClassName} onClick={()=> setActiveTab(index)}>{title}</li>
+    const tabHeading = tabItems.map(({ id, title }, index) => {
+        const fullClassName = `${styles["tab"]} ${(activeTab === index) ? styles["selected"] : ''}`;
+        return <li key={id} className={fullClassName} onClick={() => setActiveTab(index)}>{title}</li>
     });
-    // const {content} = tabItems.find((_, index) => activeTab === index);
-    // const tabElements = content.map(({id, text, type = null}) => {
-    //     const elClassName = type ? "marriage-documents-item" : "marriage-documents-list-item";
-    //     return <li key={id} className={elClassName}>{text}</li>
-    // });
-    const tabElements = tabItems.map(({id, content}, index) => {
-        const tabList = content.map(({id, text, type = null}) => {
-            const elClassName = type ? "marriage-documents-item" : "marriage-documents-list-item";
+
+    const tabElements = tabItems.map(({ id, content }, index) => {
+
+        const tabList = content.map(({ id, text, type = null }) => {
+            const elClassName = type ? styles["item"] : styles["list-item"];
             return <li key={id} className={elClassName}>{text}</li>
         });
-        const fullClassName = (activeTab === index) ? "marriage-documents-tab-content selected" : "marriage-documents-tab-content";
+
+        const fullClassName = `${styles["tab-content"]} ${(activeTab === index) ? styles["selected"] : ''}`;
         return (
             <ul key={id} className={fullClassName}>
                 {tabList}
@@ -29,28 +34,16 @@ const MarriageDocuments = () => {
     });
 
     return (
-        <section className="marriage-documents">
-            <div className="container">
-                <h2 className="title">{t("title")}</h2>
-                <div className="marriage-documents-content">
-                    <ol className="marriage-documents-tab-list">
+        <section className={styles["section"]}>
+            <Container>
+                <Title text={t("title")} />
+                <div className={styles["content"]}>
+                    <ol className={styles["tabs"]}>
                         {tabHeading}
-                        {/* <li className="marriage-documents-tab selected">{t("tab-1")}</li>
-                        <li className="marriage-documents-tab">{t("tab-2")}</li>
-                        <li className="marriage-documents-tab">{t("tab-3")}</li> */}
                     </ol>
-                    {/* <ul>
-                        {tabElements}
-                    </ul> */}
                     {tabElements}
-                    {/* <ul>
-                        <li className="marriage-documents-item">{t("tab-1-text-1")}</li>
-                        <li className="marriage-documents-item">{t("tab-1-text-2")}</li>
-                        <li className="marriage-documents-item">{t("tab-1-text-3")}</li>
-                        <li className="marriage-documents-item">{t("tab-1-text-4")}</li>
-                    </ul> */}
                 </div>
-            </div>
+            </Container>
         </section>
     )
 };

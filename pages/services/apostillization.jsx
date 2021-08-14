@@ -1,12 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 import Layout from "../../src/shared/components/Layout";
-import Apostille from "../../src/client/Apostille";
+import ServicePage from "../../src/client/ServicePage";
+import ServiceArticle from "../../src/shared/components/ServiceArticle";
 
 const ServicesPage = () => {
+
+    const { t } = useTranslation("apostillization");
+    const content = t("content", {returnObjects: true});
+
     return (
         <Layout fileName="apostillization-page">
-            <Apostille />
+            <ServicePage img="/img/Services/icon-4.png" title={t("title")} btnText={t("btn")} >
+                <ServiceArticle content={content} />
+            </ServicePage>
         </Layout>
     );
 };

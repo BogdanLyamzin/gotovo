@@ -1,23 +1,28 @@
 import {useTranslation} from "next-i18next";
 
-import BlogItem from "../../shared/components/BlogItem";
+import Container from "../../shared/components/Container";
+import Title from "../../shared/components/Title";
+import BlogItem from "./BlogItem";
+
+import styles from "./Blog.module.scss";
 
 const Blog = () => {
+
     const { t } = useTranslation("blog");
     const blogItems = t("list", {returnObjects: true});
 
-    const blogElements = blogItems.map(({id, text, ...props}) => {
+    const blogElements = blogItems.map(({ id, text, ...props }) => {
         return <BlogItem key={id} {...props} />
     });
 
     return (
-        <section className="blog">
-            <div className="container">
-                <h3 className="title">{t("title")}</h3>
-                <div className="blog-items">
+        <section className={styles["blog"]}>
+            <Container>
+                <Title text={t("title")} />
+                <div className={styles["list"]}>
                     {blogElements}
                 </div>
-            </div>
+            </Container>
         </section>
     )
 };

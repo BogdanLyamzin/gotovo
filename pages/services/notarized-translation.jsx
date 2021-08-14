@@ -1,12 +1,20 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 import Layout from "../../src/shared/components/Layout";
-import NotarizedTranslation from "../../src/client/NotarizedTranslation";
+import ServicePage from "../../src/client/ServicePage";
+import ServiceArticle from "../../src/shared/components/ServiceArticle";
 
 const ServicesPage = () => {
+
+    const { t } = useTranslation("notarized-translation");
+    const content = t("content", {returnObjects: true});
+
     return (
         <Layout fileName="notarized-translation-page">
-            <NotarizedTranslation />
+            <ServicePage img="/img/Services/notary3.png" title={t("title")} btnText={t("btn")} >
+                <ServiceArticle content={content} />
+            </ServicePage>
         </Layout>
     );
 };

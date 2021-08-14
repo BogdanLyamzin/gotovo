@@ -7,13 +7,16 @@ import Ornament from "../../shared/components/Ornament";
 import styles from "./OurTarget.module.scss";
 
 const OurTarget = () => {
+
     const { t } = useTranslation("our-target");
+    const article = t('article', {returnObjects: true});
+
     return (
         <section className={styles["our-target"]}>
             <div className={styles["content"]}>
                 <Ornament className={styles["ornament"]} img="/img/ornament.svg" side="left" />
                 <Container>
-                    <Article className={styles["article"]} title={t("title")} text={t("text")} />
+                    <Article className={styles["article"]} title={t("title")} article={article} />
                 </Container>
             </div>
             <div className={styles["map"]}>

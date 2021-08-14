@@ -1,0 +1,34 @@
+.page {
+    background-color: $bg-light;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .page {
+        padding: 30px 15px 60px;
+    }
+
+    .news {
+        align-items: center;
+    }
+}
+
+@media (min-width: 481px) {
+    .page {
+        padding: 60px 0 110px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 70% auto;
+        align-items: flex-start;
+    }
+
+    .news {
+        align-items: flex-end;
+    }
+}
