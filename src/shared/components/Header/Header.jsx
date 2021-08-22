@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import Container from "../Container";
+import Image from 'next/image';
 
 import styles from "./Header.module.scss";
 
@@ -12,8 +13,12 @@ const Header = ({ title, text, children, img, mobImg }) => {
                 <p className={styles["text-small"]}>{text}</p>
                 {children}
             </Container>
-            <img className={styles["img"]} src={img} alt="Header image" />
-            <img className={styles["img-mob"]} src={mobImg} alt="Header image" />
+            <div className={styles["img-mob"]}>
+                <Image src={mobImg} width={363} height={460} priority alt="Header image" />
+            </div>
+            <div className={styles["img"]}>
+                <Image src={img} width={571} height={468} priority alt="Header image" />
+            </div>
         </header>
     )
 };

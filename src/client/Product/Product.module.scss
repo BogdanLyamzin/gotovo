@@ -1,8 +1,8 @@
-.product {
+.section {
     background-color: $bg-light;
 }
 
-.item {
+.product {
     width: 100%;
     background-color: #fff;
     box-shadow: 0px 10px 30px rgba(121, 85, 72, 0.1);
@@ -58,16 +58,17 @@
     }
 }
 
-.buy {
+.items {
     display: flex;
     align-items: center;
+    margin-left: 30px;
     margin-bottom: 35px;
 }
 
 .price {
     position: relative;
     font-weight: 700;
-    margin-right: 40px;
+    margin-right: 38px;
     z-index: 1;
 
     &::after {
@@ -138,6 +139,14 @@
     }
 }
 
+.buy {
+    width: 100%;
+
+    @media (min-width: 481px) {
+        max-width: 300px;
+    }
+}
+
 .input {
     height: 46px;
     padding: 14px 27px;
@@ -152,15 +161,31 @@
     }
 }
 
-.btn {
-    box-shadow: 0px 4px 4px rgba(121, 85, 72, 0.04), 0px 4px 16px rgba(121, 85, 72, 0.08);
+.input, .btn {
+    width: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .product {
+    .section {
         padding: 30px 15px 80px;
     }
 
+    .info {
+        padding: 35px 25px 45px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .section {
+        padding: 45px 30px 110px;
+    }
+
+    .info {
+        padding: 40px 33px 50px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
     .img {
         width: 100%;
     }
@@ -174,52 +199,66 @@
         margin-bottom: 35px;
     }
 
-    .info {
-        padding: 40px 25px 50px;
-    }
-
-    .buy {
-        justify-content: space-around;
-    }
-
     .price {
         font-size: 24px;
         margin-right: 25px;
     }
-
-    .input, .btn {
-        width: 100%;
-    }
 }
 
-@media (min-width: 481px) {
-    .product {
-        padding: 80px 0 140px;
+@media (min-width: 900px) {
+    .section {
+        padding: 80px 30px 140px;
     }
 
-    .item {
+    .product {
         display: grid;
         grid-template-columns: repeat(2, 50%);
-    }
-
-    .name {
-        font-size: 32px;
-        margin-bottom: 50px;
-    }
-
-    .description {
-        margin: 0 40px 35px 0;
-    }
-
-    .info {
-        padding: 40px 60px;
     }
 
     .price {
         font-size: 22px;
     }
+}
 
-    .input, .btn {
-        width: 230px;
+@media (min-width: 900px) and (max-width: 1260px) {
+    .info {
+        padding: 35px 40px;
+    }
+
+    .name {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        margin-bottom: 20px;
+    }
+
+    .items {
+        margin-bottom: 20px;
+    }
+
+    .input {
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .info {
+        padding: 40px 100px 40px 60px;
+    }
+
+    .name {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .description {
+        margin-bottom: 35px;
     }
 }

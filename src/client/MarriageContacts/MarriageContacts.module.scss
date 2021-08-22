@@ -1,5 +1,17 @@
 .section {
     background-color: $bg-light;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding: 30px 15px;
+    }
+
+    @media (min-width: 481px) and (max-width: 1260px) {
+        padding: 45px 30px;
+    }
+
+    @media (min-width: 1260px) {
+        padding: 60px 0;
+    }
 }
 
 .form {
@@ -37,17 +49,19 @@
     height: 390px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .section {
-        padding: 30px 15px;
-    }
-
+@media (min-width: 320px) and (max-width: 900px) {
     .form {
-        margin-bottom: 50px;
+        max-width: 500px;
+        margin: 0 auto 60px;
     }
 
     .btn {
         width: 100%;
+    }
+
+    .contacts-items {
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .contacts-item {
@@ -59,15 +73,12 @@
     }
 }
 
-@media (min-width: 481px) {
-    .section {
-        padding: 60px 0;
-    }
-
+@media (min-width: 900px) {
     .container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 130px;
+        grid-template-columns: repeat(2, minmax(45%, 500px));
+        grid-column-gap: 30px;
+        justify-content: space-between;
     }
 
     .label {

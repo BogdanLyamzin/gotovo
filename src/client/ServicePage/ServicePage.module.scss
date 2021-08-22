@@ -1,5 +1,18 @@
-.service-page {
+.section {
+    position: relative;
     background-color: $bg-light;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding: 30px 15px 80px;
+    }
+
+    @media (min-width: 481px) and (max-width: 1260px) {
+        padding: 45px 30px 110px;
+    }
+
+    @media (min-width: 1260px) {
+        padding: 50px 0 150px;
+    }
 }
 
 .header {
@@ -20,11 +33,7 @@
     text-align: center;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .service-page {
-        position: relative;
-        padding: 30px 15px 80px;
-    }
+@media (min-width: 320px) and (max-width: 1260px) {
 
     .header {
         max-width: 80%;
@@ -58,11 +67,7 @@
     }
 }
 
-@media (min-width: 481px) {
-    .service-page {
-        padding: 50px 0 150px;
-    }
-
+@media (min-width: 1260px) {
     .header {
         position: relative;
     }

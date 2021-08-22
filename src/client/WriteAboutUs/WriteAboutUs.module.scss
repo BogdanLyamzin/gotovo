@@ -38,11 +38,28 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
     .section {
-        padding: 60px 20px 110px;
+        padding: 45px 20px 80px;
     }
 
     .content {
         grid-gap: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 950px) {
+    .section {
+        padding: 50px 30px 90px;
+    }
+
+    .content {
+        max-width: 500px;
+        grid-gap: 30px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 950px) {
+    .content {
         grid-template-areas: "ictv tsn"
                              "ictv tsn"
                              "trk tsn"
@@ -71,7 +88,7 @@
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 950px) {
     .section {
         padding: 60px 0 135px;
     }

@@ -1,16 +1,33 @@
 import { useTranslation } from "next-i18next";
+import { useState, useRef } from "react";
 
-import CustomLink from "../../../shared/components/Link";
+import CustomLink from "../../../../shared/components/Link";
 
-import styles from "./NavbarMenu.module.scss";
+import styles from "./MobMenuList.module.scss";
 
-const NavbarMenu = () => {
-    
+const MobMenuList = () => {
     const { t } = useTranslation("navbar");
     const menuItems = t("menu", { returnObjects: true });
 
-    const menuElements = menuItems.map(({ id, href, text, list = null }) => {
+    const [openMenuIdx, setOpenMenuIdx] = useState(false);
+
+    const toggle = (idx) => {
+        setOpenMenuIdx(prevState => {
+            return (prevState === idx) ? false : idx;
+        });
+    };
+
+    const menuElements = menuItems.map(({ id, href, text, list = null }, index) => {
         if (list) {
+            const elRef = useRef(null);
+
+            const isActive = (index === openMenuIdx) ? "active" : "";
+
+            let elementStyle = {};
+            if (elRef.current && (index === openMenuIdx)) {
+                const { style, scrollHeight } = elRef.current;
+                elementStyle.maxHeight = style.maxHeight ? null : `${scrollHeight}px`;
+            }
 
             const menuElementList = list.map(({ id, href, text, target = "_self" }) => {
                 return (
@@ -24,17 +41,16 @@ const NavbarMenu = () => {
 
             return (
                 <li className={styles["item"]} key={id} >
-                    <CustomLink href={href} className={styles["link"]}>
+                    <span className={`${styles["link"]} ${styles[isActive]}`} onClick={() => toggle(index)} >
                         {text}
-                    </CustomLink>
-                    <div className={styles["dropdown"]}>
+                    </span>
+                    <div className={`${styles["dropdown"]} ${styles[isActive]}`} ref={elRef} style={elementStyle}>
                         <ul className={`${styles["dropdown-list"]}`}>
                             {menuElementList}
                         </ul>
                     </div>
                 </li>
             );
-
         } else {
             return (
                 <li className={styles["item"]} key={id}>
@@ -53,4 +69,4 @@ const NavbarMenu = () => {
     )
 }
 
-export default NavbarMenu;
+export default MobMenuList;

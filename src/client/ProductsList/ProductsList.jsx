@@ -19,7 +19,6 @@ const ProductsList = () => {
         <section className={styles["products"]}>
             <Container>
                 <Title text={t("title")} />
-                {/* <h3 className="title">{t("title")}</h3> */}
                 <div className={styles["list"]}>
                     {productsElements}
                 </div>

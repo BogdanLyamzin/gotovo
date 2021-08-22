@@ -3,7 +3,11 @@
         padding: 30px 15px;
     }
 
-    @media (min-width: 481px) {
+    @media (min-width: 481px) and (max-width: 1260px) {
+        padding: 45px 30px;
+    }
+
+    @media (min-width: 1260px) {
         padding: 60px 0 80px;
     }
 }

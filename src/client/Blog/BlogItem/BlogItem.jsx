@@ -4,9 +4,9 @@ import CustomLink from "../../../shared/components/Link";
 
 import styles from "./BlogItem.module.scss";
 
-const BlogItem = ({ title, date, img, link }) => {
+const BlogItem = ({ className, title, date, img, link }) => {
     return (
-        <CustomLink href={link} className={styles["item"]}>
+        <CustomLink href={link} className={`${styles["item"]} ${className}`}>
             <div className={styles["photo"]}>
                 <img className={styles["img"]} src={img} alt="Blog photo"/>
             </div>
@@ -19,6 +19,7 @@ const BlogItem = ({ title, date, img, link }) => {
 };
 
 BlogItem.propTypes = {
+    className: PropTypes.string,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ import styles from "./About.module.scss";
 const About = ({ title, article, img }) => {
 
     return (
-        <section className={styles["about"]}>
+        <section className={styles["section"]}>
 
             <Container>
                 <Article title={title} article={article} />

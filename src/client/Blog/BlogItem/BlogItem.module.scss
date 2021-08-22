@@ -6,7 +6,6 @@
     border-radius: 8px;
     border: 10px solid #fff;
     background-color: #fff;
-    margin-bottom: 30px;
 
     &:hover .img {
         transform: scale(1.1);
@@ -33,31 +32,4 @@
     font-weight: 700;
     line-height: 1.2em;
     margin-bottom: 20px;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .blog {
-        padding: 30px 15px 60px;
-    }
-
-    .item {
-        width: 90%;
-        margin: 0 auto 30px;
-    }
-}
-
-@media (min-width: 481px) {
-    .blog {
-        padding: 60px 0 110px;
-    }
-
-    .item {
-        width: 256px;
-
-        &:nth-child(4n+1) { order: 1; }
-        &:nth-child(4n+2) { order: 2; }
-        &:nth-child(4n+3) { order: 3; }
-        &:nth-child(4n)   { order: 4; }
-        
-    }
 }

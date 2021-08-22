@@ -8,7 +8,7 @@ const Article = ({ className, title, article }) => {
         if (text) {
             return <p key={id} className={styles["text"]}>{text}</p>
         } else {
-            const listElems = list.map(({ id, text }) => <li key={id} className="article-list-item">{text}</li>);
+            const listElems = list.map(({ id, text }) => <li key={id} className={styles["list-item"]}>{text}</li>);
             return (
                 <ul key={id}>
                     {listElems}

@@ -8,11 +8,11 @@ import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
     return (
-        <nav className={styles.nav}>
-            <div className={styles["nav-container"]}>
+        <nav className={styles["nav"]}>
+            <div className={styles["container"]}>
                 <NavbarMobileMenu />
                 <Logo type="main" />
-                <NavbarMenu type="desktop" />
+                <NavbarMenu />
                 <NavbarLanguage />
                 <NavbarAuth type="desktop" />
             </div>

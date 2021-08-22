@@ -9,7 +9,7 @@ import styles from "./ServicePage.module.scss";
 const ServicePage = ({ img, title, btnText, children }) => {
 
     return (
-        <section className={styles["service-page"]}>
+        <section className={styles["section"]}>
             <Container>
                 <div className={styles["header"]}>
                     <Button className={styles["btn"]} href="/services" text={btnText} color="light" size="normal" />

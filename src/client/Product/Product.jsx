@@ -28,9 +28,9 @@ const Product = ({ page }) => {
     }
 
     return (
-        <div className={styles["product"]}>
+        <div className={styles["section"]}>
             <Container>
-                <div className={styles["item"]}>
+                <div className={styles["product"]}>
 
                     <div className={styles["img"]}>
                         <Image link={img} imgWidth="560" />
@@ -43,7 +43,7 @@ const Product = ({ page }) => {
                             {featuresElements}
                         </div>
                         
-                        <div className={styles["buy"]}>
+                        <div className={styles["items"]}>
                             <p className={styles["price"]}>{price}</p>
                             <div className={styles["counter"]}>
                                 <span className={styles["counter-btn"]} onClick={() => setCount((num) => minus(num))}></span>
@@ -51,11 +51,13 @@ const Product = ({ page }) => {
                                 <span className={`${styles["counter-btn"]} ${styles["_plus"]}`} onClick={() => setCount((num) => num + 1)}></span>
                             </div>
                         </div>
-                        
-                        <input placeholder={t('input')} type="text" className={styles["input"]} />
 
-                        <Button className={styles["btn"]} href="#" text={t('btn')} />
+                        <div className={styles["buy"]}>
+                            <input placeholder={t('input')} type="text" className={styles["input"]} />
+                            <Button className={styles["btn"]} href="#" text={t('btn')} shadow />
+                        </div>
                     </div>
+
                 </div>
             </Container>
         </div>

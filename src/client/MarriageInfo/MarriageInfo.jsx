@@ -15,7 +15,7 @@ const MarriageInfo = () => {
     })
 
     return (
-        <section className={styles["info"]}>
+        <section className={styles["section"]}>
             <Container className={styles["container"]}>
                 {elementsList}
             </Container>

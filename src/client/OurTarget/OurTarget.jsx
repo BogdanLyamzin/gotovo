@@ -3,6 +3,7 @@ import {useTranslation} from "next-i18next";
 import Container from "../../shared/components/Container";
 import Article from "../../shared/components/Article";
 import Ornament from "../../shared/components/Ornament";
+import Image from 'next/image';
 
 import styles from "./OurTarget.module.scss";
 
@@ -28,7 +29,7 @@ const OurTarget = () => {
                     <span className={styles["map-text-bold"]}>128,650,000</span>
                     <span className={styles["map-text-thin"]}>{t("visitors")}</span>
                 </div>
-                <img src="/img/map.svg" alt="Карта" />
+                <Image src="/img/Map.png" width={638} height={408} alt="Map" />
             </div>
         </section>
     )
