@@ -1,12 +1,16 @@
 .menu {
-    @media (min-width: 320px) and (max-width: 480px) {
-        display: flex;
-        flex-flow: column wrap;
-        height: 400px;
+    display: flex;
+
+    @media (min-width: 320px) and (max-width: 700px) {
         margin-top: 40px;
+        height: 400px;
     }
 
-    @media (min-width: 481px) {
-        display: flex;
+    @media (min-width: 320px) and (max-width: 820px) {
+        flex-flow: column wrap;
+    }
+
+    @media (min-width: 700px) and (max-width: 820px) {
+        height: 450px;
     }
 }

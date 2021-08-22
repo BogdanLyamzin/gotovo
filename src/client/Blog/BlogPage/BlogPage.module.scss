@@ -3,8 +3,9 @@
 }
 
 .news {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -19,16 +20,19 @@
 
 @media (min-width: 481px) {
     .page {
-        padding: 60px 0 110px;
+        padding: 60px 30px 110px;
     }
 
+    .item {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 900px) {
     .content {
         display: grid;
-        grid-template-columns: 70% auto;
+        grid-template-columns: auto 250px;
         align-items: flex-start;
-    }
-
-    .news {
-        align-items: flex-end;
+        grid-gap: 30px;
     }
 }

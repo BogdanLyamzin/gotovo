@@ -48,7 +48,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 1260px) {
    .item {
         margin: 0 auto 30px;
         padding: 25px 30px 30px;
@@ -89,7 +89,7 @@
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 1260px) {
     .item {
         display: flex;
         flex-direction: column;

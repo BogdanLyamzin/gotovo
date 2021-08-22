@@ -1,6 +1,14 @@
 .article {
     background-color: #fff;
     box-shadow: 0px 10px 30px rgba(121, 85, 72, 0.1);
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding: 30px;
+    }
+
+    @media (min-width: 480px) and (max-width: 900px) {
+        padding: 35px 40px;
+    }
 }
 
 .text {
@@ -43,10 +51,9 @@
     margin-bottom: 30px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 900px) {
     .article {
         width: 100%;
-        padding: 30px;
         border-radius: 15px;
     }
 
@@ -55,7 +62,7 @@
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 900px) {
     .article {
         width: 850px;
         padding: 40px 90px;

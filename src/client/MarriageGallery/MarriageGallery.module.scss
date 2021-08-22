@@ -1,5 +1,17 @@
 .gallery {
     background-color: $bg-light;
+
+    @media (min-width: 320px) and (max-width: 800px) {
+        padding: 30px 3.5vw;
+    }
+
+    @media (min-width: 800px) and (max-width: 1260px) {
+        padding: 45px 3.5vw;
+    }
+
+    @media (min-width: 1260px) {
+        padding: 65px 0;
+    }
 }
 
 .content {
@@ -42,13 +54,9 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .gallery {
-        padding: 30px 15px;
-    }
-
+@media (min-width: 320px) and (max-width: 1260px) {
     .content {
-        grid-gap: 10px;
+        grid-gap: 3vw;
         grid-template-areas: "item-1 item-1 item-1 item-1 item-1 item-1"  
                              "item-2 item-2 item-3 item-3 item-3 item-3"
                              "item-4 item-4 item-4 item-5 item-5 item-5";
@@ -56,7 +64,7 @@
 
     .item {
         border: 3px solid #fff;
-        height: 125px;
+        height: 35vw;
 
         &._6 {
             display: none;
@@ -64,11 +72,7 @@
     }
 }
 
-@media (min-width: 481px) {
-    .gallery {
-        padding: 65px 0;
-    }
-
+@media (min-width: 1260px) {
     .content {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 460px 180px;

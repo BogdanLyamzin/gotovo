@@ -16,7 +16,7 @@ const BlogPage = ({ pageNumber }) => {
     const { title, date, img, text } = blogItems[pageNumber - 1];
 
     const newsElements = blogItems.map(({ id, ...props }) => {
-        return <BlogItem key={id} {...props} />
+        return <BlogItem className={styles["item"]} key={id} {...props} />
     });
 
     return (

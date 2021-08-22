@@ -12,7 +12,7 @@ const Blog = () => {
     const blogItems = t("list", {returnObjects: true});
 
     const blogElements = blogItems.map(({ id, text, ...props }) => {
-        return <BlogItem key={id} {...props} />
+        return <BlogItem className={styles["item"]} key={id} {...props} />
     });
 
     return (

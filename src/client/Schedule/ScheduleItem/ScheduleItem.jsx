@@ -4,9 +4,9 @@ import CustomLink from "../../../shared/components/Link";
 
 import styles from "./ScheduleItem.module.scss";
 
-const ScheduleList = ({ name, img, href, target, list }) => {
+const ScheduleItem = ({ name, img, href, target, scheduleList }) => {
 
-    const scheduleListElements = list.map(({ id, day, time }) => {
+    const scheduleListElements = scheduleList.map(({ id, day, time }) => {
         return (
             <div key={id} className={styles["list"]}>
                 <span className={styles["text"]}>{day}</span>
@@ -26,12 +26,12 @@ const ScheduleList = ({ name, img, href, target, list }) => {
     )
 };
 
-ScheduleList.propTypes = {
+ScheduleItem.propTypes = {
     name: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     target: PropTypes.oneOf(['_blank', '_self', '_parent', '_top']),
-    list: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    scheduleList: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
 }
 
-export default ScheduleList;
+export default ScheduleItem;

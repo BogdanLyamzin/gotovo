@@ -11,6 +11,10 @@
     text-align: left;
 }
 
+.img {
+    max-width: 480px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .contacts {
         padding: 30px 15px 0;
@@ -27,10 +31,21 @@
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 900px) {
+    .contacts {
+        padding: 30px 30px 0;
+    }
+
+    .img {
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
     .contacts {
         position: relative;
-        padding: 100px 0 140px;
+        padding: 60px 20px 140px;
     }
     
     .img {
